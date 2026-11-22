@@ -1,0 +1,12 @@
+[32mtemplate instances[0m: 144
+non-linear constraints: 11482
+linear constraints: 12470
+public inputs: 4
+private inputs: 48
+public outputs: 2
+wires: 23998
+labels: 35503
+[32mWritten successfully:[0m ../withdraw/withdraw.r1cs
+[32mWritten successfully:[0m ../withdraw/withdraw.sym
+[32mWritten successfully:[0m ../withdraw/withdraw_js/withdraw.wasm
+[32mEverything went okay[0m

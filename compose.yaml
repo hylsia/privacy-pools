@@ -1,0 +1,34 @@
+# PREPARATION ONLY. Requires host secret files and an explicit hosting action.
+services:
+  hylsia:
+    build: .
+    init: true
+    restart: unless-stopped
+    deploy:
+      replicas: 1
+    ports:
+      - "127.0.0.1:3000:3000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      PRIVACY_CHAIN_IDS: "46630"
+      PRIVACY_ASP_AUTO_PUBLISH_SECONDS: "600"
+      PRIVACY_RELAYER_PRIVATE_KEY_FILE: /run/secrets/relayer_key
+      PRIVACY_ASP_POSTMAN_PRIVATE_KEY_FILE: /run/secrets/publisher_key
+      PRIVACY_ASP_EXCLUSIONS_FILE: /run/config/asp-exclusions.json
+    secrets: [relayer_key, publisher_key]
+    volumes:
+      - type: bind
+        source: ${HYLSIA_EXCLUSIONS_FILE:?Set an absolute host exclusion-list path}
+        target: /run/config/asp-exclusions.json
+        read_only: true
+secrets:
+  relayer_key:
+    file: ${HYLSIA_RELAYER_KEY_FILE:?Set an existing host service-key path}
+  publisher_key:
+    file: ${HYLSIA_PUBLISHER_KEY_FILE:?Set an existing host service-key path}

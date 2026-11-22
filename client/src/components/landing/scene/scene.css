@@ -1,0 +1,320 @@
+/* Scene kit styles (see scene/index.ts). Scenes are night illustrations in both
+   themes: every SceneStage carries `.scene.dark`, so inside a scene the theme
+   tokens, dark: variants and the sky art (sky.css) take their dark values.
+
+   Cascade: the component rules below live in Tailwind's `components` layer, so
+   utilities passed through className win over them (e.g. <Scrim side="top"
+   className="h-[60%]"> really is 60% tall). The state rules at the end (idle,
+   covered, reduced motion) stay unlayered on purpose: they must beat any
+   utility, such as a layer's will-change-transform or a loop's animation. */
+
+/* Tailwind's own layer order (index.css starts with `@layer properties;` and
+   `@layer theme, base, components, utilities;`). This sheet loads before
+   index.css (main.tsx imports App first), so it must declare the full order
+   itself: the first declaration of a layer fixes its rank. */
+@layer properties, theme, base, components, utilities;
+
+/* ── palette (spec §2) ───────────────────────────
+   Declared on :root so calm bands can use them too. `--gold` is NOT redefined
+   here (the theme uses it for legible gold text); inside a scene it becomes the
+   logo gold (see .scene.scene below). */
+:root {
+  --night-0: #04051a;
+  --night-1: #0a0c2a;
+  --night-2: #141a4a;
+  --night-3: #232a6b;
+  --violet-hi: #8b6cf6;
+  --violet: #6a4be0;
+  --violet-lo: #3b22b8;
+  --lavender: #aeb4ff;
+  --mist: #c9ccff;
+  --ink: #f4f3ff;
+  --gold-hi: #f5d58a;
+  --gold-lo: #b08f42;
+  --gold-logo: #d4ac4e;
+  --ridge-0: #2b3170;
+  --ridge-1: #1d2262;
+  --ridge-2: #121646;
+  --ridge-3: #0a0d33;
+  --ridge-rim: rgb(174 180 255 / 0.22);
+  /* cloud tones (on :root because a CloudSeam paints outside its stage):
+     lit (moonlit decks), dim (a cloud sea in shadow), near (backlit
+     foreground), wipe (the dive: four bands, each deeper, ending in --wipe-deep) */
+  --cloud-lit-top: #d3d5ff;
+  --cloud-lit-mid: #8d92e0;
+  --cloud-lit-low: #4c519f;
+  --cloud-dim-top: #9095e2;
+  --cloud-dim-mid: #4a50a5;
+  --cloud-dim-low: #252a6c;
+  --cloud-near-top: #3b4192;
+  --cloud-near-mid: #1f2462;
+  --cloud-near-low: #12163e;
+  --cloud-rim: rgb(201 204 255 / 0.34);
+  --wipe-top: #e2e3ff;
+  --wipe-body: #7a7fd0;
+  --wipe-deep: #30357f;
+  --wipe-under: #22266a;
+}
+
+/* Inside a scene --gold is the logo gold. Unlayered, with the class doubled up,
+   so it beats the theme's `.dark { --gold }` on the stage itself (a SceneStage
+   is `.scene.dark`) whichever stylesheet loads first. */
+.scene.scene {
+  --gold: var(--gold-logo);
+}
+
+@layer components {
+  .scene {
+    background-color: var(--night-1);
+    color: var(--ink);
+  }
+
+  /* ── night sky ───────────────────────────────── */
+  .scene-sky {
+    pointer-events: none;
+  }
+  .scene-sky--deep {
+    background:
+      radial-gradient(36% 30% at 82% 26%, rgb(139 108 246 / 0.15), transparent 72%),
+      radial-gradient(34% 28% at 12% 14%, rgb(106 75 224 / 0.11), transparent 70%),
+      radial-gradient(60% 22% at 30% 70%, rgb(139 108 246 / 0.09), transparent 74%),
+      radial-gradient(64% 20% at 62% 58%, rgb(174 180 255 / 0.15), transparent 74%),
+      radial-gradient(90% 30% at 60% 84%, rgb(174 180 255 / 0.14), transparent 72%),
+      linear-gradient(
+        180deg,
+        var(--night-0) 0%,
+        #060822 22%,
+        var(--night-1) 40%,
+        #10153f 56%,
+        var(--night-2) 68%,
+        #1c2360 80%,
+        var(--night-3) 92%,
+        #2b3378 100%
+      );
+  }
+  .scene-sky--horizon {
+    background:
+      radial-gradient(46% 30% at 50% 30%, rgb(139 108 246 / 0.12), transparent 72%),
+      radial-gradient(30% 24% at 86% 16%, rgb(106 75 224 / 0.1), transparent 70%),
+      radial-gradient(100% 40% at 50% 92%, rgb(174 180 255 / 0.22), transparent 70%),
+      linear-gradient(180deg, var(--night-0) 0%, var(--night-1) 30%, var(--night-2) 58%, var(--night-3) 82%, #343c86 100%);
+  }
+  .scene-sky--dawn {
+    background:
+      radial-gradient(70% 34% at 50% 100%, rgb(245 213 138 / 0.34), transparent 70%),
+      radial-gradient(90% 46% at 50% 96%, rgb(222 150 190 / 0.2), transparent 72%),
+      radial-gradient(40% 30% at 18% 20%, rgb(139 108 246 / 0.12), transparent 70%),
+      linear-gradient(180deg, var(--night-0) 0%, var(--night-1) 24%, #1a1f58 48%, #3a3a86 68%, #7a6aa8 86%, #c9a6a0 100%);
+  }
+
+  /* ── pointer parallax per depth (driven by --px / --py in [-1, 1]) ──
+     One element per plane carries both motions: framer writes `transform`
+     (scroll), this writes `translate` (pointer). Fine pointers with motion only.
+     Never put translate-* utilities on a SceneLayer: they would replace this. */
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .scene[data-pointer] .scene-depth-sky {
+      translate: calc(var(--px, 0) * -3px) calc(var(--py, 0) * -2px);
+    }
+    .scene[data-pointer] .scene-depth-far {
+      translate: calc(var(--px, 0) * -6px) calc(var(--py, 0) * -4px);
+    }
+    .scene[data-pointer] .scene-depth-mid {
+      translate: calc(var(--px, 0) * -10px) calc(var(--py, 0) * -6px);
+    }
+    .scene[data-pointer] .scene-depth-subject {
+      translate: calc(var(--px, 0) * -16px) calc(var(--py, 0) * -9px);
+    }
+    .scene[data-pointer] .scene-depth-near {
+      translate: calc(var(--px, 0) * -24px) calc(var(--py, 0) * -13px);
+    }
+  }
+
+  /* ── moon ────────────────────────────────────── */
+  .scene-moon {
+    overflow: visible;
+  }
+
+  /* ── sparkles: a glow drawn in the SVG, no filter ── */
+  .scene-sparkle {
+    position: absolute;
+    overflow: visible;
+    animation: scene-twinkle 6s ease-in-out infinite;
+  }
+  @keyframes scene-twinkle {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(0.82) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) rotate(10deg);
+    }
+  }
+
+  /* ── monoliths and diamonds ─────────────────── */
+  .scene-bob {
+    animation: scene-bob 5.6s ease-in-out infinite;
+  }
+  @keyframes scene-bob {
+    0%,
+    100% {
+      transform: translateY(-2.5%);
+    }
+    50% {
+      transform: translateY(2.5%);
+    }
+  }
+  .scene-glow {
+    pointer-events: none;
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(closest-side, rgb(245 213 138 / 0.5), rgb(212 172 78 / 0.18) 45%, transparent 100%);
+  }
+  .scene-glow--violet {
+    background: radial-gradient(closest-side, rgb(174 180 255 / 0.36), rgb(139 108 246 / 0.14) 50%, transparent 100%);
+  }
+
+  /* ── fog ──────────────────────────────────────── */
+  .scene-fog-band {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 9999px;
+    background: radial-gradient(closest-side, rgb(174 180 255 / var(--fog-a, 0.1)), rgb(174 180 255 / calc(var(--fog-a, 0.1) * 0.4)) 55%, transparent 100%);
+  }
+  .scene-fog-band.is-mist {
+    background: radial-gradient(closest-side, rgb(201 204 255 / var(--fog-a, 0.1)), rgb(201 204 255 / calc(var(--fog-a, 0.1) * 0.4)) 55%, transparent 100%);
+  }
+  .scene-fog-band.is-drift {
+    animation: scene-fog-drift var(--fog-t, 34s) ease-in-out infinite alternate;
+  }
+  @keyframes scene-fog-drift {
+    from {
+      transform: translateX(calc(var(--fog-dx, 4%) * -1));
+    }
+    to {
+      transform: translateX(var(--fog-dx, 4%));
+    }
+  }
+
+  /* ── vignette and scrim (static overlays; size/position utilities override) ── */
+  .scene-vignette {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(130% 110% at 50% 45%, transparent 52%, rgb(4 5 26 / var(--vignette, 0.55)) 100%);
+  }
+  .scene-scrim {
+    pointer-events: none;
+    position: absolute;
+  }
+  .scene-scrim--left {
+    inset: 0;
+    background: radial-gradient(62% 70% at 18% 52%, rgb(4 5 26 / 0.62), rgb(4 5 26 / 0.3) 52%, transparent 78%);
+  }
+  .scene-scrim--bottom {
+    inset: auto 0 0 0;
+    height: 60%;
+    background: linear-gradient(to top, rgb(4 5 26 / 0.7), rgb(4 5 26 / 0.32) 50%, transparent);
+  }
+  .scene-scrim--top {
+    inset: 0 0 auto 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgb(4 5 26 / 0.62), rgb(4 5 26 / 0.26) 50%, transparent);
+  }
+  .scene-scrim--center {
+    inset: 0;
+    background: radial-gradient(56% 50% at 50% 50%, rgb(4 5 26 / 0.58), rgb(4 5 26 / 0.26) 55%, transparent 80%);
+  }
+
+  /* ── type over scenes ───────────────────────── */
+  .scene-text-glow {
+    background: linear-gradient(100deg, var(--lavender) 0%, #dadcff 45%, #ffffff 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* text-shadow would paint through the transparent glyphs */
+    text-shadow: none;
+  }
+  .scene-text-gold {
+    background: linear-gradient(100deg, var(--gold-hi) 10%, #ffe9b8 55%, var(--gold-logo) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+  }
+
+  /* ── film grain: one static, fixed overlay for the whole page ── */
+  .scene-grain {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    opacity: var(--grain, 0.04);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='1.7 0 0 0 -.35  1.7 0 0 0 -.35  1.7 0 0 0 -.35  0 0 0 0 1'/></filter><rect width='180' height='180' filter='url(%23g)'/></svg>");
+    background-size: 180px 180px;
+  }
+
+  /* ── scroll cue ──────────────────────────────── */
+  .scene-cue-dot {
+    animation: scene-cue 2.4s cubic-bezier(0.45, 0, 0.3, 1) infinite;
+  }
+  @keyframes scene-cue {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    80%,
+    100% {
+      transform: translateY(14px);
+      opacity: 0;
+    }
+  }
+}
+
+/* ══ State rules: unlayered, so they beat any utility ══════════════════════ */
+
+/* ── idle while far off-screen (Landing marks blocks with data-idle) ──
+   Loops stop, pointer parallax rests, and SceneLayers give up will-change, so
+   a scene keeps no compositing layers while it is away from the screen. */
+.landing-root [data-idle] :is(.scene-sparkle, .scene-bob, .scene-fog-band, .scene-cue-dot) {
+  animation: none;
+}
+.landing-root [data-idle] .scene-layer {
+  will-change: auto;
+}
+.landing-root [data-idle] .scene[data-pointer] :is(.scene-depth-sky, .scene-depth-far, .scene-depth-mid, .scene-depth-subject, .scene-depth-near) {
+  translate: none;
+}
+
+/* ── covered by the stage's own front wipe (data-covered, set by a stage whose
+   CloudWipe hides all of it, e.g. the hero at the end of its dive) ──
+   The art planes under the cloud are not drawn, keep no compositing layer and
+   stop their loops; the copy stays (focusable, readable by screen readers).
+   data-cue-off: the scroll cue has faded out, so its falling dot rests. */
+.scene[data-covered] > .scene-layer {
+  visibility: hidden;
+  will-change: auto;
+}
+.scene[data-covered]
+  :is(.scene-sparkle, .scene-bob, .scene-fog-band, .scene-cue-dot, .sky-stars-layer, .sky-sparkle, .sky-ribbon, .fox-body, .mascot-glint) {
+  animation: none;
+}
+.scene[data-covered] .fox-body {
+  will-change: auto;
+}
+.scene[data-cue-off] .scene-cue-dot {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-sparkle,
+  .scene-bob,
+  .scene-fog-band.is-drift,
+  .scene-cue-dot {
+    animation: none;
+  }
+}

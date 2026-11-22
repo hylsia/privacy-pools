@@ -1,0 +1,43 @@
+{
+  "chainId": 1,
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "artifactManifestSha256": "546ae336183d51bf580d7118b5a945581d6d2bdbb988b12d305e338350e55c32",
+  "publicationStatus": "User-authorized publication complete; Sourcify runtime match exact for all three contracts. See confirmed-results.json for precise creation-match results.",
+  "libraries": [
+    {
+      "name": "PoseidonT3",
+      "address": "0xCd9C4359AEc7C1C778Dea7E95C22B2C509Eea085"
+    },
+    {
+      "name": "PoseidonT4",
+      "address": "0x250E9cb1ddbcca6c2ADB24f34a351daBA7E0DCeB"
+    }
+  ],
+  "files": [
+    {
+      "contract": "WithdrawVerifierV2ETH",
+      "address": "0x3482C211042894457b48F1870Fc83731cd085B13",
+      "file": "WithdrawVerifierV2ETH.standard-input.json",
+      "compilerVersion": "0.8.28+commit.7893614a",
+      "source": "src/verifiers/WithdrawVerifierV2ETH.sol",
+      "sha256": "b80499a3247884784a0dc1d1c86c62e51e7017cfc432872d0d83a6aed0b88586"
+    },
+    {
+      "contract": "CommitmentVerifierV2ETH",
+      "address": "0x0170A74750475BF45DEd1b1873d63Ca583EE42Ea",
+      "file": "CommitmentVerifierV2ETH.standard-input.json",
+      "compilerVersion": "0.8.28+commit.7893614a",
+      "source": "src/verifiers/CommitmentVerifierV2ETH.sol",
+      "sha256": "1f169289bafa605360ddff82246d250e287ae12b86a017848eac08c68b46b953"
+    },
+    {
+      "contract": "PrivacyPoolV2ETH",
+      "address": "0xAC84cFAC0a7C55760197b0681576CD27837cCfea",
+      "file": "PrivacyPoolV2ETH.standard-input.json",
+      "compilerVersion": "0.8.28+commit.7893614a",
+      "source": "src/v2/PrivacyPoolV2ETH.sol",
+      "sha256": "27e733ba064ae6931a7659041a2e1d225a9984a3321cc4aa6e91cd8da61f846c"
+    }
+  ],
+  "publicationAuthorizationDate": "2026-11-22"
+}

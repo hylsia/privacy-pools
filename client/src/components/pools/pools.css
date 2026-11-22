@@ -1,0 +1,61 @@
+/* Two-series flow palette (deposits in, withdrawals out), validated with the dataviz validator
+   (lightness band, chroma floor, CVD separation, normal-vision floor, contrast vs the card):
+     light  #4a44c4 / #0284c7 on #FFFFFF  CVD ΔE 11.7 (deutan), normal ΔE 16.1, both >= 3:1
+     dark   #8b6cf6 / #14a3b8 on #10133A  CVD ΔE 13.5 (deutan), normal ΔE 20.9, both >= 3:1
+   Withdrawals are not gold or amber: on the landing gold means "your note" only (scene/Monoliths.tsx),
+   rose is caution and emerald is "open". The dark deposit violet is the landing's --violet-hi. */
+:root {
+  --flow-in: #4a44c4;
+  --flow-out: #0284c7;
+}
+.dark {
+  --flow-in: #8b6cf6;
+  --flow-out: #14a3b8;
+}
+
+/* The desktop sidebar (PoolsShell.tsx). The layout holds a 68px rail of icons. Its panel opens to 14rem OVER the
+   content while the pointer is on it, and closes when the pointer leaves, so the page never reflows; there is no button
+   and nothing is remembered. Short delays keep a pointer that only crosses the rail from opening it, and one that slips
+   off for a moment from closing it. Hover counts only where the device can hover (a touch screen keeps the icons, which
+   are links); a keyboard user's focus inside opens it too (:focus-visible, so a link clicked with the mouse does not
+   hold it open). Labels and titles (.rail-fade) fade in once the panel has started to open. */
+.shell-rail {
+  width: 68px;
+  transition:
+    width 200ms ease-out 150ms,
+    box-shadow 200ms ease-out 150ms;
+}
+.shell-rail .rail-fade {
+  opacity: 0;
+  transition: opacity 120ms ease-out;
+}
+@media (hover: hover) {
+  .shell-rail:hover {
+    width: 14rem;
+    transition-delay: 80ms;
+    box-shadow:
+      inset -1px 0 0 color-mix(in oklab, var(--border) 80%, transparent),
+      18px 0 36px -24px rgb(0 0 0 / 0.45);
+  }
+  .shell-rail:hover .rail-fade {
+    opacity: 1;
+    transition-delay: 180ms;
+  }
+}
+.shell-rail:has(:focus-visible) {
+  width: 14rem;
+  transition-delay: 0ms;
+  box-shadow:
+    inset -1px 0 0 color-mix(in oklab, var(--border) 80%, transparent),
+    18px 0 36px -24px rgb(0 0 0 / 0.45);
+}
+.shell-rail:has(:focus-visible) .rail-fade {
+  opacity: 1;
+  transition-delay: 100ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .shell-rail,
+  .shell-rail .rail-fade {
+    transition: none;
+  }
+}

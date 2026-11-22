@@ -1,0 +1,25 @@
+{
+  "result": "passed",
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "artifactManifestSha256": "546ae336183d51bf580d7118b5a945581d6d2bdbb988b12d305e338350e55c32",
+  "protocol": "hylsia-pp-v2-eth",
+  "targetChainId": 1,
+  "executedLocallyOnChainId": 31337,
+  "contractTestsPassed": 17,
+  "realProofs": {
+    "withdraw": 5,
+    "commitment": 4
+  },
+  "publicInputMutationsRejected": 46,
+  "encryptedBackupRecovery": "passed",
+  "repeatedSecretWithdrawalAndRagequit": "passed",
+  "independentReview": false,
+  "fixtureSha256": "70d78367428c49553650625f0796b89ce356e3a569161f3723b2256c69fc637a",
+  "contractLogSha256": "857c7da3c00e50578a709b597995446e6fa9db60481386d5fbd72835b3e27de3",
+  "testSourcePins": {
+    "PrivacyPoolV2.t.sol": "492ea7641df9b203b928f2ade2296cd685fca727d677b701d7710dd21fbc461e",
+    "PrivacyPoolV2ETH.t.sol": "4e6a45292a02b21cf9650e364d5cadbc9636f37f02169b94db8afb4139160f3b"
+  },
+  "completedAt": "2026-11-21T18:10:30.429Z",
+  "mainnetTransactionsSent": 0
+}

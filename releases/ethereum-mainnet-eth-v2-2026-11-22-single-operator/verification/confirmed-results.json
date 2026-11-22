@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "assembledAt": "2026-11-21T18:59:10.947Z",
+  "chainId": 1,
+  "pool": "0xAC84cFAC0a7C55760197b0681576CD27837cCfea",
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "artifactManifestSha256": "546ae336183d51bf580d7118b5a945581d6d2bdbb988b12d305e338350e55c32",
+  "trustModel": "single-operator",
+  "independentReview": false,
+  "deploymentRecordSha256": "6dffd1a8b5872bfe0db7585aa4d72f179be5d491a7c4459760ad72528a13e751",
+  "receiptAndRuntimeVerification": {
+    "status": "passed",
+    "method": "Exact-package native ETH deployer --operator-authorized --reconcile; actual RPC receipts, roles, scope, verifier bytecode and pool runtime/library/immutable checks",
+    "recordedAt": "2026-11-21T18:41:51.727Z",
+    "rpcHost": "ethereum-rpc.publicnode.com",
+    "receiptsConfirmed": 5
+  },
+  "parameters": {
+    "protocol": "hylsia-pp-v2-eth",
+    "scope": "19862275661092037214311706317823814540136185778625368978903287973627071173463",
+    "owner": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+    "aspPostman": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+    "withdrawVerifier": "0x3482C211042894457b48F1870Fc83731cd085B13",
+    "commitmentVerifier": "0x0170A74750475BF45DEd1b1873d63Ca583EE42Ea",
+    "minDepositWei": "0"
+  },
+  "verifierCodeHash": {
+    "withdraw": "0x0026527e326a6236644221ee8af852b9c5ac4c19ef4aa911dff67e9afa2d449c",
+    "commitment": "0x4d33e76df5bcab30f66c5b7250b7c29a6776bfa44c9a2b9d4c6baf2a260984a7"
+  },
+  "receipts": [
+    {
+      "transactionHash": "0x5d9d5660cfb5044a54d307bc223c2c7c2c2477a887b154c0c55c93f7a319a008",
+      "status": "0x1",
+      "blockNumber": "26465228",
+      "gasUsed": "3621515",
+      "effectiveGasPriceWei": "132863373",
+      "gasCostWei": "481166698270095"
+    },
+    {
+      "transactionHash": "0x3aae98edcdfeabbd6b1394555f725dae225739e355ea040d6f5942d859290543",
+      "status": "0x1",
+      "blockNumber": "26465229",
+      "gasUsed": "2756712",
+      "effectiveGasPriceWei": "145661874",
+      "gasCostWei": "401547835998288"
+    },
+    {
+      "transactionHash": "0x80455e20ca3c0eba153344f28e9f30628be56ab1cd21ac4ef52ee1f1ceaf9c4a",
+      "status": "0x1",
+      "blockNumber": "26465230",
+      "gasUsed": "446001",
+      "effectiveGasPriceWei": "152770501",
+      "gasCostWei": "68135796216501"
+    },
+    {
+      "transactionHash": "0xf4783439d13944e802dc7ea09d6c631fd69ba005c44fa5b407e58294e4bf906c",
+      "status": "0x1",
+      "blockNumber": "26465232",
+      "gasUsed": "406490",
+      "effectiveGasPriceWei": "142210649",
+      "gasCostWei": "57807206712010"
+    },
+    {
+      "transactionHash": "0xd22547f4a1c6c89eb3bfd938bcbedf76117e2b94a7f791eae4e91b5202eabc32",
+      "status": "0x1",
+      "blockNumber": "26465235",
+      "gasUsed": "3323617",
+      "effectiveGasPriceWei": "151954268",
+      "gasCostWei": "505037788347356"
+    }
+  ],
+  "gasUsed": "10554335",
+  "totalGasCostWei": "1513695325544250",
+  "totalGasCostEth": "0.00151369532554425",
+  "deployerBalanceSnapshotEth": "0.00348630467445575",
+  "deployerBalanceSnapshotContext": "Read-only RPC check after pool receipt success; latest and pending nonces were both 5.",
+  "sourcify": {
+    "checkedAt": "2026-11-21T18:55:48.140Z",
+    "contracts": [
+      {
+        "name": "withdraw",
+        "address": "0x3482C211042894457b48F1870Fc83731cd085B13",
+        "httpStatus": 200,
+        "matchId": "59675570",
+        "creationMatch": "exact_match",
+        "runtimeMatch": "exact_match",
+        "verifiedAt": "2026-11-21T18:44:15Z",
+        "match": "exact_match",
+        "chainId": "1"
+      },
+      {
+        "name": "commitment",
+        "address": "0x0170A74750475BF45DEd1b1873d63Ca583EE42Ea",
+        "httpStatus": 200,
+        "matchId": "59675896",
+        "creationMatch": "exact_match",
+        "runtimeMatch": "exact_match",
+        "verifiedAt": "2026-11-21T18:51:41Z",
+        "match": "exact_match",
+        "chainId": "1"
+      },
+      {
+        "name": "pool",
+        "address": "0xAC84cFAC0a7C55760197b0681576CD27837cCfea",
+        "httpStatus": 200,
+        "matchId": "59675925",
+        "creationMatch": "match",
+        "runtimeMatch": "exact_match",
+        "verifiedAt": "2026-11-21T18:52:30Z",
+        "match": "exact_match",
+        "chainId": "1"
+      }
+    ]
+  },
+  "applicationActivated": false,
+  "mainnetDepositWithdrawalTransactionsSent": 0
+}

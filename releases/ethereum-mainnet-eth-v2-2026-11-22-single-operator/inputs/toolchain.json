@@ -1,0 +1,11 @@
+{
+  "node": "v24.12.0",
+  "snarkjs": "0.7.6",
+  "snarkjsCliSha256": "6d787e37a4d1a2c6dd6032dadca09c0b3b007d4d4578bb6232a98136555d051a",
+  "circomWasmSha256": "96fc92a93768f38979db6c2bac4b1aa9fc7d66742121a63d4c4792d5b4037162",
+  "forge": "forge Version: 1.7.1\nCommit SHA: 4072e48705af9d93e3c0f6e29e93b5e9a40caed8\nBuild Timestamp: 2026-05-08T07:54:31.470926000Z (1778226871)\nBuild Profile: dist",
+  "solc": "0.8.28",
+  "optimizationRuns": 200,
+  "evmVersion": "shanghai",
+  "reviewedRelease": false
+}

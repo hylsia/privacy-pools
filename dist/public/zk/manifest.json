@@ -1,0 +1,46 @@
+{
+  "protocol": "hylsia-pp-v1",
+  "builtAt": "2026-11-16T07:54:33.113Z",
+  "ptau": {
+    "file": "powersOfTau28_hez_final_16.ptau",
+    "sha256": "2da90ce57a3f6fa94cdb695b0df73d89f4fe7196ce44440ba37a7c28d5d273a3"
+  },
+  "circuits": {
+    "withdraw": {
+      "wasm": {
+        "path": "withdraw.wasm",
+        "sha256": "4f0cb6505161780cd759ffcbfb9fee18af2939a9c5e143a14eb5b71ad6b47fa1",
+        "bytes": 2549474
+      },
+      "zkey": {
+        "path": "withdraw.zkey",
+        "sha256": "c6c0f48cf194a34422d0faa4f586c18f4547bbe2d8ba2dd1d94eafb36da02c73",
+        "bytes": 10775683
+      },
+      "vkey": {
+        "path": "withdraw.vkey.json",
+        "sha256": "1dc4aa6699fd8c403c9322bda1b63c01ed87c28c73dd993f3f188d497936d2a1",
+        "bytes": 3840
+      },
+      "nPublic": 6
+    },
+    "commitment": {
+      "wasm": {
+        "path": "commitment.wasm",
+        "sha256": "00b219d406248c3276f91c635c9e4ec8d0d6d593d0bf55ea6123c537bb64a9b1",
+        "bytes": 2382009
+      },
+      "zkey": {
+        "path": "commitment.zkey",
+        "sha256": "06464000c466aeaf3900d2b5b20dcebc768e678fcbfa0321a8afef81801fe931",
+        "bytes": 747499
+      },
+      "vkey": {
+        "path": "commitment.vkey.json",
+        "sha256": "139d663703e1607edee64c2331550b890396e9f7afb809bde18ef9826dbb2db1",
+        "bytes": 3474
+      },
+      "nPublic": 4
+    }
+  }
+}

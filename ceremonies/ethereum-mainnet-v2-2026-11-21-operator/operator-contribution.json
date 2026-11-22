@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "targetChainId": 1,
+  "targetProtocol": "hylsia-pp-v2-eth",
+  "purpose": "One local operator contribution, awaiting independent participants and finalization",
+  "createdAt": "2026-11-21T15:12:40.057Z",
+  "originalCeremonyManifestSha256": "a9d41a1c509d2753e7fbbef58e0b1585d964ff062da328068327f2d2722f5ce5",
+  "phase1Sha256": "1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922",
+  "phase1VerificationLogSha256": "e0a7deea27e2c6a7c872aec2895c0a27063fc6480062c8505bd3fd66554ce191",
+  "productionReady": false,
+  "reviewedRelease": false,
+  "broadcastAllowed": false,
+  "independentlyReviewed": false,
+  "independentParticipantCountEstablished": false,
+  "circuits": {
+    "withdraw": {
+      "key": "withdraw_0001.zkey",
+      "bytes": 10810706,
+      "sha256": "bb391dc981537f4447a1baea5dc08cdb3ce4bf6d235f11dd011289aae92508a6",
+      "contributionHash": "8795376efd2dd5f9aaf2269e1252a85f8bfe0e43417d54b71d09e4433ee7efdc441fb17a677648e2587489cca872cb7cd7a4b6ecb7c749c820d883265906b347",
+      "contributionCount": 1,
+      "transcript": {
+        "type": 0,
+        "transcript": "657c214cdbddb1fb182cd8140c482a128525f40e7b232c8a488aa10592617d7cb33d630bdd079f5e613b0da23c2efb2d28b50dfb6af1bbec4105a2839355fa85",
+        "name": "hylsia-local-operator-2026-11-21"
+      },
+      "verifiedAgainstR1csAndPhase1": true,
+      "verificationLog": "withdraw-verify.log",
+      "verificationLogSha256": "1fa656c02b70e1723e01496ce608879456ebfec679e16faa1f84cfa1d3357755",
+      "bellmanChallenge": "withdraw_0001.mpcparams",
+      "bellmanChallengeBytes": 9777500,
+      "bellmanChallengeSha256": "db99242535bf635da3bfaebe32e2b9201f94f5c58d89f3f43b596468a25358d6"
+    },
+    "commitment": {
+      "key": "commitment_0001.zkey",
+      "bytes": 782522,
+      "sha256": "7eba1f249cf7b2fb25a9fcd638ff86c2f028a68afc45bd4d074cc3dbe57a301a",
+      "contributionHash": "f4af9d61894cc2f5d958afa3bd1aa2ce515408ecb5a39eaeca529395b78f1f56eb59648f36ebad4cc451eb7e56faf9be96aa31dfe9b83acd572d5bd305900fca",
+      "contributionCount": 1,
+      "transcript": {
+        "type": 0,
+        "transcript": "10f5afb27d54829ac52d99fbf7b5fd92516e96e488af5bf8d492fd540eab4463e53797f758e4de7769d288229c500c6f2276fbbbfc29cd545dd1d5d19a902d37",
+        "name": "hylsia-local-operator-2026-11-21"
+      },
+      "verifiedAgainstR1csAndPhase1": true,
+      "verificationLog": "commitment-verify.log",
+      "verificationLogSha256": "982eea18a96d558e963031d83aebf5c2e382240ef289469715a98ec63e9639fa",
+      "bellmanChallenge": "commitment_0001.mpcparams",
+      "bellmanChallengeBytes": 699100,
+      "bellmanChallengeSha256": "468a82cd877ba2f3838786200a655862c2e87acdced0ad06dbcf000cc0a275fd"
+    }
+  },
+  "finishedAt": "2026-11-21T15:13:16.311Z"
+}

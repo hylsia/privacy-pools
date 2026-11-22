@@ -1,0 +1,793 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@import "tailwindcss";
+@import "tw-animate-css";
+/* Font Awesome base styles go in the base layer so Tailwind size utilities (h-4 w-4 …) override its 1em default. */
+@import "@fortawesome/fontawesome-svg-core/styles.css" layer(base);
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm:  0.5rem;
+  --radius-md:  0.75rem;
+  --radius-lg:  1rem;
+  --radius-xl:  1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius:     0.75rem;
+
+  --color-background:           var(--background);
+  --color-foreground:           var(--foreground);
+  --color-card:                 var(--card);
+  --color-card-foreground:      var(--card-foreground);
+  --color-popover:              var(--popover);
+  --color-popover-foreground:   var(--popover-foreground);
+  --color-primary:              var(--primary);
+  --color-primary-foreground:   var(--primary-foreground);
+  --color-secondary:            var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:                var(--muted);
+  --color-muted-foreground:     var(--muted-foreground);
+  --color-accent:               var(--accent);
+  --color-accent-foreground:    var(--accent-foreground);
+  --color-destructive:          var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border:               var(--border);
+  --color-input:                var(--input);
+  --color-ring:                 var(--ring);
+  --color-chart-1:              var(--chart-1);
+  --color-chart-2:              var(--chart-2);
+  --color-chart-3:              var(--chart-3);
+  --color-chart-4:              var(--chart-4);
+  --color-chart-5:              var(--chart-5);
+  --color-sidebar:              var(--sidebar);
+  --color-sidebar-foreground:   var(--sidebar-foreground);
+  --color-sidebar-primary:      var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent:       var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border:       var(--sidebar-border);
+  --color-sidebar-ring:         var(--sidebar-ring);
+
+  /* Trading semantic */
+  --color-profit:               var(--profit);
+  --color-loss:                 var(--loss);
+  --color-warning:              var(--warning);
+}
+
+/* ══════════════════════════════════════════════
+   CSS VARIABLES — Light Mode (Default)
+══════════════════════════════════════════════ */
+:root {
+  --radius: 0.75rem;
+
+  --background:             #F4F3FF;
+  --foreground:             #14143F;
+  --card:                   #FFFFFF;
+  --card-foreground:        #14143F;
+  --popover:                #FFFFFF;
+  --popover-foreground:     #14143F;
+
+  --primary:                #4A44C4;
+  --primary-foreground:     #FFFFFF;
+
+  --secondary:              #E8E6FF;
+  --secondary-foreground:   #24245A;
+  --muted:                  #E8E6FF;
+  --muted-foreground:       #5E5F8F;
+  --accent:                 #4A44C4;
+  --accent-foreground:      #FFFFFF;
+
+  --destructive:            #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border:                 #D2CFF5;
+  --input:                  #E8E6FF;
+  --ring:                   #8F8CF080;
+
+  /* Charts */
+  --chart-1: #AEB4FF;
+  --chart-2: #4A44C4;
+  --chart-3: #D97706;
+  --chart-4: #5E5F8F;
+  --chart-5: #14143F;
+
+  /* Sidebar */
+  --sidebar:                    #F4F3FF;
+  --sidebar-foreground:         #14143F;
+  --sidebar-primary:            #4A44C4;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent:             #E8E6FF;
+  --sidebar-accent-foreground:  #14143F;
+  --sidebar-border:             #D2CFF5;
+  --sidebar-ring:               #AEB4FF;
+
+  /* Trading semantic */
+  --profit:  #1E9E7E;
+  --loss:    #888888;
+  --warning: #999999;
+
+  /* Mascot trim */
+  --gold: #8A6410;
+}
+
+/* ══════════════════════════════════════════════
+   CSS VARIABLES — Dark Mode
+══════════════════════════════════════════════ */
+.dark {
+  --background:             #0A0C2A;
+  --foreground:             #ECEBFF;
+  --card:                   #10133A;
+  --card-foreground:        #ECEBFF;
+  --popover:                #10133A;
+  --popover-foreground:     #ECEBFF;
+
+  --primary:                #AEB4FF;
+  --primary-foreground:     #0A0C2A;
+
+  --secondary:              #171A47;
+  --secondary-foreground:   #B9BCEC;
+  --muted:                  #171A47;
+  --muted-foreground:       #8D92C8;
+  --accent:                 #AEB4FF;
+  --accent-foreground:      #0A0C2A;
+
+  --destructive:            #FCA5A5;
+  --destructive-foreground: #1A0A0A;
+
+  --border:                 #23265C;
+  --input:                  #171A47;
+  --ring:                   #AEB4FF50;
+
+  /* Charts */
+  --chart-1: #AEB4FF;
+  --chart-2: #8A90F0;
+  --chart-3: #F2DCA6;
+  --chart-4: #8D92C8;
+  --chart-5: #ECEBFF;
+
+  /* Sidebar */
+  --sidebar:                    #0A0C2A;
+  --sidebar-foreground:         #ECEBFF;
+  --sidebar-primary:            #AEB4FF;
+  --sidebar-primary-foreground: #0A0C2A;
+  --sidebar-accent:             #10133A;
+  --sidebar-accent-foreground:  #ECEBFF;
+  --sidebar-border:             #23265C;
+  --sidebar-ring:               #AEB4FF;
+
+  /* Trading semantic */
+  --profit:  #7FE7C4;
+  --loss:    #6B6F9E;
+  --warning: #888888;
+
+  /* Mascot trim */
+  --gold: #F2DCA6;
+}
+
+/* ══════════════════════════════════════════════
+   LIGHT THEME OVERRIDES
+══════════════════════════════════════════════ */
+.light {
+  --background:             #F4F3FF;
+  --foreground:             #14143F;
+  --card:                   #FFFFFF;
+  --card-foreground:        #14143F;
+  --popover:                #FFFFFF;
+  --popover-foreground:     #14143F;
+
+  --primary:                #4A44C4;
+  --primary-foreground:     #FFFFFF;
+
+  --secondary:              #E8E6FF;
+  --secondary-foreground:   #24245A;
+  --muted:                  #E8E6FF;
+  --muted-foreground:       #5E5F8F;
+  --accent:                 #4A44C4;
+  --accent-foreground:      #FFFFFF;
+
+  --destructive:            #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border:                 #D2CFF5;
+  --input:                  #E8E6FF;
+  --ring:                   #8F8CF066;
+
+  --chart-1: #AEB4FF;
+  --chart-2: #4A44C4;
+  --chart-3: #D97706;
+  --chart-4: #5E5F8F;
+  --chart-5: #14143F;
+
+  --sidebar:                    #F4F3FF;
+  --sidebar-foreground:         #14143F;
+  --sidebar-primary:            #4A44C4;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent:             #E8E6FF;
+  --sidebar-accent-foreground:  #14143F;
+  --sidebar-border:             #D2CFF5;
+  --sidebar-ring:               #AEB4FF;
+
+  --profit:  #1E9E7E;
+  --loss:    #888888;
+  --warning: #999999;
+
+  /* Mascot trim */
+  --gold: #8A6410;
+}
+
+/* ══════════════════════════════════════════════
+   BASE RESET
+══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* smooth anchor scrolling only when the user allows motion */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* landing: keyboard focus and native anchors clear the fixed nav pill */
+html:has(.landing-root) { scroll-padding-top: 5rem; }
+
+/* landing: framer-motion measures scroll targets against the root scroller and
+   warns while it is position: static; body is already relative, so nothing moves */
+html:has(.landing-root) { position: relative; }
+
+/* landing: the opaque .landing-root (with its own sky) covers the body's fixed
+   glow / grid / dot layers below, so they are not drawn at all; otherwise each
+   is a viewport-sized compositing layer and #root a page-sized overlap layer */
+html:has(.landing-root) body::before,
+html:has(.landing-root) body::after { display: none; }
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", "Space Grotesk", system-ui, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ── Animated radial glow background (Dark Mode Only) ── */
+.dark body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 45% at 15% 8%,  rgba(174,180,255,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 35% at 85% 85%, rgba(174,180,255,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 55% at 50% 50%, rgba(174,180,255,0.015) 0%, transparent 65%);
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.light body::before { opacity: 0.4; }
+
+/* ── Subtle grid overlay (Dark Mode Only) ── */
+.dark body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 52px 52px;
+  pointer-events: none;
+}
+
+/* Light mode background subtle pattern */
+body:not(.dark)::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+#root { position: relative; z-index: 1; }
+
+/* ══════════════════════════════════════════════
+   TYPOGRAPHY
+══════════════════════════════════════════════ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* The bare rule above is unlayered, so it beats every Tailwind utility and the
+   layered .landing-root heading rules below (before this fix all landing
+   headings computed to Inter 700). Inside the landing, roll these three
+   properties back to the layered styles: utilities on a heading win again, and
+   unstyled headings fall back to the @layer components rules. */
+.landing-root :is(h1, h2, h3, h4, h5, h6) {
+  font-family: revert-layer;
+  font-weight: revert-layer;
+  letter-spacing: revert-layer;
+}
+
+/* The Pools dashboard (PoolsShell's .app-root, and its sheets and dialogs) gets
+   the same roll-back, so its heading utilities win as on the landing: page
+   titles in Space Grotesk 600 (font-display), card titles in Inter 600. */
+.app-root :is(h1, h2, h3, h4, h5, h6) {
+  font-family: revert-layer;
+  font-weight: revert-layer;
+  letter-spacing: revert-layer;
+}
+
+/* sections that SectionLink moves focus to (it gives them tabindex="-1") draw no outline */
+.landing-root :where(section, main)[tabindex="-1"]:focus { outline: none; }
+
+code, pre, .font-mono { font-family: "JetBrains Mono", "Fira Code", monospace !important; }
+
+/* ══════════════════════════════════════════════
+   GLASSMORPHISM
+══════════════════════════════════════════════ */
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border);
+}
+
+.glass-card {
+  background: var(--card);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient shimmer top border */
+.glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--primary) 30%,
+    rgba(174,180,255,0.3) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ══════════════════════════════════════════════
+   NEON GLOW
+══════════════════════════════════════════════ */
+.glow-red {
+  box-shadow:
+    0 0 10px rgba(174,180,255,0.35),
+    0 0 35px rgba(174,180,255,0.12),
+    0 0 70px rgba(174,180,255,0.05);
+}
+
+.glow-red-sm {
+  box-shadow:
+    0 0 6px rgba(174,180,255,0.3),
+    0 0 18px rgba(174,180,255,0.1);
+}
+
+.glow-red-text {
+  text-shadow:
+    0 0 10px rgba(174,180,255,0.8),
+    0 0 28px rgba(174,180,255,0.3);
+}
+
+.glow-green {
+  box-shadow:
+    0 0 8px rgba(174,180,255,0.35),
+    0 0 22px rgba(174,180,255,0.12);
+}
+
+.glow-primary { box-shadow: 0 0 20px rgba(174,180,255,0.2); }
+
+/* ══════════════════════════════════════════════
+   GRADIENT TEXT
+══════════════════════════════════════════════ */
+.gradient-text-red {
+  background: linear-gradient(135deg, #AEB4FF 0%, #4A44C4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyber {
+  background: linear-gradient(135deg, var(--foreground) 0%, #AEB4FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ══════════════════════════════════════════════
+   STAT CARD
+══════════════════════════════════════════════ */
+.stat-card {
+  position: relative;
+  background: var(--card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0.5;
+}
+
+.stat-card:hover {
+  border-color: var(--primary);
+  box-shadow:
+    0 0 18px rgba(174,180,255,0.06),
+    0 8px 32px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════════════
+   ANIMATED ELEMENTS
+══════════════════════════════════════════════ */
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  60%  { transform: scale(1.8); opacity: 0;   }
+  100% { transform: scale(1);   opacity: 0;   }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-4px); }
+}
+
+@keyframes scan-line {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes fade-in {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+@keyframes border-beam {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam calc(var(--duration)*1s) infinite linear;
+}
+
+.live-dot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-dot::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--profit);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg,
+    var(--muted) 25%,
+    var(--accent) 50%,
+    var(--muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+/* ══════════════════════════════════════════════
+   WEB3 TABLE ROWS
+══════════════════════════════════════════════ */
+.web3-row {
+  border-bottom: 1px solid var(--border);
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.web3-row:hover {
+  background: var(--accent);
+  border-bottom-color: var(--primary);
+}
+
+.web3-row:hover::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--primary), transparent);
+}
+
+/* ══════════════════════════════════════════════
+   SCROLLBAR
+══════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* ══════════════════════════════════════════════
+   SHADCN BASE OVERRIDES
+══════════════════════════════════════════════ */
+@layer base {
+  * { @apply border-border outline-ring/50; }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02","cv03","cv04","cv11";
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  a[href], select:not(:disabled) { @apply cursor-pointer; }
+}
+
+/* ══════════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════════ */
+@layer components {
+  /* Landing: Inter body, Space Grotesk 600 display headings, Inter 600 card titles
+     (fonts loaded in the @import at the top). Utilities on a heading override these. */
+  .landing-root {
+    font-family: var(--font-sans);
+  }
+  .landing-root :where(h1, h2) {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    font-feature-settings: normal;
+  }
+  .landing-root :where(h3, h4) {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2rem);
+  }
+
+  .flex { min-width: 0; min-height: 0; }
+
+  .text-profit  { color: var(--profit); }
+  .text-loss    { color: var(--loss); }
+  .text-warning { color: var(--warning);  }
+
+  .bg-profit { background-color: color-mix(in oklch, var(--profit) 12%, transparent); }
+  .bg-loss   { background-color: color-mix(in oklch, var(--loss) 12%, transparent); }
+
+  /* Neon badges */
+  .badge-neon-red {
+    background: color-mix(in oklch, var(--primary) 12%, transparent);
+    border: 1px solid color-mix(in oklch, var(--primary) 35%, transparent);
+    color: var(--primary);
+    box-shadow: 0 0 8px color-mix(in oklch, var(--primary) 15%, transparent);
+  }
+
+  .badge-neon-green {
+    background: color-mix(in oklch, var(--profit) 12%, transparent);
+    border: 1px solid color-mix(in oklch, var(--profit) 35%, transparent);
+    color: var(--profit);
+    box-shadow: 0 0 8px color-mix(in oklch, var(--profit) 15%, transparent);
+  }
+
+  .badge-active {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 2px 10px; border-radius: 9999px;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+    background: color-mix(in oklch, var(--profit) 12%, transparent);
+    color: var(--profit);
+    border: 1px solid color-mix(in oklch, var(--profit) 30%, transparent);
+    box-shadow: 0 0 8px color-mix(in oklch, var(--profit) 12%, transparent);
+  }
+
+  .badge-paused {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 2px 10px; border-radius: 9999px;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+    background: color-mix(in oklch, var(--warning) 12%, transparent);
+    color: var(--warning);
+    border: 1px solid color-mix(in oklch, var(--warning) 30%, transparent);
+  }
+
+  .badge-stopped, .badge-error {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 2px 10px; border-radius: 9999px;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+    background: color-mix(in oklch, var(--loss) 12%, transparent);
+    color: var(--loss);
+    border: 1px solid color-mix(in oklch, var(--loss) 30%, transparent);
+  }
+
+  .accent-line {
+    background: linear-gradient(90deg, var(--primary), #4A44C4);
+  }
+
+  .card-hover { @apply transition-all duration-200 hover:border-primary/40; }
+}
+
+/* ══════════════════════════════════════════════
+   COMPONENT OVERRIDES
+══════════════════════════════════════════════ */
+
+/* Cards — glass effect */
+.bg-card {
+  background: var(--card) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* Tabs */
+[role="tablist"] {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+[role="tab"][data-state="active"] {
+  background: color-mix(in oklch, var(--primary) 15%, transparent) !important;
+  color: var(--primary) !important;
+  box-shadow: 0 0 12px color-mix(in oklch, var(--primary) 20%, transparent) !important;
+}
+
+/* Dropdowns */
+[data-radix-popper-content-wrapper] > div {
+  background: var(--popover) !important;
+  border: 1px solid var(--border) !important;
+  backdrop-filter: blur(24px) !important;
+}
+
+/* Dialog */
+[role="dialog"] {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  backdrop-filter: blur(32px) !important;
+}
+
+/* Inputs */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  background: var(--input) !important;
+  border-color: var(--border) !important;
+  color: var(--foreground) !important;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--primary) 12%, transparent), 0 0 12px color-mix(in oklch, var(--primary) 8%, transparent) !important;
+  outline: none;
+}
+
+/* Primary buttons — interactive gradient */
+button[class*="bg-primary"],
+[class*="bg-primary"][role="button"] {
+  background: var(--primary) !important;
+  box-shadow: 0 0 12px rgba(174,180,255,0.15), 0 2px 8px rgba(0,0,0,0.2) !important;
+  transition: all 0.2s ease !important;
+  color: #000000 !important;
+}
+
+button[class*="bg-primary"]:hover {
+  box-shadow: 0 0 22px rgba(174,180,255,0.3), 0 4px 16px rgba(174,180,255,0.15) !important;
+  transform: translateY(-1px) !important;
+  color: #000000 !important;
+}
+
+/* Text color on hover for elements with primary background */
+.hover\:bg-primary\/10:hover,
+.hover\:bg-primary\/15:hover,
+.hover\:bg-primary\/20:hover {
+  color: var(--primary) !important;
+}
+
+/* Filter/tab buttons: when active (bg-primary) show white text */
+button.bg-primary,
+button[class*="bg-primary/"] {
+  color: #000000 !important;
+}
+
+/* Hover on outline/ghost buttons that turn primary on hover */
+button:hover[class*="hover:bg-primary"],
+button:hover[class*="hover:border-primary"] {
+  color: #000000 !important;
+}
+
+/* Recharts */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border) !important;
+}
+
+.recharts-default-tooltip {
+  background: var(--popover) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0.75rem !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+/* TradingView chart */
+.tv-lightweight-charts { border-radius: 0.75rem; overflow: hidden; }
+
+/* Legal pages prose */
+.prose-custom h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+.prose-custom h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+.prose-custom p {
+  margin-bottom: 0.75rem;
+}
+.prose-custom ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}

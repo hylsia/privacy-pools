@@ -1,0 +1,14 @@
+{
+  "status": "confirmed",
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "chainId": 1,
+  "pool": "0xAC84cFAC0a7C55760197b0681576CD27837cCfea",
+  "poolReceiptBlock": "26465235",
+  "explorerVerification": "pending-reconciliation",
+  "deployer": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+  "nonce": 0,
+  "confirmedAt": "2026-11-21T18:41:51.727Z",
+  "sourceVerification": "Sourcify exact runtime match for all three contracts; pool creation match is partial",
+  "sourceVerificationReport": "docs/security/ethereum-mainnet-deployment-verification.json",
+  "sourceVerificationReportSha256": "7dc7e4436fe69a2f09c9c1de3ae10ae0b887cefd02b674c466aeb95ee8484bf9"
+}

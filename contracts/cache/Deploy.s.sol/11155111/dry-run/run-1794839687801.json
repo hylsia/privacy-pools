@@ -1,0 +1,19 @@
+{
+  "transactions": [
+    {
+      "rpc": "https://rpc.sepolia.ethpandaops.io"
+    },
+    {
+      "rpc": "https://rpc.sepolia.ethpandaops.io"
+    },
+    {
+      "rpc": "https://rpc.sepolia.ethpandaops.io"
+    },
+    {
+      "rpc": "https://rpc.sepolia.ethpandaops.io"
+    },
+    {
+      "rpc": "https://rpc.sepolia.ethpandaops.io"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "protocol": "hylsia-pp-v2-candidate",
+  "targetChainId": 4663,
+  "createdAt": "2026-11-21T07:23:10.175Z",
+  "workspace": "ceremonies/robinhood-mainnet-v2-2026-11-21-challenges",
+  "manifestSha256": "a9d41a1c509d2753e7fbbef58e0b1585d964ff062da328068327f2d2722f5ce5",
+  "status": "awaiting-phase1-verification-and-independent-contributions",
+  "productionReady": false,
+  "broadcastAllowed": false,
+  "phase1TranscriptVerified": false,
+  "phase2ContributionCount": 0,
+  "reviewedRelease": false,
+  "integrityFilesChecked": 86,
+  "phase1": {
+    "url": "https://circom.info/powersOfTau28_hez_final_16.ptau",
+    "provenance": "https://github.com/iden3/snarkjs#7-prepare-phase-2",
+    "blake2b512": "6a6277a2f74e1073601b4f9fed6e1e55226917efb0f0db8a07d98ab01df1ccf43eb0e8c3159432acd4960e2f29fe84a4198501fa54c8dad9e43297453efec125",
+    "path": "phase1.ptau",
+    "bytes": 75580568,
+    "sha256": "1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922",
+    "integrity": "matches-published-digest",
+    "fullTranscriptVerification": "pending"
+  },
+  "toolchain": {
+    "node": "v24.12.0",
+    "circom2": "0.2.23",
+    "snarkjs": "0.7.6",
+    "circomlib": "2.0.5",
+    "circomWasmSha256": "96fc92a93768f38979db6c2bac4b1aa9fc7d66742121a63d4c4792d5b4037162",
+    "snarkjsCliSha256": "6d787e37a4d1a2c6dd6032dadca09c0b3b007d4d4578bb6232a98136555d051a",
+    "optimization": "O1"
+  },
+  "circuits": {
+    "withdraw": {
+      "publicSignals": 6,
+      "r1csSha256": "3af7cf8c1c9eb6346ceb134519a3138a135aa561e2f5d632c181c220fcc698d3",
+      "matchesTestedDevelopmentR1cs": true,
+      "initialZkey": {
+        "bytes": 10810280,
+        "sha256": "a9c95ec93fcda5a504d6922cbbb887b4a4f9cee90660be2262d194d12cabb626"
+      },
+      "challenge": {
+        "bytes": 9777116,
+        "sha256": "1cabf470d537be866a894b04410419a1e413d92a98a96caad480d1fca4c3e555"
+      }
+    },
+    "commitment": {
+      "publicSignals": 4,
+      "r1csSha256": "083e2f086d9f7093500374dba83afedc976f1276cef776ae6eb079a323fd4493",
+      "matchesTestedDevelopmentR1cs": true,
+      "initialZkey": {
+        "bytes": 782096,
+        "sha256": "63053cca5d933893bdc9ee2918c3fee15666b1d7fc21f2590705115d335057ad"
+      },
+      "challenge": {
+        "bytes": 698716,
+        "sha256": "95f0ce1dcd780fae66e831c0106eec383bd642dc6480a8b436e3a04186d2ff4d"
+      }
+    }
+  },
+  "notes": [
+    "Local preparation evidence only. No production proving key or mainnet deployment.",
+    "Full phase-1 transcript verification was interrupted and remains pending.",
+    "Independent phase-2 contributions, finalization, review and production validation remain pending."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-21T19:00:13.624Z",
+  "archive": "releases/ethereum-mainnet-eth-v2-2026-11-22-single-operator.tar.gz",
+  "sha256": "f033607498841e2ab2f114c8971c871dc98d23b40ed684e162f1e2c9ee93cbf2",
+  "bytes": 88978106,
+  "entries": 275,
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "trustModel": "single-operator",
+  "independentReview": false,
+  "contains": "Exact final-key Ethereum native ETH release, public broadcast receipts, source-verification inputs/results and acceptance evidence",
+  "excludes": [
+    "Forge build output",
+    "Forge signing cache",
+    ".env",
+    "wallet private keys"
+  ],
+  "privateKeyNonPersistenceScan": {
+    "files": 266,
+    "matchingFiles": 0
+  },
+  "archiveEntriesChecked": true
+}

@@ -1,0 +1,11 @@
+[32mtemplate instances[0m: 142
+non-linear constraints: 878
+linear constraints: 890
+public inputs: 2
+private inputs: 2
+public outputs: 2
+wires: 1772
+labels: 2604
+[32mWritten successfully:[0m releases/ethereum-mainnet-eth-v2-2026-11-22-single-operator/inputs/commitment/commitment.r1cs
+[32mWritten successfully:[0m releases/ethereum-mainnet-eth-v2-2026-11-22-single-operator/inputs/commitment/commitment_js/commitment.wasm
+[32mEverything went okay[0m

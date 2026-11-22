@@ -1,0 +1,26 @@
+Compiling 32 files with Solc 0.8.28
+Solc 0.8.28 finished in 1.30s
+Compiler run successful!
+
+Ran 17 tests for test/PrivacyPoolV2ETH.t.sol:PrivacyPoolV2ETHTest
+[PASS] test_changeRagequitUsesSameSpendNullifierAsPrivatePath() (gas: 8302264)
+[PASS] test_copiedDepositCannotStrandOriginalRagequit() (gas: 8302599)
+[PASS] test_copierCannotRagequitOriginalLabel() (gas: 6086556)
+[PASS] test_duplicateSecretsCanBothRagequit() (gas: 7108219)
+[PASS] test_duplicateSecretsSupportTwoPrivateWithdrawalChains() (gas: 13218196)
+[PASS] test_invalidRecoveryNonceRejectsBeforeAcceptingFunds() (gas: 47829)
+[PASS] test_nativeETHAssetAndAdministrativeSeparation() (gas: 12888)
+[PASS] test_nativeETHRejectsInvalidDeploymentRolesOrVerifierCode() (gas: 4933698)
+[PASS] test_originalRagequitStillWorksAfterWindDown() (gas: 6357589)
+[PASS] test_privateSpendReplayFails() (gas: 8517008)
+[PASS] test_ragequitOfCopiedDepositDoesNotConsumeOriginalPrivateSpend() (gas: 8301610)
+[PASS] test_ragequitReplayFails() (gas: 6359427)
+[PASS] test_sameNoteCannotSpendViaBothExitPaths() (gas: 8035702)
+[PASS] test_sharedOwnerPublisherCanDeployAndPublish() (gas: 3220620)
+[PASS] test_sharedOwnerPublisherRetainsPrivateSpendAndPublicExit() (gas: 8309941)
+[PASS] test_v1ProofRejectedByV2Verifier() (gas: 318670)
+[PASS] test_v2ProofRejectedByV1Verifier() (gas: 2337652)
+Suite result: ok. 17 passed; 0 failed; 0 skipped; finished in 55.81ms (295.77ms CPU time)
+
+Ran 1 test suite in 64.04ms (55.81ms CPU time): 17 tests passed, 0 failed, 0 skipped (17 total tests)
+2026-11-21T14:57:06.354577Z  WARN evm::traces: failed to flush signature cache err=failed to create file "/Users/imrybrndo/.foundry/cache/signatures": Operation not permitted (os error 1)

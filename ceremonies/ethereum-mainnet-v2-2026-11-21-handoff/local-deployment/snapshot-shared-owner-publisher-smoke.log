@@ -1,0 +1,5 @@
+
+> hylsia@1.0.0 zk:v2:deploy:smoke
+> node --import tsx scripts/privacy/v2/deployment-smoke.ts --network ethereum-mainnet --env-signer-local --shared-owner-publisher-local
+
+Native ETH deployment template passed (owned local chain 1, env signer true, shared owner/publisher true): simulation, receipts, custody, runtime bytecode and key non-persistence checks. DEVELOPMENT verifiers; no public chain or deployment record.

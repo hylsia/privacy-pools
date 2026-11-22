@@ -1,0 +1,6 @@
+{
+  "protocol": "hylsia-pp-v2-eth",
+  "status": "prepared-for-operator-authorized-deployment",
+  "productionReady": false,
+  "reviewedRelease": false
+}

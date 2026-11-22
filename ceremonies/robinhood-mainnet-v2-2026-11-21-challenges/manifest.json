@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "protocol": "hylsia-pp-v2-candidate",
+  "targetChainId": 4663,
+  "status": "awaiting-phase1-verification-and-independent-contributions",
+  "productionReady": false,
+  "broadcastAllowed": false,
+  "phase2ContributionCount": 0,
+  "phase1TranscriptVerified": false,
+  "createdAt": "2026-11-21T07:23:10.175Z",
+  "warning": "UNSAFE initial keys. Await independent contributions, finalization, and review. Never deploy or publish as proving assets.",
+  "phase1": {
+    "url": "https://circom.info/powersOfTau28_hez_final_16.ptau",
+    "provenance": "https://github.com/iden3/snarkjs#7-prepare-phase-2",
+    "blake2b512": "6a6277a2f74e1073601b4f9fed6e1e55226917efb0f0db8a07d98ab01df1ccf43eb0e8c3159432acd4960e2f29fe84a4198501fa54c8dad9e43297453efec125",
+    "path": "phase1.ptau",
+    "bytes": 75580568,
+    "sha256": "1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922",
+    "integrity": "matches-published-digest",
+    "fullTranscriptVerification": "pending"
+  },
+  "sources": {
+    "sources/circuits/v2/withdraw.circom": {
+      "bytes": 4127,
+      "sha256": "ad4ec5a0873b4c452c7b7c242f35112c95a7d7bc51f2bec2dd393633af9e842d"
+    },
+    "sources/circuits/v2/commitment.circom": {
+      "bytes": 1522,
+      "sha256": "668f0b3e1476fdf09e3c47d34b2c4d08e2902bb8abe3edcd229445a842e4d11c"
+    },
+    "sources/circuits/lib/merkleProof.circom": {
+      "bytes": 1184,
+      "sha256": "717f184331a403ac2cc458a85d05df6f989884baeb9ef0c93eead3fb567e2413"
+    },
+    "sources/package.json": {
+      "bytes": 4227,
+      "sha256": "3480beb59adece52cdff5de7ae727ef1074cf2a4950c520da12832ba00dfb7f2"
+    },
+    "sources/package-lock.json": {
+      "bytes": 554372,
+      "sha256": "b3fac482bcb0d7cca3822bc32025900c1f2018b90eeb87586ffc48204a9ba77e"
+    },
+    "sources/node_modules/circomlib/circuits/README.md": {
+      "bytes": 12604,
+      "sha256": "02db8a261a4c93b3e492d9d29bbe14b4c988690c0c5cf99c17e66cf389c383d4"
+    },
+    "sources/node_modules/circomlib/circuits/aliascheck.circom": {
+      "bytes": 995,
+      "sha256": "7df7542461a68c1564a55be8f01d75571c0e2555a08a078abeba43e1ea032eb4"
+    },
+    "sources/node_modules/circomlib/circuits/babyjub.circom": {
+      "bytes": 2454,
+      "sha256": "fdd45cd3edd59621c203d478218c1a623a03acdd4d5be997208310bc72df61ce"
+    },
+    "sources/node_modules/circomlib/circuits/binsub.circom": {
+      "bytes": 1790,
+      "sha256": "089b76d543c0e9c1c7793f5175d36b3bad42adde4b6dd15e1cedb11fbdc3c482"
+    },
+    "sources/node_modules/circomlib/circuits/binsum.circom": {
+      "bytes": 2264,
+      "sha256": "8aa153baf5791d96d06dce837c1e19b9ecc3a7dc65054132d5dd189b60bfcfc2"
+    },
+    "sources/node_modules/circomlib/circuits/bitify.circom": {
+      "bytes": 2276,
+      "sha256": "688f121303a2dd0154ceeda8d2f53a9d2d26789d10a69a46acd534642725683e"
+    },
+    "sources/node_modules/circomlib/circuits/comparators.circom": {
+      "bytes": 2802,
+      "sha256": "fd0c7723ee56e1467df1861131157cbb108e156fe2d9ec64895c8e68de14db20"
+    },
+    "sources/node_modules/circomlib/circuits/compconstant.circom": {
+      "bytes": 1823,
+      "sha256": "94c5cc93b589a940acbfecdb98babc2efc253ad4298814399fb41109faa3b50d"
+    },
+    "sources/node_modules/circomlib/circuits/eddsa.circom": {
+      "bytes": 3639,
+      "sha256": "a9d64b6459a1275b14ba79ca9e13c2fe4fca681739e39dc6d1234997efb37f77"
+    },
+    "sources/node_modules/circomlib/circuits/eddsamimc.circom": {
+      "bytes": 3432,
+      "sha256": "a0c5e55efedcfed8ba1fb22d46a5898597d7474f563ce198abc97cfd2dfbb232"
+    },
+    "sources/node_modules/circomlib/circuits/eddsamimcsponge.circom": {
+      "bytes": 3457,
+      "sha256": "c86f85d9305978953e02e4dacbc8e7b6053a73b76488ef7216d7b08b3e8a55f9"
+    },
+    "sources/node_modules/circomlib/circuits/eddsaposeidon.circom": {
+      "bytes": 3425,
+      "sha256": "3e85c0aac26da6e8dd10565643790f82c905e88db0c5a673853e329618e1c29e"
+    },
+    "sources/node_modules/circomlib/circuits/escalarmul.circom": {
+      "bytes": 8204,
+      "sha256": "1c77bde2799351afcaf25a8bd813ecf0dc56e0304ed7e4128aa0c012cca45745"
+    },
+    "sources/node_modules/circomlib/circuits/escalarmulany.circom": {
+      "bytes": 5790,
+      "sha256": "a881382804dc0e0fde2784c6b6e507928b5e0f14bef927c50f4529c05d2fa9de"
+    },
+    "sources/node_modules/circomlib/circuits/escalarmulfix.circom": {
+      "bytes": 8603,
+      "sha256": "32c3f23c33d6325156ba42ebcd83cd75f944ccb5fb4db042ddb9bec987b2c7e6"
+    },
+    "sources/node_modules/circomlib/circuits/escalarmulw4table.circom": {
+      "bytes": 1391,
+      "sha256": "c22dcc91ea7f363029ac9ee06c804868e0ccbcf0c58d6e0840b102a229fd1181"
+    },
+    "sources/node_modules/circomlib/circuits/gates.circom": {
+      "bytes": 2067,
+      "sha256": "890e2514ddcbce77e0a5f6867749401fc182664a4b901d6d7bf6856197e0d87c"
+    },
+    "sources/node_modules/circomlib/circuits/mimc.circom": {
+      "bytes": 9489,
+      "sha256": "511bf6471eadfc7c4c17a96820bb6902f2262acfad7d285421d428db3b3c71c8"
+    },
+    "sources/node_modules/circomlib/circuits/mimcsponge.circom": {
+      "bytes": 20287,
+      "sha256": "3adfd1876931eba559ba2ee899c2f6f89194626cf8104770844f2febcac4691a"
+    },
+    "sources/node_modules/circomlib/circuits/montgomery.circom": {
+      "bytes": 3169,
+      "sha256": "63692077f57f4467960b172830abbeb4dfafdc3744cde6863433cccea7f0f2bf"
+    },
+    "sources/node_modules/circomlib/circuits/multiplexer.circom": {
+      "bytes": 3033,
+      "sha256": "d955fa5da40c3066442f2a4b5688f3e2985bca4cec0607b20310babc97f97116"
+    },
+    "sources/node_modules/circomlib/circuits/mux1.circom": {
+      "bytes": 1254,
+      "sha256": "eaa61d34d40b03a1695212c012f5793c06f6d0db634878a0246249ba12a40922"
+    },
+    "sources/node_modules/circomlib/circuits/mux2.circom": {
+      "bytes": 1635,
+      "sha256": "3eb37808cb9a1eee5cc3659dae3c5544abec28aa1cf42852732fdbbca8272968"
+    },
+    "sources/node_modules/circomlib/circuits/mux3.circom": {
+      "bytes": 2123,
+      "sha256": "5fe2d242bf2482df1d75401d18399c4eac3e1d34d89622290c98f4aefa21dba4"
+    },
+    "sources/node_modules/circomlib/circuits/mux4.circom": {
+      "bytes": 4627,
+      "sha256": "df75a7969324854fc038efd370ee413d8a5b3680fe1e26bb6d4a2f3b293acbfc"
+    },
+    "sources/node_modules/circomlib/circuits/pedersen.circom": {
+      "bytes": 8477,
+      "sha256": "eec016424bbad5c4878e38e5b9614712536ef220e007f0e02a6181d0cb58cd37"
+    },
+    "sources/node_modules/circomlib/circuits/pedersen_old.circom": {
+      "bytes": 3309,
+      "sha256": "97e0d50542adb63324d576bcdf27a0be591f407fb2362456d5ef7d07e010796f"
+    },
+    "sources/node_modules/circomlib/circuits/pointbits.circom": {
+      "bytes": 3729,
+      "sha256": "7db4382cf32ab0ad7032d47d31543ca9e60fe8bfb9e7ef0bf0a6cf77a406bcba"
+    },
+    "sources/node_modules/circomlib/circuits/poseidon.circom": {
+      "bytes": 5165,
+      "sha256": "2582464669b69827164bd08ee0337997e1957f2ab4f00cdd86d533ca5e9d9234"
+    },
+    "sources/node_modules/circomlib/circuits/poseidon_constants.circom": {
+      "bytes": 1943473,
+      "sha256": "94c9e4b5ea891ab4d1ba626f1d719f8c661014d9b628f6096c803f75f39e3eee"
+    },
+    "sources/node_modules/circomlib/circuits/poseidon_constants_old.circom": {
+      "bytes": 898152,
+      "sha256": "1f597465bf5376d846b7e24d0e7aed417c7146ed3219689e1e2db1772fd25b38"
+    },
+    "sources/node_modules/circomlib/circuits/poseidon_old.circom": {
+      "bytes": 2498,
+      "sha256": "7311ed7812eede7082447cc7f70cea1d547170df9d5ae6afd8a482ac11749a38"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/ch.circom": {
+      "bytes": 1071,
+      "sha256": "facb33f8ed5dfcd3590eaaf8921c37c27839564d61d565597de1412b78e42cf8"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/constants.circom": {
+      "bytes": 2069,
+      "sha256": "90f910027d360162896b81a4a1654fae16b74d90d43521d172f72c6deb52104e"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/main.circom": {
+      "bytes": 1016,
+      "sha256": "07d3fcfbd8bada316e854f7d670130c905294dc0f3f9f2d5510e0a14b8c0345e"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/maj.circom": {
+      "bytes": 1212,
+      "sha256": "64f2483ac7db29099bc5d241f5870dec0b5172599d40c56084565ebd589247ff"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/rotate.circom": {
+      "bytes": 915,
+      "sha256": "a20bc425cd4b516696c374da461b2f1c046b5782c18741ecea4a0a45e29ba7ab"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/sha256.circom": {
+      "bytes": 2521,
+      "sha256": "6aa5f2907798187ab41d1e5d44439498d27523691b611736b3b68362759d1b1e"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/sha256_2.circom": {
+      "bytes": 2634,
+      "sha256": "af7705903862164feb46d20ab467d2736d07449eadd09a69be59a62dc8b84aff"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/sha256compression.circom": {
+      "bytes": 4782,
+      "sha256": "aec6674cee5d0b775d7b27279a98b7fbabf5258885d56e01dec9a4a356dbc69c"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/sha256compression_function.circom": {
+      "bytes": 2812,
+      "sha256": "1418439e9609ff086f6cce56341eb3add999c875bd48e2dc9f84a252781bc9e5"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/shift.circom": {
+      "bytes": 992,
+      "sha256": "874990de968719b50e7f0d6e713926f016c53f3f1ce33ee354b5b1984f2aa4de"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/sigma.circom": {
+      "bytes": 1971,
+      "sha256": "0af88a750958ecabbb6e4c17b3d5d4f8efdd8841b98a1e5186ba1092a74d2024"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/sigmaplus.circom": {
+      "bytes": 1464,
+      "sha256": "43d34fce0160ac9fa8d03425f2349bf8a29dd0448226774a8030f853642c9760"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/t1.circom": {
+      "bytes": 1604,
+      "sha256": "0488b16db02b2dd43429d964096aedf261c31ab6a2484a67b91bf3ccfc6bf38b"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/t2.circom": {
+      "bytes": 1415,
+      "sha256": "58c7e16ae5144ad72a900e1d470eb7d9d317f2a033f1ea85090e56548fa5d431"
+    },
+    "sources/node_modules/circomlib/circuits/sha256/xor3.circom": {
+      "bytes": 1276,
+      "sha256": "d2d65d9ef40a37c1b46e4fae0dd1e7f9084ab917c870153dbb6303c6e4e378f1"
+    },
+    "sources/node_modules/circomlib/circuits/sign.circom": {
+      "bytes": 1088,
+      "sha256": "172255ff7d11d48958d9836f88bb40792009b94be19ba94ed01982a12c276dfb"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smthash_mimc.circom": {
+      "bytes": 1356,
+      "sha256": "497ef4698cdc7d44f2ba6bc0f2733984bc4fb1896c17613b02260fe0343a5235"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smthash_poseidon.circom": {
+      "bytes": 1357,
+      "sha256": "c4a15a8585b858b0ff463877d4fd137fcdef297911738947acb6346e45bf8e20"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smtlevins.circom": {
+      "bytes": 4148,
+      "sha256": "ebd399c61631ce8dfd45005f008b42b0e61dfa919ba1d2c4cf56025db99e8e2f"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smtprocessor.circom": {
+      "bytes": 13674,
+      "sha256": "1ee74d2cd14f18e7a7f5866e06b3ba3c10221fc7d7a4ba738bd1fb4b81f24ea8"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smtprocessorlevel.circom": {
+      "bytes": 2674,
+      "sha256": "36e0b6a9f83b5688e3d7b18fe8122e105b1c53687600785c5829f3e6bec3dcc2"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smtprocessorsm.circom": {
+      "bytes": 7580,
+      "sha256": "d54b37b5c9e121cbceec2872f743d4be68c8ec4182dfaf1ec59549d16d7e4ca8"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smtverifier.circom": {
+      "bytes": 3934,
+      "sha256": "adf1370b4a5bf3337c59883585b1a5124ac7e18518709b7c0b76293df9339a97"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smtverifierlevel.circom": {
+      "bytes": 1753,
+      "sha256": "0926c062e2bcded731a8f944d0ec0cb3875868e0ab8f88371937e64dec898850"
+    },
+    "sources/node_modules/circomlib/circuits/smt/smtverifiersm.circom": {
+      "bytes": 4490,
+      "sha256": "3551c671748332ba4c27c8b81fe94bad630f01a184cc9c5f6d3bc07ec6c0d1b9"
+    },
+    "sources/node_modules/circomlib/circuits/switcher.circom": {
+      "bytes": 1172,
+      "sha256": "350c325368fa69460f2c9fc79d1928ee8f56b576c88321199e770e1a9e9d5ef1"
+    }
+  },
+  "repository": {
+    "head": "ee97e4f49bced54e926657491bab7468a163dc71",
+    "dirty": true,
+    "reviewedRelease": false
+  },
+  "toolchain": {
+    "node": "v24.12.0",
+    "circom2": "0.2.23",
+    "snarkjs": "0.7.6",
+    "circomlib": "2.0.5",
+    "circomWasmSha256": "96fc92a93768f38979db6c2bac4b1aa9fc7d66742121a63d4c4792d5b4037162",
+    "snarkjsCliSha256": "6d787e37a4d1a2c6dd6032dadca09c0b3b007d4d4578bb6232a98136555d051a",
+    "optimization": "O1"
+  },
+  "circuits": {
+    "withdraw": {
+      "publicSignals": 6,
+      "phase2ContributionCount": 0,
+      "files": {
+        "withdraw/withdraw.r1cs": {
+          "bytes": 3219912,
+          "sha256": "3af7cf8c1c9eb6346ceb134519a3138a135aa561e2f5d632c181c220fcc698d3"
+        },
+        "withdraw/withdraw_0000.zkey": {
+          "bytes": 10810280,
+          "sha256": "a9c95ec93fcda5a504d6922cbbb887b4a4f9cee90660be2262d194d12cabb626"
+        },
+        "withdraw/withdraw_0000.mpcparams": {
+          "bytes": 9777116,
+          "sha256": "1cabf470d537be866a894b04410419a1e413d92a98a96caad480d1fca4c3e555"
+        },
+        "withdraw/withdraw_js/withdraw.wasm": {
+          "bytes": 2326418,
+          "sha256": "798fc607a79e5bd79326e2056d5cb756693892fb3365cdb787d1655f2af1c82d"
+        },
+        "withdraw/withdraw_js/generate_witness.js": {
+          "bytes": 697,
+          "sha256": "4995a2e6b01432f76182abec6a831fdaf7f840384035072002ccaa43101b14d4"
+        },
+        "withdraw/withdraw_js/witness_calculator.js": {
+          "bytes": 10441,
+          "sha256": "3bfca49ee5489996a827a1e5a0c8a1f558dbd99e657c7591f5b32e0d33189ce4"
+        },
+        "withdraw/withdraw.sym": {
+          "bytes": 2044649,
+          "sha256": "3ca74ac008e9380fbfe63d426e26752bdebd77231777884d2e6eab597ac330b9"
+        }
+      }
+    },
+    "commitment": {
+      "publicSignals": 4,
+      "phase2ContributionCount": 0,
+      "files": {
+        "commitment/commitment.r1cs": {
+          "bytes": 242684,
+          "sha256": "083e2f086d9f7093500374dba83afedc976f1276cef776ae6eb079a323fd4493"
+        },
+        "commitment/commitment_0000.zkey": {
+          "bytes": 782096,
+          "sha256": "63053cca5d933893bdc9ee2918c3fee15666b1d7fc21f2590705115d335057ad"
+        },
+        "commitment/commitment_0000.mpcparams": {
+          "bytes": 698716,
+          "sha256": "95f0ce1dcd780fae66e831c0106eec383bd642dc6480a8b436e3a04186d2ff4d"
+        },
+        "commitment/commitment_js/commitment.wasm": {
+          "bytes": 2169842,
+          "sha256": "0ad4a877543b8102fff989bdc5f3bc24a0057c025e13da52872fc06a7ee9c422"
+        },
+        "commitment/commitment_js/generate_witness.js": {
+          "bytes": 697,
+          "sha256": "4995a2e6b01432f76182abec6a831fdaf7f840384035072002ccaa43101b14d4"
+        },
+        "commitment/commitment_js/witness_calculator.js": {
+          "bytes": 10441,
+          "sha256": "3bfca49ee5489996a827a1e5a0c8a1f558dbd99e657c7591f5b32e0d33189ce4"
+        },
+        "commitment/commitment.sym": {
+          "bytes": 129701,
+          "sha256": "e377cc60f573f923363cd94eb34cf58c06fdc886974f3c9aa11d45e513df3bbc"
+        }
+      }
+    }
+  },
+  "logs": {
+    "logs/withdraw-compile.log": "a99c309ee1ee1941dc64d954b91926c0ad8985367572c8aed7c56b359721293a",
+    "logs/withdraw-setup.log": "e479cbbb4705f362dcd8e1497b262e427076091c767d4b8162bc53c3e3f92b1b",
+    "logs/withdraw-initial-verify.log": "41c237ad99a98a9b625b458205c0e1a39d24e1583a3c077e9733ee4d1fc6b70d",
+    "logs/withdraw-challenge-export.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/commitment-compile.log": "dc10ce5363dd84cf82607386ca02883ca3a4ddcfc66a3f40a5c56ebbda79ca83",
+    "logs/commitment-setup.log": "998af93ba635717543e1027e08a8689641713383ede5d4e2fe0329fc2b6b49cd",
+    "logs/commitment-initial-verify.log": "1b59c0a628c7f77a06c9977f64ad4fbbbe0974638ba40824c25770bdf156d299",
+    "logs/commitment-challenge-export.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

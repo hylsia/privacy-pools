@@ -1,0 +1,41 @@
+{
+  "chainId": 1,
+  "protocol": "hylsia-pp-v2-eth",
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "artifactManifestSha256": "546ae336183d51bf580d7118b5a945581d6d2bdbb988b12d305e338350e55c32",
+  "authorizationMode": "single-operator-user-authorized",
+  "independentReview": false,
+  "deployer": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+  "owner": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+  "publisher": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+  "minDepositWei": "0",
+  "nonce": 0,
+  "feeCapWei": "181194967",
+  "simulatedGas": "14533112",
+  "estimatedMaximumWei": "2633326749247304",
+  "budgetWei": null,
+  "readyForBroadcast": true,
+  "blockers": [],
+  "simulatedContracts": [
+    {
+      "name": "PoseidonT3",
+      "address": "0xcd9c4359aec7c1c778dea7e95c22b2c509eea085"
+    },
+    {
+      "name": "PoseidonT4",
+      "address": "0x250e9cb1ddbcca6c2adb24f34a351daba7e0dceb"
+    },
+    {
+      "name": "WithdrawVerifierV2ETH",
+      "address": "0x3482c211042894457b48f1870fc83731cd085b13"
+    },
+    {
+      "name": "CommitmentVerifierV2ETH",
+      "address": "0x0170a74750475bf45ded1b1873d63ca583ee42ea"
+    },
+    {
+      "name": "PrivacyPoolV2ETH",
+      "address": "0xac84cfac0a7c55760197b0681576cd27837ccfea"
+    }
+  ]
+}

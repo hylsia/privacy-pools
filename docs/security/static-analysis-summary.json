@@ -1,0 +1,59 @@
+{
+  "slitherVersion": "0.11.4",
+  "cryticCompileVersion": "0.3.11",
+  "contracts": 8,
+  "detectors": 100,
+  "results": 134,
+  "groups": [
+    {
+      "check": "arbitrary-send-eth",
+      "impact": "High",
+      "count": 1
+    },
+    {
+      "check": "incorrect-return",
+      "impact": "High",
+      "count": 8
+    },
+    {
+      "check": "missing-zero-check",
+      "impact": "Low",
+      "count": 2
+    },
+    {
+      "check": "timestamp",
+      "impact": "Low",
+      "count": 1
+    },
+    {
+      "check": "assembly",
+      "impact": "Informational",
+      "count": 12
+    },
+    {
+      "check": "pragma",
+      "impact": "Informational",
+      "count": 1
+    },
+    {
+      "check": "solc-version",
+      "impact": "Informational",
+      "count": 2
+    },
+    {
+      "check": "low-level-calls",
+      "impact": "Informational",
+      "count": 1
+    },
+    {
+      "check": "missing-inheritance",
+      "impact": "Informational",
+      "count": 2
+    },
+    {
+      "check": "naming-convention",
+      "impact": "Informational",
+      "count": 104
+    }
+  ]
+}

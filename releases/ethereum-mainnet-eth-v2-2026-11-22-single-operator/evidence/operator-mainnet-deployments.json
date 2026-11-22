@@ -1,0 +1,11 @@
+[
+  {
+    "chainId": 1,
+    "protocol": "hylsia-pp-v2-eth",
+    "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+    "artifactManifestSha256": "546ae336183d51bf580d7118b5a945581d6d2bdbb988b12d305e338350e55c32",
+    "deployer": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+    "evidencePath": "docs/security/ethereum-mainnet-single-operator-release.json",
+    "evidenceSha256": "ecd6d65007865ec76ece0137cf01c804745e067a13b0f33ef7ad07b015a3d96c"
+  }
+]

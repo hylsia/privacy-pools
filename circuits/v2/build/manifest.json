@@ -1,0 +1,26 @@
+{
+  "protocol": "hylsia-pp-v2-candidate",
+  "status": "development",
+  "productionReady": false,
+  "compilerOptimization": "O1",
+  "ptauSha256": "2da90ce57a3f6fa94cdb695b0df73d89f4fe7196ce44440ba37a7c28d5d273a3",
+  "merkleProofSha256": "717f184331a403ac2cc458a85d05df6f989884baeb9ef0c93eead3fb567e2413",
+  "circuits": {
+    "withdraw": {
+      "sourceSha256": "ad4ec5a0873b4c452c7b7c242f35112c95a7d7bc51f2bec2dd393633af9e842d",
+      "r1csSha256": "3af7cf8c1c9eb6346ceb134519a3138a135aa561e2f5d632c181c220fcc698d3",
+      "zkeySha256": "1ca78235344191af3c6acefe8bf228048038f93edb86a8a01eb1842d7291ee7a",
+      "wasmSha256": "798fc607a79e5bd79326e2056d5cb756693892fb3365cdb787d1655f2af1c82d",
+      "vkeySha256": "9e18689ebe0de7db7d77c9b76a7d7b589c2cbc829a84100b6e497b43b7a4f263",
+      "verifierSha256": "5449620382bf1cf44505852e6c92b210c90e10e279116e7b10ca156523c949ca"
+    },
+    "commitment": {
+      "sourceSha256": "668f0b3e1476fdf09e3c47d34b2c4d08e2902bb8abe3edcd229445a842e4d11c",
+      "r1csSha256": "083e2f086d9f7093500374dba83afedc976f1276cef776ae6eb079a323fd4493",
+      "zkeySha256": "8c28b724ed6ff49e2e9ec416fc9f2fba8a367414338bce735dde4809bc653bae",
+      "wasmSha256": "0ad4a877543b8102fff989bdc5f3bc24a0057c025e13da52872fc06a7ee9c422",
+      "vkeySha256": "f0f4797afe241ce8ecfdf46f553b60d1bf201d40b1a51ed20b7e639a598c1984",
+      "verifierSha256": "cedb9db8eca26b919aafee7dc22b0f866d3c77caf781f9a50669f9b1eea9280d"
+    }
+  }
+}

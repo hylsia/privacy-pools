@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-11-22",
+  "scope": "Read-only evidence; neither dates nor identities are independently authenticated by Git metadata",
+  "publicRepository": {
+    "name": "hylsia/hylsia_privacy_pools",
+    "createdAt": "2026-11-21T16:57:06Z",
+    "head": "2a37ecb32cc5980ae3e95ccb35bbc8b13e813c5e",
+    "contributorAccounts": [
+      {
+        "login": "nemesisd-d",
+        "contributions": 20
+      },
+      {
+        "login": "hylsia",
+        "contributions": 1
+      }
+    ]
+  },
+  "localHistory": {
+    "head": "b46edcbb82a36dfb7410e2b84032e00cf8ebd4b7",
+    "commitCount": 22,
+    "authorCommitterTimestampMismatches": 0,
+    "commits": [
+      {
+        "sha": "5328dd02ae9511af0b782ae40cd6922824513de2",
+        "authorDate": "2026-11-17T12:36:52+08:00",
+        "committerDate": "2026-11-17T12:36:52+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "ec7228837ccdcf75937158aff8c6e6c9c29c66a2",
+        "authorDate": "2026-11-17T21:07:40+08:00",
+        "committerDate": "2026-11-17T21:07:40+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "b36639e9bf73bd8e15cf722c59d3572c9482a0e4",
+        "authorDate": "2026-11-18T01:52:04+08:00",
+        "committerDate": "2026-11-18T01:52:04+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "f08248bc5f637e96e942cf62226fb8012f99abfc",
+        "authorDate": "2026-11-18T07:34:09+08:00",
+        "committerDate": "2026-11-18T07:34:09+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "f53ffd53ff16e47cae7681e9ff67253222533053",
+        "authorDate": "2026-11-18T10:55:29+08:00",
+        "committerDate": "2026-11-18T10:55:29+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "2f7153419c8637c1bc384ab8c13b12929ec1437c",
+        "authorDate": "2026-11-18T15:06:09+08:00",
+        "committerDate": "2026-11-18T15:06:09+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "c0a17b31384296fb07c54ec31c7d1f9ca406de4d",
+        "authorDate": "2026-11-18T15:28:42+08:00",
+        "committerDate": "2026-11-18T15:28:42+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "846365cd514a860ee09f7105bcd0b925a738d953",
+        "authorDate": "2026-11-18T15:37:04+08:00",
+        "committerDate": "2026-11-18T15:37:04+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "843ed95a2142c12448b699b419b9e549d2bdd752",
+        "authorDate": "2026-11-18T16:01:38+08:00",
+        "committerDate": "2026-11-18T16:01:38+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "fe6a0a83abb821663025231f0b26a261f2da1eff",
+        "authorDate": "2026-11-18T16:01:41+08:00",
+        "committerDate": "2026-11-18T16:01:41+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "f44f31d8c307897b8de821a99bf59580ae881e64",
+        "authorDate": "2026-11-18T17:23:41+08:00",
+        "committerDate": "2026-11-18T17:23:41+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "1fe579167d2a982e178551e432704e01817ae704",
+        "authorDate": "2026-11-18T22:48:16+08:00",
+        "committerDate": "2026-11-18T22:48:16+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "e957e3950399a5e050aaf3bfe0e3e4b1a25a88a8",
+        "authorDate": "2026-11-18T23:05:33+08:00",
+        "committerDate": "2026-11-18T23:05:33+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "b0faf404c7a6e078fa8302f0012e8f8f793e4a37",
+        "authorDate": "2026-11-18T23:23:35+08:00",
+        "committerDate": "2026-11-18T23:23:35+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "d66a50108bc377cee6b1c96b3b7ad2c594d7c19f",
+        "authorDate": "2026-11-18T23:37:41+08:00",
+        "committerDate": "2026-11-18T23:37:41+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "99d97d3c27fe44ce3a47f65947a86ba2ab77ebb3",
+        "authorDate": "2026-11-18T23:50:56+08:00",
+        "committerDate": "2026-11-18T23:50:56+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "338b3e96fbd1f7dd74baaa1c9af0f57774214305",
+        "authorDate": "2026-11-19T13:07:20+08:00",
+        "committerDate": "2026-11-19T13:07:20+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "2170828dd510c40d9e0e5eef6422c364f439c16b",
+        "authorDate": "2026-11-19T20:44:51+08:00",
+        "committerDate": "2026-11-19T20:44:51+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "ee97e4f49bced54e926657491bab7468a163dc71",
+        "authorDate": "2026-11-21T02:49:21+08:00",
+        "committerDate": "2026-11-21T02:49:21+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "106975871dcdef5c47f441fefc742826e266bc3b",
+        "authorDate": "2026-11-22T00:51:05+08:00",
+        "committerDate": "2026-11-22T00:51:05+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "a2c6d23bad3aa3020cadbf865162f767c6bd53d6",
+        "authorDate": "2026-11-22T10:35:26+08:00",
+        "committerDate": "2026-11-22T10:35:26+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      },
+      {
+        "sha": "b46edcbb82a36dfb7410e2b84032e00cf8ebd4b7",
+        "authorDate": "2026-11-22T11:01:24+08:00",
+        "committerDate": "2026-11-22T11:01:24+08:00",
+        "author": "Ray Brando",
+        "committer": "Ray Brando",
+        "signatureStatus": "N"
+      }
+    ]
+  },
+  "testnetDeployment": {
+    "source": "Read-only JSON-RPC receipt and block from the public Robinhood Chain Testnet endpoint",
+    "rpcHost": "rpc.testnet.chain.robinhood.com",
+    "chainId": 46630,
+    "transactionHash": "0x3ee049e43af2f4e13f6cbff628a81a8dc623a88badda1497febc47677cea92f0",
+    "receiptStatus": "0x1",
+    "contractAddress": "0xbbc4362133e4d50157206cc907909d0c0211913f",
+    "blockNumber": 154136462,
+    "blockHash": "0x1611290d95f76596e2de1319df4b4478dd45d64abccb9648eb9c3134d3a5b7ef",
+    "blockTimestamp": 1794845177,
+    "blockTimeUtc": "2026-11-16T16:06:17.000Z",
+    "limits": "The receipt demonstrates contract deployment before public GitHub creation, not authorship or correctness of the full repository."
+  },
+  "methodologySources": [
+    "https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github",
+    "https://docs.github.com/en/account-and-profile/how-tos/contribution-settings/troubleshooting-missing-contributions",
+    "https://docs.github.com/en/account-and-profile/reference/profile-contributions-reference",
+    "https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification"
+  ]
+}

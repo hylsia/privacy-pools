@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /health/
+Disallow: /zk/
+
+Sitemap: https://www.hylsiapools.tech/sitemap.xml

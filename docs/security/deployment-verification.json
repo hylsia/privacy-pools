@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-19",
+  "chainId": 46630,
+  "sourceCommit": "5328dd0",
+  "reviewBaseCommit": "99d97d3c27fe44ce3a47f65947a86ba2ab77ebb3",
+  "compiler": "0.8.28+commit.7893614a",
+  "settings": {
+    "remappings": [
+      "forge-std/=lib/forge-std/src/",
+      "poseidon-solidity/=../node_modules/poseidon-solidity/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "src/PrivacyPool.sol": "PrivacyPool"
+    },
+    "evmVersion": "shanghai",
+    "libraries": {}
+  },
+  "linkedLibraries": {
+    "../node_modules/poseidon-solidity/PoseidonT3.sol:PoseidonT3": "0xff4044510b61a631ab192cd4f60d45731c0c12f3",
+    "../node_modules/poseidon-solidity/PoseidonT4.sol:PoseidonT4": "0xa553216d49f01c26e2a8ed86860d4c789c194b33"
+  },
+  "constructorArgs": "0x0000000000000000000000002629ccae35e1e6f5958ed618a75de28d08763bc40000000000000000000000004d62c8c148a847788c385b436ed760bde5b1b80c0000000000000000000000007594c1923973ee026040e935df93244a41de7977000000000000000000000000fb1bfc18294a884b040f3e4b633a08f1d577ffe20000000000000000000000000000000000000000000000000000000000000000",
+  "poolRuntimeMatch": true,
+  "verifierRuntimeMatch": true,
+  "librariesMatchAfterSelfAddressSubstitution": true,
+  "poolRuntimeKeccak256": "0x228fce23d5ef067007049ca81bac41ad36bd50a8cd8b829ed45efb5e3051171c"
+}

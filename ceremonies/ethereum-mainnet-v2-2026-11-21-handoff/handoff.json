@@ -1,0 +1,1794 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Independent phase-2 contribution and native ETH source review handoff",
+  "targetChainId": 1,
+  "targetProtocol": "hylsia-pp-v2-eth",
+  "originalCeremonyTargetChainId": 4663,
+  "originalCeremonyManifestSha256": "a9d41a1c509d2753e7fbbef58e0b1585d964ff062da328068327f2d2722f5ce5",
+  "circuitScope": "Circuits are shared across target chains; deployment scope and final release binding must use Ethereum chain ID 1.",
+  "createdAt": "2026-11-21T14:46:59.681Z",
+  "productionReady": false,
+  "reviewedRelease": false,
+  "broadcastAllowed": false,
+  "phase1TranscriptVerified": true,
+  "phase2ContributionCount": 1,
+  "files": {
+    "ceremony/sources/circuits/v2/withdraw.circom": {
+      "sha256": "ad4ec5a0873b4c452c7b7c242f35112c95a7d7bc51f2bec2dd393633af9e842d",
+      "bytes": 4127
+    },
+    "ceremony/sources/circuits/v2/commitment.circom": {
+      "sha256": "668f0b3e1476fdf09e3c47d34b2c4d08e2902bb8abe3edcd229445a842e4d11c",
+      "bytes": 1522
+    },
+    "ceremony/sources/circuits/lib/merkleProof.circom": {
+      "sha256": "717f184331a403ac2cc458a85d05df6f989884baeb9ef0c93eead3fb567e2413",
+      "bytes": 1184
+    },
+    "ceremony/sources/package.json": {
+      "sha256": "3480beb59adece52cdff5de7ae727ef1074cf2a4950c520da12832ba00dfb7f2",
+      "bytes": 4227
+    },
+    "ceremony/sources/package-lock.json": {
+      "sha256": "b3fac482bcb0d7cca3822bc32025900c1f2018b90eeb87586ffc48204a9ba77e",
+      "bytes": 554372
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/README.md": {
+      "sha256": "02db8a261a4c93b3e492d9d29bbe14b4c988690c0c5cf99c17e66cf389c383d4",
+      "bytes": 12604
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/aliascheck.circom": {
+      "sha256": "7df7542461a68c1564a55be8f01d75571c0e2555a08a078abeba43e1ea032eb4",
+      "bytes": 995
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/babyjub.circom": {
+      "sha256": "fdd45cd3edd59621c203d478218c1a623a03acdd4d5be997208310bc72df61ce",
+      "bytes": 2454
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/binsub.circom": {
+      "sha256": "089b76d543c0e9c1c7793f5175d36b3bad42adde4b6dd15e1cedb11fbdc3c482",
+      "bytes": 1790
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/binsum.circom": {
+      "sha256": "8aa153baf5791d96d06dce837c1e19b9ecc3a7dc65054132d5dd189b60bfcfc2",
+      "bytes": 2264
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/bitify.circom": {
+      "sha256": "688f121303a2dd0154ceeda8d2f53a9d2d26789d10a69a46acd534642725683e",
+      "bytes": 2276
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/comparators.circom": {
+      "sha256": "fd0c7723ee56e1467df1861131157cbb108e156fe2d9ec64895c8e68de14db20",
+      "bytes": 2802
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/compconstant.circom": {
+      "sha256": "94c5cc93b589a940acbfecdb98babc2efc253ad4298814399fb41109faa3b50d",
+      "bytes": 1823
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/eddsa.circom": {
+      "sha256": "a9d64b6459a1275b14ba79ca9e13c2fe4fca681739e39dc6d1234997efb37f77",
+      "bytes": 3639
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/eddsamimc.circom": {
+      "sha256": "a0c5e55efedcfed8ba1fb22d46a5898597d7474f563ce198abc97cfd2dfbb232",
+      "bytes": 3432
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/eddsamimcsponge.circom": {
+      "sha256": "c86f85d9305978953e02e4dacbc8e7b6053a73b76488ef7216d7b08b3e8a55f9",
+      "bytes": 3457
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/eddsaposeidon.circom": {
+      "sha256": "3e85c0aac26da6e8dd10565643790f82c905e88db0c5a673853e329618e1c29e",
+      "bytes": 3425
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/escalarmul.circom": {
+      "sha256": "1c77bde2799351afcaf25a8bd813ecf0dc56e0304ed7e4128aa0c012cca45745",
+      "bytes": 8204
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/escalarmulany.circom": {
+      "sha256": "a881382804dc0e0fde2784c6b6e507928b5e0f14bef927c50f4529c05d2fa9de",
+      "bytes": 5790
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/escalarmulfix.circom": {
+      "sha256": "32c3f23c33d6325156ba42ebcd83cd75f944ccb5fb4db042ddb9bec987b2c7e6",
+      "bytes": 8603
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/escalarmulw4table.circom": {
+      "sha256": "c22dcc91ea7f363029ac9ee06c804868e0ccbcf0c58d6e0840b102a229fd1181",
+      "bytes": 1391
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/gates.circom": {
+      "sha256": "890e2514ddcbce77e0a5f6867749401fc182664a4b901d6d7bf6856197e0d87c",
+      "bytes": 2067
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/mimc.circom": {
+      "sha256": "511bf6471eadfc7c4c17a96820bb6902f2262acfad7d285421d428db3b3c71c8",
+      "bytes": 9489
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/mimcsponge.circom": {
+      "sha256": "3adfd1876931eba559ba2ee899c2f6f89194626cf8104770844f2febcac4691a",
+      "bytes": 20287
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/montgomery.circom": {
+      "sha256": "63692077f57f4467960b172830abbeb4dfafdc3744cde6863433cccea7f0f2bf",
+      "bytes": 3169
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/multiplexer.circom": {
+      "sha256": "d955fa5da40c3066442f2a4b5688f3e2985bca4cec0607b20310babc97f97116",
+      "bytes": 3033
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/mux1.circom": {
+      "sha256": "eaa61d34d40b03a1695212c012f5793c06f6d0db634878a0246249ba12a40922",
+      "bytes": 1254
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/mux2.circom": {
+      "sha256": "3eb37808cb9a1eee5cc3659dae3c5544abec28aa1cf42852732fdbbca8272968",
+      "bytes": 1635
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/mux3.circom": {
+      "sha256": "5fe2d242bf2482df1d75401d18399c4eac3e1d34d89622290c98f4aefa21dba4",
+      "bytes": 2123
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/mux4.circom": {
+      "sha256": "df75a7969324854fc038efd370ee413d8a5b3680fe1e26bb6d4a2f3b293acbfc",
+      "bytes": 4627
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/pedersen.circom": {
+      "sha256": "eec016424bbad5c4878e38e5b9614712536ef220e007f0e02a6181d0cb58cd37",
+      "bytes": 8477
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/pedersen_old.circom": {
+      "sha256": "97e0d50542adb63324d576bcdf27a0be591f407fb2362456d5ef7d07e010796f",
+      "bytes": 3309
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/pointbits.circom": {
+      "sha256": "7db4382cf32ab0ad7032d47d31543ca9e60fe8bfb9e7ef0bf0a6cf77a406bcba",
+      "bytes": 3729
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/poseidon.circom": {
+      "sha256": "2582464669b69827164bd08ee0337997e1957f2ab4f00cdd86d533ca5e9d9234",
+      "bytes": 5165
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/poseidon_constants.circom": {
+      "sha256": "94c9e4b5ea891ab4d1ba626f1d719f8c661014d9b628f6096c803f75f39e3eee",
+      "bytes": 1943473
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/poseidon_constants_old.circom": {
+      "sha256": "1f597465bf5376d846b7e24d0e7aed417c7146ed3219689e1e2db1772fd25b38",
+      "bytes": 898152
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/poseidon_old.circom": {
+      "sha256": "7311ed7812eede7082447cc7f70cea1d547170df9d5ae6afd8a482ac11749a38",
+      "bytes": 2498
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/ch.circom": {
+      "sha256": "facb33f8ed5dfcd3590eaaf8921c37c27839564d61d565597de1412b78e42cf8",
+      "bytes": 1071
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/constants.circom": {
+      "sha256": "90f910027d360162896b81a4a1654fae16b74d90d43521d172f72c6deb52104e",
+      "bytes": 2069
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/main.circom": {
+      "sha256": "07d3fcfbd8bada316e854f7d670130c905294dc0f3f9f2d5510e0a14b8c0345e",
+      "bytes": 1016
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/maj.circom": {
+      "sha256": "64f2483ac7db29099bc5d241f5870dec0b5172599d40c56084565ebd589247ff",
+      "bytes": 1212
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/rotate.circom": {
+      "sha256": "a20bc425cd4b516696c374da461b2f1c046b5782c18741ecea4a0a45e29ba7ab",
+      "bytes": 915
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/sha256.circom": {
+      "sha256": "6aa5f2907798187ab41d1e5d44439498d27523691b611736b3b68362759d1b1e",
+      "bytes": 2521
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/sha256_2.circom": {
+      "sha256": "af7705903862164feb46d20ab467d2736d07449eadd09a69be59a62dc8b84aff",
+      "bytes": 2634
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/sha256compression.circom": {
+      "sha256": "aec6674cee5d0b775d7b27279a98b7fbabf5258885d56e01dec9a4a356dbc69c",
+      "bytes": 4782
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/sha256compression_function.circom": {
+      "sha256": "1418439e9609ff086f6cce56341eb3add999c875bd48e2dc9f84a252781bc9e5",
+      "bytes": 2812
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/shift.circom": {
+      "sha256": "874990de968719b50e7f0d6e713926f016c53f3f1ce33ee354b5b1984f2aa4de",
+      "bytes": 992
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/sigma.circom": {
+      "sha256": "0af88a750958ecabbb6e4c17b3d5d4f8efdd8841b98a1e5186ba1092a74d2024",
+      "bytes": 1971
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/sigmaplus.circom": {
+      "sha256": "43d34fce0160ac9fa8d03425f2349bf8a29dd0448226774a8030f853642c9760",
+      "bytes": 1464
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/t1.circom": {
+      "sha256": "0488b16db02b2dd43429d964096aedf261c31ab6a2484a67b91bf3ccfc6bf38b",
+      "bytes": 1604
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/t2.circom": {
+      "sha256": "58c7e16ae5144ad72a900e1d470eb7d9d317f2a033f1ea85090e56548fa5d431",
+      "bytes": 1415
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sha256/xor3.circom": {
+      "sha256": "d2d65d9ef40a37c1b46e4fae0dd1e7f9084ab917c870153dbb6303c6e4e378f1",
+      "bytes": 1276
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/sign.circom": {
+      "sha256": "172255ff7d11d48958d9836f88bb40792009b94be19ba94ed01982a12c276dfb",
+      "bytes": 1088
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smthash_mimc.circom": {
+      "sha256": "497ef4698cdc7d44f2ba6bc0f2733984bc4fb1896c17613b02260fe0343a5235",
+      "bytes": 1356
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smthash_poseidon.circom": {
+      "sha256": "c4a15a8585b858b0ff463877d4fd137fcdef297911738947acb6346e45bf8e20",
+      "bytes": 1357
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smtlevins.circom": {
+      "sha256": "ebd399c61631ce8dfd45005f008b42b0e61dfa919ba1d2c4cf56025db99e8e2f",
+      "bytes": 4148
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smtprocessor.circom": {
+      "sha256": "1ee74d2cd14f18e7a7f5866e06b3ba3c10221fc7d7a4ba738bd1fb4b81f24ea8",
+      "bytes": 13674
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smtprocessorlevel.circom": {
+      "sha256": "36e0b6a9f83b5688e3d7b18fe8122e105b1c53687600785c5829f3e6bec3dcc2",
+      "bytes": 2674
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smtprocessorsm.circom": {
+      "sha256": "d54b37b5c9e121cbceec2872f743d4be68c8ec4182dfaf1ec59549d16d7e4ca8",
+      "bytes": 7580
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smtverifier.circom": {
+      "sha256": "adf1370b4a5bf3337c59883585b1a5124ac7e18518709b7c0b76293df9339a97",
+      "bytes": 3934
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smtverifierlevel.circom": {
+      "sha256": "0926c062e2bcded731a8f944d0ec0cb3875868e0ab8f88371937e64dec898850",
+      "bytes": 1753
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/smt/smtverifiersm.circom": {
+      "sha256": "3551c671748332ba4c27c8b81fe94bad630f01a184cc9c5f6d3bc07ec6c0d1b9",
+      "bytes": 4490
+    },
+    "ceremony/sources/node_modules/circomlib/circuits/switcher.circom": {
+      "sha256": "350c325368fa69460f2c9fc79d1928ee8f56b576c88321199e770e1a9e9d5ef1",
+      "bytes": 1172
+    },
+    "ceremony/withdraw/withdraw.r1cs": {
+      "sha256": "3af7cf8c1c9eb6346ceb134519a3138a135aa561e2f5d632c181c220fcc698d3",
+      "bytes": 3219912
+    },
+    "ceremony/withdraw/withdraw_0000.zkey": {
+      "sha256": "a9c95ec93fcda5a504d6922cbbb887b4a4f9cee90660be2262d194d12cabb626",
+      "bytes": 10810280
+    },
+    "ceremony/withdraw/withdraw_0000.mpcparams": {
+      "sha256": "1cabf470d537be866a894b04410419a1e413d92a98a96caad480d1fca4c3e555",
+      "bytes": 9777116
+    },
+    "ceremony/withdraw/withdraw_js/withdraw.wasm": {
+      "sha256": "798fc607a79e5bd79326e2056d5cb756693892fb3365cdb787d1655f2af1c82d",
+      "bytes": 2326418
+    },
+    "ceremony/withdraw/withdraw_js/generate_witness.js": {
+      "sha256": "4995a2e6b01432f76182abec6a831fdaf7f840384035072002ccaa43101b14d4",
+      "bytes": 697
+    },
+    "ceremony/withdraw/withdraw_js/witness_calculator.js": {
+      "sha256": "3bfca49ee5489996a827a1e5a0c8a1f558dbd99e657c7591f5b32e0d33189ce4",
+      "bytes": 10441
+    },
+    "ceremony/withdraw/withdraw.sym": {
+      "sha256": "3ca74ac008e9380fbfe63d426e26752bdebd77231777884d2e6eab597ac330b9",
+      "bytes": 2044649
+    },
+    "ceremony/commitment/commitment.r1cs": {
+      "sha256": "083e2f086d9f7093500374dba83afedc976f1276cef776ae6eb079a323fd4493",
+      "bytes": 242684
+    },
+    "ceremony/commitment/commitment_0000.zkey": {
+      "sha256": "63053cca5d933893bdc9ee2918c3fee15666b1d7fc21f2590705115d335057ad",
+      "bytes": 782096
+    },
+    "ceremony/commitment/commitment_0000.mpcparams": {
+      "sha256": "95f0ce1dcd780fae66e831c0106eec383bd642dc6480a8b436e3a04186d2ff4d",
+      "bytes": 698716
+    },
+    "ceremony/commitment/commitment_js/commitment.wasm": {
+      "sha256": "0ad4a877543b8102fff989bdc5f3bc24a0057c025e13da52872fc06a7ee9c422",
+      "bytes": 2169842
+    },
+    "ceremony/commitment/commitment_js/generate_witness.js": {
+      "sha256": "4995a2e6b01432f76182abec6a831fdaf7f840384035072002ccaa43101b14d4",
+      "bytes": 697
+    },
+    "ceremony/commitment/commitment_js/witness_calculator.js": {
+      "sha256": "3bfca49ee5489996a827a1e5a0c8a1f558dbd99e657c7591f5b32e0d33189ce4",
+      "bytes": 10441
+    },
+    "ceremony/commitment/commitment.sym": {
+      "sha256": "e377cc60f573f923363cd94eb34cf58c06fdc886974f3c9aa11d45e513df3bbc",
+      "bytes": 129701
+    },
+    "ceremony/phase1.ptau": {
+      "sha256": "1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922",
+      "bytes": 75580568
+    },
+    "ceremony/logs/withdraw-compile.log": {
+      "sha256": "a99c309ee1ee1941dc64d954b91926c0ad8985367572c8aed7c56b359721293a",
+      "bytes": 382
+    },
+    "ceremony/logs/withdraw-setup.log": {
+      "sha256": "e479cbbb4705f362dcd8e1497b262e427076091c767d4b8162bc53c3e3f92b1b",
+      "bytes": 461
+    },
+    "ceremony/logs/withdraw-initial-verify.log": {
+      "sha256": "41c237ad99a98a9b625b458205c0e1a39d24e1583a3c077e9733ee4d1fc6b70d",
+      "bytes": 771
+    },
+    "ceremony/logs/withdraw-challenge-export.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ceremony/logs/commitment-compile.log": {
+      "sha256": "dc10ce5363dd84cf82607386ca02883ca3a4ddcfc66a3f40a5c56ebbda79ca83",
+      "bytes": 389
+    },
+    "ceremony/logs/commitment-setup.log": {
+      "sha256": "998af93ba635717543e1027e08a8689641713383ede5d4e2fe0329fc2b6b49cd",
+      "bytes": 461
+    },
+    "ceremony/logs/commitment-initial-verify.log": {
+      "sha256": "1b59c0a628c7f77a06c9977f64ad4fbbbe0974638ba40824c25770bdf156d299",
+      "bytes": 771
+    },
+    "ceremony/logs/commitment-challenge-export.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ceremony/manifest.json": {
+      "sha256": "a9d41a1c509d2753e7fbbef58e0b1585d964ff062da328068327f2d2722f5ce5",
+      "bytes": 16184
+    },
+    "review-source/client/src/analytics.ts": {
+      "sha256": "afeeaef5b3af423869e2325200809a70ec8e13e6ea46e2c1f1910b5707a748f0",
+      "bytes": 3031
+    },
+    "review-source/client/src/App.tsx": {
+      "sha256": "fd0cca12c64379d906567f6ed4b449f22d02f94ec27ff2d78400eb6b9ffd87da",
+      "bytes": 5403
+    },
+    "review-source/client/src/areas.ts": {
+      "sha256": "7c23fca64a6ef060367d56e8ed307bd4a7048042094181f7907dc22879189477",
+      "bytes": 1235
+    },
+    "review-source/client/src/components/brand/HylsiaLogo.tsx": {
+      "sha256": "b10868bb1d94a58716cd6724343bf34f8fe53c33f987acc09b83588e504f7ff5",
+      "bytes": 1163
+    },
+    "review-source/client/src/components/brand/NetworkAttribution.tsx": {
+      "sha256": "60370f1fc67605334d4fa532b03397e14b785d95901c381384c05a66218a9fc3",
+      "bytes": 1524
+    },
+    "review-source/client/src/components/brand/NetworkMark.tsx": {
+      "sha256": "8eb49a18f70a588e93ffed88e903650bd81e58789739c18023db2112d3841c56",
+      "bytes": 5816
+    },
+    "review-source/client/src/components/brand/NoteDiamond.tsx": {
+      "sha256": "b92f64fe20fd763a81f6353febf0213dd7f73ba6abb7964f0631d768a1d90c8d",
+      "bytes": 1486
+    },
+    "review-source/client/src/components/brand/PoolMark.tsx": {
+      "sha256": "5bc5b548f4b0492f5ecdbbda8dc98fe5d8bc97fe747639057c104d1cdd5516c4",
+      "bytes": 1894
+    },
+    "review-source/client/src/components/brand/RobinhoodChain.tsx": {
+      "sha256": "77f55b3afb44836f285a53cae5022291897db5c44a3a91eaaa986e8bd1d1b2f5",
+      "bytes": 8016
+    },
+    "review-source/client/src/components/ErrorBoundary.tsx": {
+      "sha256": "3b0bdb7a19758fcd440138ccfb5f306b96836564f15d7c8c9663d7dd7417e972",
+      "bytes": 1688
+    },
+    "review-source/client/src/components/HeroMascot.tsx": {
+      "sha256": "fff3d7c3bb22fec3f7ff93f9b59d00dfdf9aa097d3c55127aaafbf2fded65bdf",
+      "bytes": 7070
+    },
+    "review-source/client/src/components/icons.tsx": {
+      "sha256": "ff44a120eba5d419b102dfd496c7543c3648688d6ffe46dd1f96a1e7d7b3c94d",
+      "bytes": 7917
+    },
+    "review-source/client/src/components/landing/links.ts": {
+      "sha256": "9c3529b6025a5d2f8e4505a974d85bb684b2a1e111375b6752ae5e433490afe4",
+      "bytes": 3137
+    },
+    "review-source/client/src/components/landing/parallax.tsx": {
+      "sha256": "93f11f08f67a6c520ee045a53aaef44ae5f6dc184582be068830f6c713ba0168",
+      "bytes": 13572
+    },
+    "review-source/client/src/components/landing/scene/Atmosphere.tsx": {
+      "sha256": "7562b3f3862c6f2dc119fd8cf9072026909e8a9519e0b9b13a7cf811001cec96",
+      "bytes": 7628
+    },
+    "review-source/client/src/components/landing/scene/bands-art.tsx": {
+      "sha256": "11f3576f10e781fd9cbb12e18493614efdb17c7ab98e7d257f53014d076e9109",
+      "bytes": 19214
+    },
+    "review-source/client/src/components/landing/scene/bands-ui.tsx": {
+      "sha256": "790833c0e582978701736a322c40a2a730253db10ace74be6d410016354ea808",
+      "bytes": 5377
+    },
+    "review-source/client/src/components/landing/scene/closing-dawn.tsx": {
+      "sha256": "257e8ab2c35444ffde7d5f3c0b45aa866716155dc702ca6be04a900981385e61",
+      "bytes": 10548
+    },
+    "review-source/client/src/components/landing/scene/Clouds.tsx": {
+      "sha256": "7f7156e48788d171ad4bf4e1eec26c7cc39ef7ec9fb28afd91dde95c7a27a875",
+      "bytes": 17664
+    },
+    "review-source/client/src/components/landing/scene/depth.tsx": {
+      "sha256": "fe3534c04f288b22b13aeccce6688e5ded6d3127089e72c0819ff658dd6cb43e",
+      "bytes": 13518
+    },
+    "review-source/client/src/components/landing/scene/faq-horizon.tsx": {
+      "sha256": "e4b8707c5e1a3f478643af13fd4f010137d8e73a9ff6e79a3a52639615900f40",
+      "bytes": 5592
+    },
+    "review-source/client/src/components/landing/scene/geometry.ts": {
+      "sha256": "51a5a0f1ee97cd7c013f5f69408e4a1c37e5e80d34c468ab16c830e12ffb139a",
+      "bytes": 9677
+    },
+    "review-source/client/src/components/landing/scene/index.ts": {
+      "sha256": "7d8120353eea5e5c9e11a21ce92f7520aef3c753819b1d5ef01ec551e51a436d",
+      "bytes": 1205
+    },
+    "review-source/client/src/components/landing/scene/Monoliths.tsx": {
+      "sha256": "da0ac11be121b2c384c3608aa7b4898daec9f040932ff66d35f6bc0bdcf67091",
+      "bytes": 8345
+    },
+    "review-source/client/src/components/landing/scene/NightSky.tsx": {
+      "sha256": "85ad271fadd67f917648e31bfbad48489ca624fc04e76014c4d4591cbc665c8f",
+      "bytes": 8526
+    },
+    "review-source/client/src/components/landing/scene/pool-art.tsx": {
+      "sha256": "09b52ccb35c0577ef645e3490ce5a1593a78b6d8c005c64124d5dc8d23ff9a6b",
+      "bytes": 12851
+    },
+    "review-source/client/src/components/landing/scene/privacy-art.tsx": {
+      "sha256": "efab4f2e2226cd7252c093ac22b0c513d2f2c5db552a559247e19be9b5b65b9d",
+      "bytes": 36601
+    },
+    "review-source/client/src/components/landing/scene/proof-constellation.tsx": {
+      "sha256": "27ca4da25ad4c95dc53f443e586434314ecbcdaea13acb74dfd1065c5c601131",
+      "bytes": 17594
+    },
+    "review-source/client/src/components/landing/scene/proof-seal.tsx": {
+      "sha256": "a4d937925f31eabe200995ddd4b03b539f8b67d1546ee9064b67f061e905b9d0",
+      "bytes": 4017
+    },
+    "review-source/client/src/components/landing/scene/proof-sky.tsx": {
+      "sha256": "e7702389120275d950aea477b9db7d9fd7667f7f83481263b8d15517053f4c63",
+      "bytes": 7938
+    },
+    "review-source/client/src/components/landing/scene/Ridges.tsx": {
+      "sha256": "33c21347a34e01d235d04d0267d7ee75a9cf17c773fa30b345f5d6d82f4929c2",
+      "bytes": 8006
+    },
+    "review-source/client/src/components/landing/sections/Chrome.tsx": {
+      "sha256": "2b67a5798af864ea13f03de8a2fe88f5f10c7151738f4f879ea7bf2280463340",
+      "bytes": 27692
+    },
+    "review-source/client/src/components/landing/sections/Cta.tsx": {
+      "sha256": "961f261231fbc8eb1a505c888571ea192dddcb9c76c1ee62bad4aef6e0decb94",
+      "bytes": 18545
+    },
+    "review-source/client/src/components/landing/sections/Faq.tsx": {
+      "sha256": "5d4fc7b8d20c9baca6e02f75a54e3d20e32007ac16a699419c4ac86b06ec77aa",
+      "bytes": 19508
+    },
+    "review-source/client/src/components/landing/sections/Guarantees.tsx": {
+      "sha256": "c4a8425f7ed0c95e46cd826aa80901af4cd8b7d1207c0b91df0419c8cb9a3e06",
+      "bytes": 22956
+    },
+    "review-source/client/src/components/landing/sections/Hero.tsx": {
+      "sha256": "e36f72f567fc822cb97a9b7fe28e634ad964a590e163456d87561571d3b23eca",
+      "bytes": 18780
+    },
+    "review-source/client/src/components/landing/sections/Network.tsx": {
+      "sha256": "ff75078e40b2b1d68f5a448b2675e6b6e94ecf5e3529a031a71b2ea6608795c7",
+      "bytes": 27530
+    },
+    "review-source/client/src/components/landing/sections/PoolScene.tsx": {
+      "sha256": "ae40fcbff4ee9bab3bb0870b8746fcc0a29e9f483225968d7e907c860674e819",
+      "bytes": 49197
+    },
+    "review-source/client/src/components/landing/sections/ProofScene.tsx": {
+      "sha256": "f9e6f9b6ffafed10c5f022b73e384a0824612953107d031ecce8b13fdfb144c8",
+      "bytes": 23310
+    },
+    "review-source/client/src/components/landing/sections/Visibility.tsx": {
+      "sha256": "a3c863653c19a8a1d8119e6dba98ee8ba0bf01b64206f5631d2808176284ec8b",
+      "bytes": 18713
+    },
+    "review-source/client/src/components/landing/sky.tsx": {
+      "sha256": "1b249609a9a2b2239b215c2411619f95004412d597e1b63ab48d7f57c1cc8191",
+      "bytes": 7551
+    },
+    "review-source/client/src/components/landing/system.tsx": {
+      "sha256": "2b83a80ea8ff2b177f4cfe5a7cf22efc5a463176d6c917d3d5115f8e80ffea9b",
+      "bytes": 18958
+    },
+    "review-source/client/src/components/landing/usePoolStatus.tsx": {
+      "sha256": "04ffc4c6513964a6b4082b5a706470cba1ce27723e7b0c6f995ff5cb42cea14f",
+      "bytes": 6238
+    },
+    "review-source/client/src/components/MascotFace.tsx": {
+      "sha256": "4bd5ea87b95050f17b2b64325cee4deaf937e1bc302f629a851bc4a16ba6f6ad",
+      "bytes": 5769
+    },
+    "review-source/client/src/components/pools/ConnectionSettings.tsx": {
+      "sha256": "597478a617649f9f7714e82b43e70185734ffeb7fa71b0c7320b437fff706e0f",
+      "bytes": 6123
+    },
+    "review-source/client/src/components/pools/DashboardWallet.tsx": {
+      "sha256": "c475af7edb6bc6ce3379a0eb29b2fa42588b42bf7c60cdd7eedca5c309b97788",
+      "bytes": 11776
+    },
+    "review-source/client/src/components/pools/format.ts": {
+      "bytes": 2293,
+      "sha256": "81aee22954ced9f27d027cc2291ebd97f8765ba2f2d9335aaa151279a069d126"
+    },
+    "review-source/client/src/components/pools/MetricList.tsx": {
+      "sha256": "9350cb46d5e591f8ff07fa363d29fe2a8c3b9f22e8948b1f49d7e6ab1bf3386d",
+      "bytes": 2023
+    },
+    "review-source/client/src/components/pools/NetworkMenu.tsx": {
+      "bytes": 10479,
+      "sha256": "f7df2fc9e667e3692832903030e267affa49ae7ae58c270756956d337b3e3059"
+    },
+    "review-source/client/src/components/pools/PoolCharts.tsx": {
+      "bytes": 5494,
+      "sha256": "ad1a66fd6a1e3b1d4fd4081c9a8c53e0ddba507537f9dbfc3d38ff5fa05186d0"
+    },
+    "review-source/client/src/components/pools/PoolDetail.tsx": {
+      "bytes": 15607,
+      "sha256": "fea411f688c629b12b8546b287019b62ade03d00ff05525b38936058e30101cb"
+    },
+    "review-source/client/src/components/pools/PoolsShell.tsx": {
+      "sha256": "152dc7d1a963d722127fcb79a89695bb056f83b94ff4c63231e8fdc7f7b55878",
+      "bytes": 18285
+    },
+    "review-source/client/src/components/pools/prefs.ts": {
+      "sha256": "c9327e0a0428cf609064fbb1576be242e8464bd178c447ceebc0e4aac4011930",
+      "bytes": 3474
+    },
+    "review-source/client/src/components/pools/RelayerSettings.tsx": {
+      "sha256": "33c86d27a566a648dd0d4b510ce833e6cf05ad821774664759142df7ac8321ad",
+      "bytes": 4897
+    },
+    "review-source/client/src/components/pools/Sparkline.tsx": {
+      "sha256": "c8eb88d94d6adb3006fab9f6f0d5f75cf21a659bb448a9d2f263f7fa2c053bdd",
+      "bytes": 2818
+    },
+    "review-source/client/src/components/pools/TopStats.tsx": {
+      "bytes": 14642,
+      "sha256": "e13e667b5f441c034ce67f25a1931e5537f1fcec8f79e4dbf4c161f6a6430a25"
+    },
+    "review-source/client/src/components/pools/types.ts": {
+      "sha256": "3bc628f3ab6bb10055fc47dfc66315587ace3a774f66aebf199b44486f7bf894",
+      "bytes": 7559
+    },
+    "review-source/client/src/components/privacy/ActivityPanel.tsx": {
+      "bytes": 6991,
+      "sha256": "6e19842b502cacadfb68816538ca6a85c749f436631a0904055d1c8b437367ce"
+    },
+    "review-source/client/src/components/privacy/DepositPanel.tsx": {
+      "sha256": "2528ca970855b28666c188fa55be73305c6c8c8601753584fd60d81eeba5763d",
+      "bytes": 11285
+    },
+    "review-source/client/src/components/privacy/GetStarted.tsx": {
+      "sha256": "06a2dab5c737cc28a9f92312213bafcf56e7bc9e6d2fb4db1efe10c485de82f1",
+      "bytes": 4599
+    },
+    "review-source/client/src/components/privacy/NotesPanel.tsx": {
+      "sha256": "b0421efb8135e8b557813d185a92c06cb07b31c942560b0cf464446f1a5c1da7",
+      "bytes": 13258
+    },
+    "review-source/client/src/components/privacy/OpStatus.tsx": {
+      "bytes": 5265,
+      "sha256": "e89135fe99463621eebb701abf5330d85c24edf0cf03f9fb6000c3759ee8c7cd"
+    },
+    "review-source/client/src/components/privacy/PoolHeader.tsx": {
+      "bytes": 15609,
+      "sha256": "329bdc8115657a077e3e01a913d0d206816ac67682090ba97008f699b3ebccee"
+    },
+    "review-source/client/src/components/privacy/PrivacyCheck.tsx": {
+      "bytes": 30037,
+      "sha256": "96dcaf7b4962a14884fc3e1f2dbeada29f6ef144d96b492d46a25da0e075fea9"
+    },
+    "review-source/client/src/components/privacy/PrivacyNotice.tsx": {
+      "sha256": "b4e7b3b3a38c13b0e698b2620bcdebf7acd3fc555485f85333b6de7e4b9d3ce5",
+      "bytes": 12920
+    },
+    "review-source/client/src/components/privacy/Screening.tsx": {
+      "bytes": 28466,
+      "sha256": "bf1024bdf05acdf689f355c256727615da931142eb208dbdf692e222a559ab6e"
+    },
+    "review-source/client/src/components/privacy/ui.tsx": {
+      "sha256": "8f90fb3179cd55d81fac904809516b8e8895316a501f0957e0ebd552477096e0",
+      "bytes": 28651
+    },
+    "review-source/client/src/components/privacy/VaultPanel.tsx": {
+      "sha256": "95aea25395eb17625dd783b4d1a378bf326858086d86b284acf421899b69cf63",
+      "bytes": 23008
+    },
+    "review-source/client/src/components/privacy/WithdrawPanel.tsx": {
+      "bytes": 38462,
+      "sha256": "1c59b996ff3885dea940622969525857c94e5fe0a7a80305b2541d49f21fb08c"
+    },
+    "review-source/client/src/components/ui/badge.tsx": {
+      "sha256": "51fd797c59e63d164ade736769f19f26e41c157daba29aa0b327b3b226f4d4ac",
+      "bytes": 1639
+    },
+    "review-source/client/src/components/ui/blur-fade.tsx": {
+      "sha256": "f58ac66f9b59545b58e30d828f5eb49b03d1da4ddaa25c076df4157d95beba39",
+      "bytes": 2681
+    },
+    "review-source/client/src/components/ui/button.tsx": {
+      "sha256": "b08b4785e03566c7a6063b3d57234deae41649676870cbbb9ab2448d816e1739",
+      "bytes": 2097
+    },
+    "review-source/client/src/components/ui/checkbox.tsx": {
+      "sha256": "4fc309590e66d3c41e3be5fb73f988b0e916e7bf5fff321c22c3a64cd4fe97cf",
+      "bytes": 1218
+    },
+    "review-source/client/src/components/ui/dialog.tsx": {
+      "sha256": "3ffd83bd2940c1191fde091bc47311aebc2b79d78824965a5c446115e58190aa",
+      "bytes": 6024
+    },
+    "review-source/client/src/components/ui/dropdown-menu.tsx": {
+      "sha256": "ede99252b737a29eb1f05370956e2b842be161b6a661f1429155ac561653d029",
+      "bytes": 8434
+    },
+    "review-source/client/src/components/ui/input.tsx": {
+      "sha256": "0aaad971269e84519fb14928a70777db539b4cacf9f145fecd905ba483a199c6",
+      "bytes": 2728
+    },
+    "review-source/client/src/components/ui/label.tsx": {
+      "sha256": "7fdad17d8e83912ad0cfc372c551a901ab98523ef17c0792a17c592a147db732",
+      "bytes": 602
+    },
+    "review-source/client/src/components/ui/popover.tsx": {
+      "sha256": "5e7bec05904d9091a7b53963f5b49660bf3564b02a057ef8640ab6855d6e32fd",
+      "bytes": 1629
+    },
+    "review-source/client/src/components/ui/progress.tsx": {
+      "sha256": "2297e3c13d5b2a04a9164c3900c8cae2e477c07ebed35c4bbda98d1232ab7b7e",
+      "bytes": 731
+    },
+    "review-source/client/src/components/ui/radio-group.tsx": {
+      "sha256": "025f03d81d4e304eb27d94e6517f37072a3941df8f8603ac55cfb42b17cd99ef",
+      "bytes": 1459
+    },
+    "review-source/client/src/components/ui/select.tsx": {
+      "sha256": "40945665ec8363e55ae38f26115ee763cbc5548bed585eed569d406cbc4b7a75",
+      "bytes": 6297
+    },
+    "review-source/client/src/components/ui/sheet.tsx": {
+      "sha256": "ab22e38f2cf312a31a84fb91f7e912f0da66e809f6e1ae675ec6cf0c8ec0ba61",
+      "bytes": 4107
+    },
+    "review-source/client/src/components/ui/skeleton.tsx": {
+      "sha256": "45f9d99742a8c838522cc2048299a0b2d39ccdf43bfa0712d2285b4657502750",
+      "bytes": 439
+    },
+    "review-source/client/src/components/ui/sonner.tsx": {
+      "sha256": "a65fe9ded89363ec546f28401a26caec1a3aa38c52259eb829cfa33723dbe3a5",
+      "bytes": 561
+    },
+    "review-source/client/src/components/ui/tooltip.tsx": {
+      "sha256": "cfbe029d61262e00781a1a0f6a8c1b8ccf7c94f4936c4390501b2ef7405c500e",
+      "bytes": 2100
+    },
+    "review-source/client/src/contexts/ThemeContext.tsx": {
+      "sha256": "5027851780547da394068b7851e3d399efb9361ac4c82aa12e716b2e37a22160",
+      "bytes": 1724
+    },
+    "review-source/client/src/docs/content.ts": {
+      "sha256": "ec928817357e628974195c8f75a53510ed2f21b213f15a7e9a1def129906cbab",
+      "bytes": 45424
+    },
+    "review-source/client/src/hooks/useComposition.ts": {
+      "bytes": 2303,
+      "sha256": "da31768c2d25008f694bb6cea84d0ef96b8e5f3bdd206f3819519e484206740f"
+    },
+    "review-source/client/src/hooks/usePersistFn.ts": {
+      "sha256": "60cc14f39a3f8b212d7baf4beeaf35f81e09a7c78e4154bcca3477e010879511",
+      "bytes": 471
+    },
+    "review-source/client/src/lib/trpc.ts": {
+      "sha256": "d883ad43f46eaf73342924feaf5342ce601d04abe1a828076625071931cc0ef3",
+      "bytes": 162
+    },
+    "review-source/client/src/lib/utils.ts": {
+      "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "bytes": 169
+    },
+    "review-source/client/src/main.tsx": {
+      "sha256": "eb1878528cbd71e909669f36183788fa0783aaac64356548d57a8d877ddb7fa8",
+      "bytes": 3205
+    },
+    "review-source/client/src/pages/Docs.tsx": {
+      "sha256": "8b9fc2a5450de0973d160209c828173263f0f58a0fedda9c81c387347c940d51",
+      "bytes": 19986
+    },
+    "review-source/client/src/pages/Landing.tsx": {
+      "sha256": "8c8ec637ba14e811b32045421cbd5b4bb90079ce4c90ebd08199213b2463ea12",
+      "bytes": 6141
+    },
+    "review-source/client/src/pages/PoolAddressRedirect.tsx": {
+      "sha256": "6e6fc3406b3591edcfcb9d31380f516097f764a8fcc99d345d995a927e61922b",
+      "bytes": 7351
+    },
+    "review-source/client/src/pages/PoolPage.tsx": {
+      "bytes": 38882,
+      "sha256": "490b66983cf94bdedf8ef4338fad05a0f9e7a32872881c3c66da088f729ac730"
+    },
+    "review-source/client/src/pages/Pools.tsx": {
+      "bytes": 41149,
+      "sha256": "dd5af348c2783ae1b24895abc75b69a695d921f7334d9ca152dd727fcf8b81f6"
+    },
+    "review-source/client/src/pages/Portfolio.tsx": {
+      "bytes": 36655,
+      "sha256": "508a9ff0e6faa656e4849756e8118641fcc59e95cb9782d641d8b46e01ca0ce1"
+    },
+    "review-source/client/src/pages/Privacy.tsx": {
+      "sha256": "73f7bffc640b47bb06d46449f71e33db59b2c4616b1ab95be3576a29441d22c7",
+      "bytes": 418
+    },
+    "review-source/client/src/pages/ScreeningPolicy.tsx": {
+      "bytes": 20080,
+      "sha256": "0a25004b87d735ce934430a7dd8e224ce7e0e3a4b34e1a39d4080e5f142d1320"
+    },
+    "review-source/client/src/pages/Vault.tsx": {
+      "sha256": "6c1b308916a1233952fa228607088d0da221c2e1f27da36d7e8b066989284c63",
+      "bytes": 11000
+    },
+    "review-source/client/src/privacy/activityStore.ts": {
+      "sha256": "20026d2db2dc63d6c5f6db0b3e6223d47cd21d64947dc2dc6d19ffb739ca8a8c",
+      "bytes": 30443
+    },
+    "review-source/client/src/privacy/artifacts.ts": {
+      "sha256": "cf5e4a619411b6dd486bf87347df96156fb23b1784189c01ee698b1f63d5ce79",
+      "bytes": 12566
+    },
+    "review-source/client/src/privacy/config.ts": {
+      "sha256": "c909bc9648b1aec9b50ba7c7ec72751e0392d3a96f9e3859b3d8957cc3aff46c",
+      "bytes": 10608
+    },
+    "review-source/client/src/privacy/deviceLock.ts": {
+      "sha256": "ed319a332f2ffa0d069d9e5bf5850d0dc9f2d84630762b8cac2d5b65963b0081",
+      "bytes": 1049
+    },
+    "review-source/client/src/privacy/evmWallets.ts": {
+      "sha256": "f7d20964847be1546e6f88d0f2dc8e6fb7c2dda88307ff3015a283b4baa939a2",
+      "bytes": 4267
+    },
+    "review-source/client/src/privacy/format.ts": {
+      "sha256": "2d5af20be1afcc800c91ee201855a0d7c850d4ead6714f46572c760f95b00aad",
+      "bytes": 730
+    },
+    "review-source/client/src/privacy/migrate.ts": {
+      "sha256": "fb02782841399784c0eb69f46cbf5eb8b60d288d3a771afc027bdcfdb207064b",
+      "bytes": 11126
+    },
+    "review-source/client/src/privacy/PrivacyProvider.tsx": {
+      "sha256": "ccec708a93fda8405361d1c84fecca658b1237794593d17919fcf9c01535f2f7",
+      "bytes": 100175
+    },
+    "review-source/client/src/privacy/publicData.ts": {
+      "sha256": "b0276eafe4c6a6b125e399059d8554f4a50ec6a4cb6b634658ac7d5c0247e1a1",
+      "bytes": 24175
+    },
+    "review-source/client/src/privacy/relayers.ts": {
+      "sha256": "65e688b8f426312ed8ab08f49fe306fc478b8a2f90683865eb0734481c92cabe",
+      "bytes": 8335
+    },
+    "review-source/client/src/privacy/rpcOverride.ts": {
+      "sha256": "e86ce714917cea29ed14993646ba3ec5d4c165f71b4f93e4194f0658b1625977",
+      "bytes": 6690
+    },
+    "review-source/client/src/privacy/safetyCopy.ts": {
+      "sha256": "76d95afe79cdee9a8248e9c7cf5f160e8bf880baf8a1d2e6e1e19376ec72d0b0",
+      "bytes": 427
+    },
+    "review-source/client/src/privacy/storage.ts": {
+      "sha256": "c3efd93361e2cb69a1eef4742be03900534b374f988795d4cf7c308094cd5625",
+      "bytes": 947
+    },
+    "review-source/client/src/privacy/unlockedWork.ts": {
+      "sha256": "ff86e41563c4b6f1e8f484d0307186e1dc0a793991b81f6edcfb9512291bffec",
+      "bytes": 3376
+    },
+    "review-source/client/src/privacy/useRelayer.ts": {
+      "sha256": "bba410dccc10b5a695dd713271a8aa8523103023162107608265df37e868fdd7",
+      "bytes": 1630
+    },
+    "review-source/client/src/privacy/wagmi.ts": {
+      "sha256": "b8217baeef3a4e666cb743e3698645dff202ac2f77bbbef7d338b1b5e43b7d27",
+      "bytes": 4483
+    },
+    "review-source/client/src/privacy/walletChain.ts": {
+      "sha256": "389d120bdc5dd860219f8faa8e84b5fc0e2a565551a77131d4fd22a329f3ce71",
+      "bytes": 8108
+    },
+    "review-source/client/src/privacy/walletConnection.ts": {
+      "sha256": "31aa0302575563d7cd80804d352c77203dd711f62672b3fb8ce2e130d6308533",
+      "bytes": 1771
+    },
+    "review-source/client/src/privacy/walletGuard.ts": {
+      "sha256": "f197a207988cc4e97d9f8b20f0c63933415cbb7c9e238cc21bda15fc42451a5b",
+      "bytes": 5374
+    },
+    "review-source/client/src/providers/OnchainProvider.tsx": {
+      "bytes": 3684,
+      "sha256": "c397dd263cdc5b5943c6f72eba38333369faba705d0993af6b094426732335f6"
+    },
+    "review-source/server/_core/context.ts": {
+      "sha256": "5b770b287358c8891df73d716960e877007a721778b8a4a8f02e93a46f2a255b",
+      "bytes": 532
+    },
+    "review-source/server/_core/index.ts": {
+      "sha256": "6d55e2c293778b110a4d192dfe5ed3ed7ced91f9b11a852c5c297421a63fa7cd",
+      "bytes": 4233
+    },
+    "review-source/server/_core/loadEnv.ts": {
+      "sha256": "fe0483bb132e8479742133c6073ac270657cb6e2a76a24d6cc2ba408abe4df55",
+      "bytes": 1028
+    },
+    "review-source/server/_core/runtimeSecrets.ts": {
+      "sha256": "f5014fd259fba38850133d0f00d02aee51d5dc59a72df22f61e028698abbbb7c",
+      "bytes": 864
+    },
+    "review-source/server/_core/securityHeaders.ts": {
+      "sha256": "d68cc411a4dd0a128dd4826c26478efcdae2a1c2e3c2a382234314a72e476c53",
+      "bytes": 1176
+    },
+    "review-source/server/_core/trpc.ts": {
+      "sha256": "c40de36b7af1aaf6f701a477214f04b371d0bb390a88f19183f1a460ae69c7ac",
+      "bytes": 371
+    },
+    "review-source/server/_core/vite.ts": {
+      "sha256": "ea812843a11ec9747270c9cdb1facbe13674fa3e7d5f71348cdc77ecef3f0fde",
+      "bytes": 3338
+    },
+    "review-source/server/privacy/activityStore.test.ts": {
+      "sha256": "b718a1f4bf6c9a6b46e34d7f7be1d0a6d4cdaec2ad15fa5d99895ca4b13b02d6",
+      "bytes": 48739
+    },
+    "review-source/server/privacy/anvilKeys.test.ts": {
+      "sha256": "46ae8668ad18e50d515fb0c5ccc00bfd4fcda12a02e2b79833f5d7d403541dc1",
+      "bytes": 867
+    },
+    "review-source/server/privacy/areas.test.ts": {
+      "sha256": "c46f06f338fd4c85d07bbe2253c11d53be68bc12976b25f9094c8f8b5d7085cb",
+      "bytes": 6586
+    },
+    "review-source/server/privacy/artifacts.test.ts": {
+      "sha256": "7837dd9b8c446b7ac15ce66d1bce98ea851a7c58b81059b433e8d7426a3044ab",
+      "bytes": 10280
+    },
+    "review-source/server/privacy/asp.ts": {
+      "sha256": "c1f5627e21b3ed2539bcc9a61b3b1c66f2941f9ede98bb59bdac29a53a50a92e",
+      "bytes": 60306
+    },
+    "review-source/server/privacy/associationSet.test.ts": {
+      "sha256": "16e00c8e5ae9d47ae7601234091c1627e3bdae22deddb8f2584c0f0741771f35",
+      "bytes": 34605
+    },
+    "review-source/server/privacy/autoPublish.ts": {
+      "sha256": "527c70a0947cabda437148a2c79d7c4b29a6ddab3dedf0546ec7a8464c33cc84",
+      "bytes": 14757
+    },
+    "review-source/server/privacy/blockTimes.ts": {
+      "sha256": "7c9a8f52f4b6785d5ec81dc68a12e318047d64eb07d1a7b6ad178b3a79a8a87d",
+      "bytes": 3178
+    },
+    "review-source/server/privacy/chain.ts": {
+      "sha256": "e43207a8067fbe27d2724fbf532a858a976afb6bd08898c0ae315d83d0aec309",
+      "bytes": 2710
+    },
+    "review-source/server/privacy/clientMigrate.test.ts": {
+      "sha256": "d81976121be7ed8cfd2f0f42f2087ec3638f6af72218367890914bc11faee1ec",
+      "bytes": 13709
+    },
+    "review-source/server/privacy/config.ts": {
+      "sha256": "3edde7795d5873fe03cd3623df809b91607f62a608f11fc3a03800e17ff89d16",
+      "bytes": 17638
+    },
+    "review-source/server/privacy/deploymentRecords.test.ts": {
+      "sha256": "e89352a0f60bd31631209b1a1dd53407b429c517a4074cc48bf2240d153d41b8",
+      "bytes": 22281
+    },
+    "review-source/server/privacy/devArtifacts.test.ts": {
+      "sha256": "6086228b3bf638c9a0b61e9f0ff95401721e207ada0614213029e9aedac953e3",
+      "bytes": 1560
+    },
+    "review-source/server/privacy/devArtifacts.ts": {
+      "sha256": "d7366f6614dbe82a73fa2e706d3de10445b1c72a2b00607b1b78f7fbe581977e",
+      "bytes": 3243
+    },
+    "review-source/server/privacy/docs.test.ts": {
+      "sha256": "edcd3f312339a869275d600937cc6038b73a6bb33fc515e9b587366ec84f7d05",
+      "bytes": 5131
+    },
+    "review-source/server/privacy/errors.ts": {
+      "sha256": "6455b4341a021e1956870cfc5ef3028011bb5190c379131024609b918eaffd09",
+      "bytes": 1062
+    },
+    "review-source/server/privacy/evict.ts": {
+      "sha256": "7f125a03a7e9760e61d615723d1697c1c12e36a3210c388831877bbbf3591993",
+      "bytes": 18115
+    },
+    "review-source/server/privacy/evmWallets.test.ts": {
+      "sha256": "bd04cb0c443b3075a21e847c1139cf3bea9da0366ce3fbd10cf963c064f1d99e",
+      "bytes": 7930
+    },
+    "review-source/server/privacy/exclusions.ts": {
+      "sha256": "43d907b078e679c8e6bdb7ea47a9814790f691c0b9f759d593981a080402d782",
+      "bytes": 10839
+    },
+    "review-source/server/privacy/funding.ts": {
+      "sha256": "5511d309689a96ae4cbe5af09ad99d53e3b536ec205d25e4cb4b609f67cba6de",
+      "bytes": 7773
+    },
+    "review-source/server/privacy/guidance.test.ts": {
+      "sha256": "9c6ea96b091e3415d088e1930f6cb8b9d565bb62dd65282ba1127a23d0f0c23a",
+      "bytes": 35405
+    },
+    "review-source/server/privacy/health.ts": {
+      "sha256": "71e5529754654feee29878e0412389a638d6a9c390eb659be6e53a3cc12ab112",
+      "bytes": 2087
+    },
+    "review-source/server/privacy/hosting.test.ts": {
+      "sha256": "b06e4f2d5d87b011314fb08878551482fedb94591a2b7b6e0a688cea6fe52c81",
+      "bytes": 3148
+    },
+    "review-source/server/privacy/mainnet.test.ts": {
+      "sha256": "ae0e1f0e9961b973fb1a774cacf2a492a00b2bf3fa837d9572ef622477d0ef45",
+      "bytes": 4462
+    },
+    "review-source/server/privacy/mainnetCeremony.test.ts": {
+      "sha256": "438c0d8c8fdb4b6caf4cab37fa4d2a1467b40f605cb3d48fc0ac2b82d7593214",
+      "bytes": 2451
+    },
+    "review-source/server/privacy/mainnetConfig.test.ts": {
+      "sha256": "42213fe80b9cbda0cf62c65d397119ca6f502b996d91f9d24fc00dc15eb658c7",
+      "bytes": 5217
+    },
+    "review-source/server/privacy/mainnetTargets.test.ts": {
+      "sha256": "75a0da8749572f7fd20b9298f3873441b4be4375f242022299efeb3a942b4d5b",
+      "bytes": 5451
+    },
+    "review-source/server/privacy/multichain.test.ts": {
+      "sha256": "e787c71cedfbcd84faf71349041cc7cbf9c3e0184a5cf35096dac0d5e98e5c4a",
+      "bytes": 75414
+    },
+    "review-source/server/privacy/nativeEthV2.test.ts": {
+      "bytes": 12443,
+      "sha256": "52f6cf88f0fb00212b5129d9205663c83f7b86209b783ee585eabd8f658ec510"
+    },
+    "review-source/server/privacy/networks.test.ts": {
+      "sha256": "43754df26737220f4c3c1c5ae8e8c3af07374080f6494f482c4d24f6f1502db6",
+      "bytes": 47491
+    },
+    "review-source/server/privacy/pools.test.ts": {
+      "sha256": "1aefefcda675b029611bd9facf84218b1297b318136f7b3b8b1b77179648a0af",
+      "bytes": 2188
+    },
+    "review-source/server/privacy/pools.ts": {
+      "sha256": "5785f915628203f967994c17016ce53f4f2574958608d40c8c5bcced467437d8",
+      "bytes": 23794
+    },
+    "review-source/server/privacy/privacy.test.ts": {
+      "sha256": "9a50972c9169fdb58c04c8d4331db07a20a5b5d273f37be29fd9fa8b524558f0",
+      "bytes": 13108
+    },
+    "review-source/server/privacy/protocolIsolation.test.ts": {
+      "sha256": "6bc8c934daf9e6e4dc38bbf465a675e98714ddd6a110f20a1044e2b1d17f4d8b",
+      "bytes": 3340
+    },
+    "review-source/server/privacy/publicData.test.ts": {
+      "sha256": "3984dfbb9b9e01f47fe6f52aae95e41b4ff4e992aa97ff9573b94714ad2039c7",
+      "bytes": 40370
+    },
+    "review-source/server/privacy/relayer.ts": {
+      "sha256": "a6b7cbd0af7bfa44fe5e19e24f57edb9cd1a7dbce4493c5252d4bf7f35223f42",
+      "bytes": 14100
+    },
+    "review-source/server/privacy/relayerCors.ts": {
+      "sha256": "65244f08791e2fef40370f331ee978ebbb7d476a10da60643c38a8a68841a19a",
+      "bytes": 1783
+    },
+    "review-source/server/privacy/resilience.test.ts": {
+      "sha256": "5ff14d6e38799834a100703487df29ca8e4a969e9c7f68b40925ef9c1d258c65",
+      "bytes": 20751
+    },
+    "review-source/server/privacy/router.ts": {
+      "sha256": "29672959ca7bd33a3800fda0c7bc00f7c3e1f0b5f8a51b8fa6f182cd198f2e68",
+      "bytes": 5658
+    },
+    "review-source/server/privacy/screening.test.ts": {
+      "sha256": "432971ba1fab6fea6f84d80c488a8e3329e0b80b08b327d7ef4282b02b190442",
+      "bytes": 111567
+    },
+    "review-source/server/privacy/screeningServer.test.ts": {
+      "sha256": "dd06bfd86bf55ea7ee1528d96dc5819193d68429ca6b001570030957b1277bb6",
+      "bytes": 71048
+    },
+    "review-source/server/privacy/simulate.test.ts": {
+      "sha256": "7848e921196c40564b5884d2f36da563de88bc6be7eed2c49e7c75f76f04d6dc",
+      "bytes": 3743
+    },
+    "review-source/server/privacy/socialPreview.test.ts": {
+      "sha256": "3d37daa9a1f84deb38063bca1ecaea11a12e65aacf820be56ff53d0cd8a4b837",
+      "bytes": 4700
+    },
+    "review-source/server/privacy/submissionQueue.test.ts": {
+      "sha256": "3dadb0f20db420d2e79ef9fa4a7a5f53f5aa3a971a81a71e70026efba533c2bf",
+      "bytes": 2532
+    },
+    "review-source/server/privacy/submissionQueue.ts": {
+      "sha256": "c3997b4e3a210b7a9928f422605ccebfd233b5d8a282b4a7c197641e9f615af3",
+      "bytes": 1861
+    },
+    "review-source/server/privacy/unlockedWork.test.ts": {
+      "sha256": "c49347420d2463be49313f41be6d2f35ca6067a1f146c387a2be59c83ec148dd",
+      "bytes": 4297
+    },
+    "review-source/server/privacy/v2.test.ts": {
+      "sha256": "ec0e7fbffe4376da82813ccd42d25be7597c348b8060de2a6d40cad679440722",
+      "bytes": 6650
+    },
+    "review-source/server/privacy/v2Runtime.test.ts": {
+      "sha256": "9ac6224c1edaf89dbedfa2701cce166ad37177e79dd3d9d7c0be07d453c10409",
+      "bytes": 6496
+    },
+    "review-source/server/privacy/v2Vault.test.ts": {
+      "sha256": "96d5b234a2ee949a8b02903ee1ea4111a27c791355ca858e4ebd3676971a527d",
+      "bytes": 6720
+    },
+    "review-source/server/privacy/vault.test.ts": {
+      "sha256": "95598304b3502b8f724c319f9708b691c3b3b65b010e41431dd29a04ef11cdb5",
+      "bytes": 10816
+    },
+    "review-source/server/privacy/walletChain.test.ts": {
+      "sha256": "a779ba37179c1f2765d43719713ac6f4c89f35df434f8d2f17a8f30fc5aa6ba1",
+      "bytes": 10111
+    },
+    "review-source/server/privacy/walletConnection.test.ts": {
+      "sha256": "6da3f83fb9f79092ae656ce99f61ca3e198acbd292bfc40c491f27812bb5f25f",
+      "bytes": 5916
+    },
+    "review-source/server/privacy/walletGuard.test.ts": {
+      "sha256": "18600a2f71bc5df5dc3a4f49c82bd4be4cc78b28996bdf128c037364e6ec1e31",
+      "bytes": 8719
+    },
+    "review-source/server/routers.ts": {
+      "sha256": "7955c7ec1cd6f7bbf5ba01ec6a95f49e2f58085dec7a5ab235d1cb059c1266bd",
+      "bytes": 628
+    },
+    "review-source/shared/privacy/abi.ts": {
+      "sha256": "583832b6f54c76974a6918cba8a69cd6c9b9450728a52891fdfa0831d05de95c",
+      "bytes": 3284
+    },
+    "review-source/shared/privacy/api.ts": {
+      "sha256": "4725bc74c525f50d087764ef14ba2268f53162121e77eb809ca3a22d61667011",
+      "bytes": 12695
+    },
+    "review-source/shared/privacy/associationSet.ts": {
+      "sha256": "e3992d9b6f428a2ef6941d0df89c188fa13b4e0f46f1abfd81b07ab7c27076d9",
+      "bytes": 39921
+    },
+    "review-source/shared/privacy/chains.ts": {
+      "sha256": "5e0fe36dc3611b8abc9adccf9041e0149dc6f70df75f08624eb0c19108a77120",
+      "bytes": 1652
+    },
+    "review-source/shared/privacy/constants.ts": {
+      "sha256": "78d7ef225e758894477978b8f187a82dc91ef19847f1c14a7dd2178c23fba495",
+      "bytes": 3438
+    },
+    "review-source/shared/privacy/context.ts": {
+      "sha256": "4ad835606d9c34757f257707df8c3ffde69e05b8e2be63dc006682a12e3fff81",
+      "bytes": 1174
+    },
+    "review-source/shared/privacy/deployments.ts": {
+      "sha256": "5303453202f2f464416aa7b78bc8d2638edf047f79a4f6969db4ef7cdfecbaa5",
+      "bytes": 1993
+    },
+    "review-source/shared/privacy/deploymentTypes.ts": {
+      "sha256": "4afe0ffcbd7e85485cd5c52bd533aef00be16cdbd39b342c377508ae5df0f0a7",
+      "bytes": 1861
+    },
+    "review-source/shared/privacy/guidance.ts": {
+      "sha256": "c3a1283f59cfa1b340551c3287994e9c7c83231785457a639a20067c376cd2aa",
+      "bytes": 28861
+    },
+    "review-source/shared/privacy/index.ts": {
+      "sha256": "6ce3f800fb8623431a36b3746e9663ed79af8326f50e03c6a58bf0e962f7304a",
+      "bytes": 494
+    },
+    "review-source/shared/privacy/indexer.ts": {
+      "sha256": "8c6f18ecdd567d2b6177c6ac52e0ca99fc04f2a0c152df8b9794f527d38939a8",
+      "bytes": 13815
+    },
+    "review-source/shared/privacy/mainnetConfig.ts": {
+      "sha256": "b40ab0da4c0267d53077e507a8694a2d4ff025b8234ec81d8fed204fa480a4bf",
+      "bytes": 3593
+    },
+    "review-source/shared/privacy/mainnetRelease.ts": {
+      "sha256": "80dca5700fe84aa6e85fe896c5c66e1f63b4d891d5b80a3a8724dde50bd8c99b",
+      "bytes": 1786
+    },
+    "review-source/shared/privacy/mainnetTargets.ts": {
+      "sha256": "a04ef7e4616bd3cd2ab4a5cb54a2792ead64c9554955bdfcca648f955dbc77f5",
+      "bytes": 918
+    },
+    "review-source/shared/privacy/merkleTree.ts": {
+      "sha256": "b75683ccbac78ac628a31ea48208b48821057e84d7483beff73d814ea3d3cb88",
+      "bytes": 4746
+    },
+    "review-source/shared/privacy/networks.ts": {
+      "sha256": "27ac27b4a7967f2876561c4513622b299249a29d8c9c936317061a3729400f81",
+      "bytes": 25795
+    },
+    "review-source/shared/privacy/notes.ts": {
+      "sha256": "3ed11297438d16043195fb1675d9256ff49d501df7d5b9f0e176f25d636af1a7",
+      "bytes": 3316
+    },
+    "review-source/shared/privacy/poseidon.ts": {
+      "sha256": "84f086abf340977a3f99655e9f24ab211a0714556c226ba6a3abfd29947b597b",
+      "bytes": 971
+    },
+    "review-source/shared/privacy/protocols.ts": {
+      "sha256": "641c78603e8d5ad6244210c59051947f14d8468d447e46af3f2c3eb18bbf34c1",
+      "bytes": 1643
+    },
+    "review-source/shared/privacy/prover.ts": {
+      "sha256": "39ce400f8ee3cf0730a38f83c1c60a305924c62de609c2a139798e05f08ffed0",
+      "bytes": 3642
+    },
+    "review-source/shared/privacy/runtime.ts": {
+      "sha256": "d5764c09198590d6b6540401e22d2947697c86e9894657e316e9486c69da70bd",
+      "bytes": 3606
+    },
+    "review-source/shared/privacy/screening.ts": {
+      "sha256": "3f4139b4befd463da4bb0f834cb8bebbc7a14643a8dd7ebbb3c2477ce8a31859",
+      "bytes": 76502
+    },
+    "review-source/shared/privacy/simulate.ts": {
+      "sha256": "d70f0d505a97ad437ea787c90ff641f8100b4e46c61cd805dc136aba402fc465",
+      "bytes": 8593
+    },
+    "review-source/shared/privacy/snapshot.ts": {
+      "sha256": "8a69aca0b0d774f093be8212846e057ae72059a30b51dbb0b55275aa6c7394af",
+      "bytes": 9156
+    },
+    "review-source/shared/privacy/snarkjs.d.ts": {
+      "sha256": "358294ee30287f32dc0fe77ace17a7bc881acb9ddd749f62a331a34631903134",
+      "bytes": 618
+    },
+    "review-source/shared/privacy/types.ts": {
+      "sha256": "d41263cfeeac4232405734c65a4538e26a2f47724cf4d87314f378f4fab91e96",
+      "bytes": 3087
+    },
+    "review-source/shared/privacy/v2/abi.ts": {
+      "sha256": "220241877f7e3e1bb6f29afef1b0a3790cebc8bdd76abd07181840e07ffe0b28",
+      "bytes": 747
+    },
+    "review-source/shared/privacy/v2/devKeyPins.ts": {
+      "sha256": "b6398833c1ab681cc41f429df4773c2af1492758ec645b35e233a5d04e95cdde",
+      "bytes": 303
+    },
+    "review-source/shared/privacy/v2/indexer.ts": {
+      "sha256": "09a185bc751dfdf8687c55f179a07b322c11592bf65fe483c73196630e9f3fd5",
+      "bytes": 3853
+    },
+    "review-source/shared/privacy/v2/notes.ts": {
+      "sha256": "e8afe5e9372f75ad06e6736b5dcc7a994d3192adf8a9ddabe06a5b50954ce699",
+      "bytes": 2101
+    },
+    "review-source/shared/privacy/v2/vault.ts": {
+      "sha256": "c2f95efd6feadc6b06878d26bac2317e1feddfc39f035a351d08626eddfdfda6",
+      "bytes": 1019
+    },
+    "review-source/shared/privacy/vault.ts": {
+      "sha256": "942f98efd7a2184596916f9bfe50b6769df9c4abf7dc8f2f578cc2a0bc305287",
+      "bytes": 11589
+    },
+    "review-source/shared/siteMetadata.ts": {
+      "sha256": "a65804b215cdb3f1ff94023421850f46d3b405723d225640e84f766ecfc46bf8",
+      "bytes": 3881
+    },
+    "review-source/scripts/privacy/anvilKeys.ts": {
+      "sha256": "4d80ef1b5dfee3d39ac6adff4485d3d5936bf655cc10cb67efe17bf74769beb9",
+      "bytes": 1149
+    },
+    "review-source/scripts/privacy/asp-publish.ts": {
+      "sha256": "2a56dda900b439a947989b8cddf01831661617a766dd7dfef79c8f434044f1d8",
+      "bytes": 14252
+    },
+    "review-source/scripts/privacy/build-circuits.ts": {
+      "sha256": "d389ceae76c12e52becbbff6d1dad83882733a28c1ac48b6db655e0a4b545f5e",
+      "bytes": 8620
+    },
+    "review-source/scripts/privacy/check-frozen-artifacts.ts": {
+      "sha256": "5b521e2250ced1acf729f0649723e22cb20fa32fc2384321e9f1af97baf26504",
+      "bytes": 692
+    },
+    "review-source/scripts/privacy/deploy.ts": {
+      "sha256": "de7f2e83254181152c7b3063772e61356b77d94b6fd1e1b83aa85c79cd4c4734",
+      "bytes": 17952
+    },
+    "review-source/scripts/privacy/deploymentRecords.ts": {
+      "sha256": "96623dbc514fb0f429e93865e9ec33eae9a85211ce0560e97993791ecca9f33f",
+      "bytes": 25726
+    },
+    "review-source/scripts/privacy/e2e.ts": {
+      "sha256": "2e14ef30fefca01f64a03f32571cce80ee09a089d645ef0e75cf5c1d498a20d9",
+      "bytes": 132959
+    },
+    "review-source/scripts/privacy/env-deployer.ts": {
+      "sha256": "4cedc8c4e7e5b7ea5e171037800263ae5c3ac111087afc88ec4f6dc4ecc1a0c6",
+      "bytes": 1024
+    },
+    "review-source/scripts/privacy/gen-fixtures.ts": {
+      "sha256": "1670ffff4302ea1a3c508b7d3a6b718cafa87650f32e77afbda5914c88cc7445",
+      "bytes": 8594
+    },
+    "review-source/scripts/privacy/loadDeploymentEnv.ts": {
+      "sha256": "25672b403d4fe84d5a3aed45151793f5089555d96cbc39bf62c029d0375853d5",
+      "bytes": 473
+    },
+    "review-source/scripts/privacy/mainnet-preflight.ts": {
+      "sha256": "f8c11c0b79c5b771e1742fff6f1525efd0d567439b5a62aaaa770cdd088d0866",
+      "bytes": 3185
+    },
+    "review-source/scripts/privacy/mainnet-target.ts": {
+      "sha256": "1660b941c2d9541c47c84c995ad9883e6571c61de7bd3a05777477998c36722e",
+      "bytes": 692
+    },
+    "review-source/scripts/privacy/mainnet-wallet.ts": {
+      "sha256": "b42df2f57f7ca2b7d44bf12ac31315189911643ac8c43f393cb831741008b296",
+      "bytes": 3052
+    },
+    "review-source/scripts/privacy/security-circuits.ts": {
+      "sha256": "736f35f716954a3ff941fcb78b537d2d3be70da053242528030418eab1308431",
+      "bytes": 5196
+    },
+    "review-source/scripts/privacy/snapshot.ts": {
+      "sha256": "4e1079e6f980ccaf9ec731788641e92b8644930f1394766c8939306acd6af297",
+      "bytes": 4994
+    },
+    "review-source/scripts/privacy/sync-deployments.ts": {
+      "sha256": "bd25c0146c62a3fa17e4fac6383abcce227b00429e4fe9eb1af2d93a750d7f65",
+      "bytes": 13982
+    },
+    "review-source/scripts/privacy/v2/build-dev.ts": {
+      "sha256": "b9fec3a6a615ff4958f926ce7bfdd017b8a1ad21003786f1a7947e04721bfabf",
+      "bytes": 4504
+    },
+    "review-source/scripts/privacy/v2/build-release.ts": {
+      "sha256": "464878a75e81ea65338f52cba9125d44b7f17aec636ffe8ec22d93d9751daa94",
+      "bytes": 12121
+    },
+    "review-source/scripts/privacy/v2/ceremony-policy.ts": {
+      "sha256": "062e65fc150d6bb2abc4624f67de8da69f45486b16aeb1741587d255d3cf926d",
+      "bytes": 2355
+    },
+    "review-source/scripts/privacy/v2/deploy-native-eth.ts": {
+      "sha256": "6e55ecef220973a62164fed712edc412c00e536e18155f69aed3b376f98ea839",
+      "bytes": 15582
+    },
+    "review-source/scripts/privacy/v2/deployment-smoke.ts": {
+      "sha256": "57fda8455993e87413cf0f52864b279b32384c16c154b1cd5bc67d5718d27b37",
+      "bytes": 9297
+    },
+    "review-source/scripts/privacy/v2/e2e.ts": {
+      "sha256": "65208052b4bbc7d1716f52cb2f163d52c1a3d1082e3e05d50168c010b4c9c3ec",
+      "bytes": 11978
+    },
+    "review-source/scripts/privacy/v2/gen-fixtures.ts": {
+      "sha256": "73516d8e5777d6f5570726024a579b05fe77beb3d2eec55aeb982ea4b1534b69",
+      "bytes": 12878
+    },
+    "review-source/scripts/privacy/v2/prepare-mainnet-ceremony.ts": {
+      "sha256": "164aa4892f0bfb45cdd90ad8b75ee776a2cd6accfefa8aa501a1d90022ffda05",
+      "bytes": 8619
+    },
+    "review-source/scripts/privacy/v2/read-contributions.ts": {
+      "sha256": "bf0005fe25b1f5bb11c7a4737eae0ec985a9041ddf4bf37b609b1b02b664c5a6",
+      "bytes": 1713
+    },
+    "review-source/scripts/privacy/v2/release-files.ts": {
+      "sha256": "198e6cd59db2d0f5b28b8f569ee0b504130734e0da05dbffeebec1dd2c5a1b2f",
+      "bytes": 2907
+    },
+    "review-source/scripts/privacy/v2/release-inputs.ts": {
+      "sha256": "7a404227ee97038c67b979b6cbc5bf5eb65a106a2337874b90c3a8a2f26732e1",
+      "bytes": 1913
+    },
+    "review-source/scripts/privacy/v2/release-policy.ts": {
+      "sha256": "c68558f75cd790d24378f951af47c036033132015edf7372d7e157c553af69e4",
+      "bytes": 5766
+    },
+    "review-source/scripts/privacy/v2/runtime-bytecode.ts": {
+      "sha256": "59d7f0152bf084e86bcad137a9eeac3dca84a97a1fd8117c4e18a60069c96e85",
+      "bytes": 2339
+    },
+    "review-source/scripts/privacy/v2/solidity-project.ts": {
+      "sha256": "fbabf8881d37854d4595e6e53562e339bdc23ef2d9b8004ffbaa1bcacaacbc6d",
+      "bytes": 1440
+    },
+    "review-source/contracts/src/interfaces/IVerifiers.sol": {
+      "sha256": "faace68e07ffe7cdff4193fa01d03f16c4526cddb28a164993425e8f6bd3097f",
+      "bytes": 690
+    },
+    "review-source/contracts/src/MerkleTreeWithHistory.sol": {
+      "sha256": "f83e2ae488a2df5bd1a382ee8e2936a920fb9d06e1bd1315365c3fa31e66edeb",
+      "bytes": 3437
+    },
+    "review-source/contracts/src/PrivacyPool.sol": {
+      "sha256": "9eda7afb10307ea9f6b5928fcc28bc0925feea1ac57a2d0e380beb35a49bbf8d",
+      "bytes": 14017
+    },
+    "review-source/contracts/src/v2/dev-verifiers/CommitmentVerifierV2Dev.sol": {
+      "sha256": "cedb9db8eca26b919aafee7dc22b0f866d3c77caf781f9a50669f9b1eea9280d",
+      "bytes": 8320
+    },
+    "review-source/contracts/src/v2/dev-verifiers/WithdrawVerifierV2Dev.sol": {
+      "sha256": "5449620382bf1cf44505852e6c92b210c90e10e279116e7b10ca156523c949ca",
+      "bytes": 9099
+    },
+    "review-source/contracts/src/v2/PrivacyPoolV2.sol": {
+      "sha256": "69a8c13e59b99b1ddfdbc9c982c1898b3705957ca9b68c85a6f399dc979ca557",
+      "bytes": 14797
+    },
+    "review-source/contracts/src/v2/PrivacyPoolV2ETH.sol": {
+      "sha256": "5a9b96c23bdf612d62aaeed85d2dc8720157d0b15d71e604e17304fc654b2ead",
+      "bytes": 1202
+    },
+    "review-source/contracts/src/verifiers/CommitmentVerifier.sol": {
+      "sha256": "87b88c30088ff14e2f03f354852da8443376936d02064978c45f30858712f2b7",
+      "bytes": 8334
+    },
+    "review-source/contracts/src/verifiers/WithdrawVerifier.sol": {
+      "sha256": "24d0bca1ff59ef5d66ed57282bd85a5e9f9c354b147d2dc7aeff23dd6aff8fa3",
+      "bytes": 9108
+    },
+    "review-source/contracts/test/CrossChain.t.sol": {
+      "sha256": "163b6dfcdb08e2e8dbd1d779cb8ac98d80bb15febe690705b8cbb4e796b9e84f",
+      "bytes": 5068
+    },
+    "review-source/contracts/test/PrivacyPool.t.sol": {
+      "sha256": "9abc1cfb939be7b7d558552c6e3c472a4ce3809a4a4f284a3f721b2ac8eba2d9",
+      "bytes": 14791
+    },
+    "review-source/contracts/test/PrivacyPoolV2.t.sol": {
+      "sha256": "76b24f0585b57d6f1c4a3179f93b9fc641adb747d7df1809036920f577884d43",
+      "bytes": 9565
+    },
+    "review-source/contracts/test/PrivacyPoolV2ETH.t.sol": {
+      "sha256": "4e6a45292a02b21cf9650e364d5cadbc9636f37f02169b94db8afb4139160f3b",
+      "bytes": 2839
+    },
+    "review-source/contracts/test/PrivacyPoolV2Invariant.t.sol": {
+      "sha256": "fd244b43dc54b297febc16cf9fb8438c48c5064d71650c9504af3be10fc08b8b",
+      "bytes": 4154
+    },
+    "review-source/contracts/test/SecurityReview.t.sol": {
+      "sha256": "a94a1d9645df51146ab8f10369dbb0552dd8dff4149c49de0ca06b8f3d092bac",
+      "bytes": 15082
+    },
+    "review-source/contracts/script/Deploy.s.sol": {
+      "sha256": "5d196897733ba0777ca02f0b5e85dc23956a3ae15dc32413c277c73711cea173",
+      "bytes": 7964
+    },
+    "review-source/contracts/script/DeployV2Dev.s.sol": {
+      "sha256": "246816e0a0f894637a256be62e466c71eabc6546a68e27ff0125893e1c38332f",
+      "bytes": 3245
+    },
+    "review-source/contracts/lib/forge-std/src/Base.sol": {
+      "sha256": "76b05dda37981797d3d403f29fc6cad79b46e2fc11da47d649ff13acb69158b2",
+      "bytes": 2248
+    },
+    "review-source/contracts/lib/forge-std/src/Config.sol": {
+      "sha256": "850649e2ede6e0e1384ba00eba1335a7af7e97643c731a4587335c0f51f67041",
+      "bytes": 2659
+    },
+    "review-source/contracts/lib/forge-std/src/console.sol": {
+      "sha256": "894dc6e40fe62d887df6243112d8c775df2db60babc3024ee04a5564b90af64d",
+      "bytes": 71039
+    },
+    "review-source/contracts/lib/forge-std/src/console2.sol": {
+      "sha256": "62d8ccbd118fec4f99c5e847322d6ca0d7fbe6a0a16e5a26b0590869fcd69357",
+      "bytes": 131
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC1155.sol": {
+      "sha256": "d10916158da2bbecc56364cda787da303b57313d478c150b1c79ac05d3b2936c",
+      "bytes": 7626
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC165.sol": {
+      "sha256": "d9bea769cd3aa52c5dfbfe7b447a63b00ab22baaa4f9d2af789f44553078a27b",
+      "bytes": 559
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC20.sol": {
+      "sha256": "cb4bf7f4c0bc513e2c82f251a84e67d2e950cef12e570f40a0d4880b2e25fc9f",
+      "bytes": 2089
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC4626.sol": {
+      "sha256": "5b9da91e1215dc84a606c06f636b34582aec6cdf35ae828dce3852f727d9278e",
+      "bytes": 11982
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC6909.sol": {
+      "sha256": "44ef6ba5ab803241ed5992f35606820322e2df5947da488870c78f2181d97840",
+      "bytes": 3503
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC721.sol": {
+      "sha256": "2e6e000940bf5278cf64f170ac839682667368a5aee7222b312e255ec8eda275",
+      "bytes": 9063
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC7540.sol": {
+      "sha256": "5b9e0d90816f47628b2023351c84e9b8d8667f685c98234742be99dc8eaf2fb6",
+      "bytes": 6712
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IERC7575.sol": {
+      "sha256": "15163bc29d96c6b905b53da06e243fbd2ae6b7c8984b8306ff4c9b0716ec055b",
+      "bytes": 12605
+    },
+    "review-source/contracts/lib/forge-std/src/interfaces/IMulticall3.sol": {
+      "sha256": "890a5b361034daa6006b3ba2275e743cd6197c4d81e3df5732cdce731d3c0868",
+      "bytes": 2141
+    },
+    "review-source/contracts/lib/forge-std/src/LibVariable.sol": {
+      "sha256": "0b789ace36e54d1746d08b9b161f5ab4c2fa55c8d30808421349ae33f703c797",
+      "bytes": 17987
+    },
+    "review-source/contracts/lib/forge-std/src/safeconsole.sol": {
+      "sha256": "fd74d8ed377e1470217cd6dce7699dcbc4e79b3893f17ae2a298c0e7e4418181",
+      "bytes": 408927
+    },
+    "review-source/contracts/lib/forge-std/src/Script.sol": {
+      "sha256": "172a6201241215bdc1f552197f9950e4d2ab7f56dd1e1b992dc51dc71d4e17a1",
+      "bytes": 1110
+    },
+    "review-source/contracts/lib/forge-std/src/StdAssertions.sol": {
+      "sha256": "203de35565c3d68b6599f84e88068f79c23b53a80d18c46056e85d4c5f48613c",
+      "bytes": 58829
+    },
+    "review-source/contracts/lib/forge-std/src/StdChains.sol": {
+      "sha256": "981b7ce12f4bc3193c7914c68f51be74d1d03c33732db894f5d36ad8025ab4f5",
+      "bytes": 16053
+    },
+    "review-source/contracts/lib/forge-std/src/StdCheats.sol": {
+      "sha256": "487455f72985babc19ed6456ce85fe6939af1db0bf8d00210314e726b1fc1008",
+      "bytes": 39194
+    },
+    "review-source/contracts/lib/forge-std/src/StdConfig.sol": {
+      "sha256": "6b93592f2642a09923fcf94bba052b54d5c279f488ef4a66f573796e6cc22eb0",
+      "bytes": 31810
+    },
+    "review-source/contracts/lib/forge-std/src/StdConstants.sol": {
+      "sha256": "17dfd996881264de1e6af6697a3dc7a56ae8ff0717e4cb4f1685bd7fb3a45147",
+      "bytes": 1882
+    },
+    "review-source/contracts/lib/forge-std/src/StdError.sol": {
+      "sha256": "c1f7271f11a44628810ef6beb2da0c43add131ff9cfcac4d7acd633c269ccf7d",
+      "bytes": 1915
+    },
+    "review-source/contracts/lib/forge-std/src/StdInvariant.sol": {
+      "sha256": "7d3a62087c7d06766e99f8e4f4e50997b0ff8730fb304986f2c4cd895a67fbbd",
+      "bytes": 7264
+    },
+    "review-source/contracts/lib/forge-std/src/StdJson.sol": {
+      "sha256": "433c8ca2b3ae87e2f8a5b5902dc55446528ffd6b8e1af8a333f2eff4403e5620",
+      "bytes": 14798
+    },
+    "review-source/contracts/lib/forge-std/src/StdMath.sol": {
+      "sha256": "7224cea66fc06c7a9d303084cccb14eaedffe4b21b3f9695d06dc590d2894d7d",
+      "bytes": 2938
+    },
+    "review-source/contracts/lib/forge-std/src/StdSecp256k1.sol": {
+      "sha256": "e66b454052c23b7f6224a9bd59a2112ceb4af00f77afefbcdfef749896c8e42c",
+      "bytes": 6209
+    },
+    "review-source/contracts/lib/forge-std/src/StdStorage.sol": {
+      "sha256": "cd3e30147de813618446c9eed8c07b8c14ee6989c3b5ad608f72af3b17adedf9",
+      "bytes": 26342
+    },
+    "review-source/contracts/lib/forge-std/src/StdStyle.sol": {
+      "sha256": "903ea6f4e4aa31e416b5043abecc09ced41dc78c9ce9dabb5c745337ee13139d",
+      "bytes": 17505
+    },
+    "review-source/contracts/lib/forge-std/src/StdToml.sol": {
+      "sha256": "682e9c74bd02de5df7be595d27fa44eeaf0a5d96ad5c2db507065386d35eb433",
+      "bytes": 14097
+    },
+    "review-source/contracts/lib/forge-std/src/StdUtils.sol": {
+      "sha256": "52d713d886305184e7ed3b3a2e5941ea1440f071d9c9a4d6fea618135e1d3f67",
+      "bytes": 11980
+    },
+    "review-source/contracts/lib/forge-std/src/Test.sol": {
+      "sha256": "6ac6a04a9723f3b51a86fcd0c4cf02e8011f112df052a8eea8e986d85b0bb3d7",
+      "bytes": 1313
+    },
+    "review-source/contracts/lib/forge-std/src/Vm.sol": {
+      "sha256": "6b9435bc4498914f23a5617de00c5aa8631215e6f4bd19edfc55878d6363e289",
+      "bytes": 171954
+    },
+    "review-source/circuits/v2/withdraw.circom": {
+      "sha256": "ad4ec5a0873b4c452c7b7c242f35112c95a7d7bc51f2bec2dd393633af9e842d",
+      "bytes": 4127
+    },
+    "review-source/circuits/v2/commitment.circom": {
+      "sha256": "668f0b3e1476fdf09e3c47d34b2c4d08e2902bb8abe3edcd229445a842e4d11c",
+      "bytes": 1522
+    },
+    "review-source/circuits/lib/merkleProof.circom": {
+      "sha256": "717f184331a403ac2cc458a85d05df6f989884baeb9ef0c93eead3fb567e2413",
+      "bytes": 1184
+    },
+    "review-source/package.json": {
+      "sha256": "b1336b4f80d76612f7f975b3c1ba78fc612e8fe723e9b14f749c3a02860081cb",
+      "bytes": 4645
+    },
+    "review-source/package-lock.json": {
+      "sha256": "b3fac482bcb0d7cca3822bc32025900c1f2018b90eeb87586ffc48204a9ba77e",
+      "bytes": 554372
+    },
+    "review-source/tsconfig.json": {
+      "sha256": "d123d96d5377d1a3ff2d2887d580fbb19372620df05aa0b4a1827123134da7fd",
+      "bytes": 807
+    },
+    "review-source/tsconfig.privacy-scripts.json": {
+      "sha256": "ebef4e3e49cd1631bae74e11c3807ae5cdf09a347eeeb6dfa0603e49c32fc3cc",
+      "bytes": 422
+    },
+    "review-source/contracts/foundry.toml": {
+      "sha256": "044df756f55de57ed4f7a78c31c28f47753d8b5b7db090bf973e5c7c97cfadd7",
+      "bytes": 504
+    },
+    "review-source/README.md": {
+      "sha256": "135d1004d27f64b1607413b726d91394f428880372d3713131540a6411be724f",
+      "bytes": 16219
+    },
+    "review-source/docs/privacy-pools/mainnet-ceremony.md": {
+      "bytes": 6695,
+      "sha256": "4c701c63812e114cb66ff2a537e9be38246b42913216f9f00000e68ea21b0618"
+    },
+    "review-source/docs/privacy-pools/native-eth-v2.md": {
+      "bytes": 9957,
+      "sha256": "2bf0befe4b194a125e419d005fc41af44a7b12c17efecae99c0f199bc4175399"
+    },
+    "review-source/docs/privacy-pools/dual-mainnet.md": {
+      "sha256": "c8d8893815d0135b415517614cbc5cf461cf2cddbd30d7a1a02149c424569fc9",
+      "bytes": 5057
+    },
+    "review-source/docs/privacy-pools/mainnet-migration.md": {
+      "sha256": "ebdec5a867410b661efcf2ce13a9a6789284eb9acc3ea35880a7768c58427091",
+      "bytes": 11129
+    },
+    "review-source/vite.config.ts": {
+      "bytes": 9117,
+      "sha256": "de790f798d4d00cc7cc2ace130c4d694321150e40b35cf5bd46577507571a701"
+    },
+    "review-source/vitest.config.ts": {
+      "sha256": "c0c7ffb16d00f0e49181da3873b3c83bedebf3d17063d5aaf5bfb50b5adc844c",
+      "bytes": 556
+    },
+    "review-source/scripts/privacy/v2/templates/DeployV2ETH.s.sol": {
+      "bytes": 2032,
+      "sha256": "3dd962bf04fd1dfcc87cac22885b2032df60c5e0925c88c2093948bee4c5632d"
+    },
+    "review-source/contracts/test/fixtures/pool.json": {
+      "bytes": 8458,
+      "sha256": "1009fa135763c76d2532e7ccc8007dab81a731b192f91b9393f09b1a6ed7cc55"
+    },
+    "review-source/contracts/test/fixtures/security.json": {
+      "bytes": 2177,
+      "sha256": "eb971ba6cf136bbfa6401e2a746c7cf0bb3bd4019180f7426adc94b5ff94ed54"
+    },
+    "review-source/contracts/test/fixtures/v2/pool.json": {
+      "bytes": 20382,
+      "sha256": "576f55c03bf482ab81a735082e704ce2e21ddd942aff42842eda678563166376"
+    },
+    "review-source/docs/security/frozen-artifacts.json": {
+      "bytes": 4067,
+      "sha256": "cfdd92d5e5e1f7beb0c05f9a500dca97015f5761440e8733e224da22e9dc57ef"
+    },
+    "review-source/docs/security/findings.md": {
+      "bytes": 21344,
+      "sha256": "164f82ca4c143ba1513d5312ef361fb8ccca5d4b8036d076906515ed11da04b8"
+    },
+    "operator/withdraw_0001.zkey": {
+      "bytes": 10810706,
+      "sha256": "bb391dc981537f4447a1baea5dc08cdb3ce4bf6d235f11dd011289aae92508a6"
+    },
+    "operator/withdraw_0001.mpcparams": {
+      "bytes": 9777500,
+      "sha256": "db99242535bf635da3bfaebe32e2b9201f94f5c58d89f3f43b596468a25358d6"
+    },
+    "operator/withdraw-verify.log": {
+      "bytes": 1071,
+      "sha256": "1fa656c02b70e1723e01496ce608879456ebfec679e16faa1f84cfa1d3357755"
+    },
+    "operator/commitment_0001.zkey": {
+      "bytes": 782522,
+      "sha256": "7eba1f249cf7b2fb25a9fcd638ff86c2f028a68afc45bd4d074cc3dbe57a301a"
+    },
+    "operator/commitment_0001.mpcparams": {
+      "bytes": 699100,
+      "sha256": "468a82cd877ba2f3838786200a655862c2e87acdced0ad06dbcf000cc0a275fd"
+    },
+    "operator/commitment-verify.log": {
+      "bytes": 1071,
+      "sha256": "982eea18a96d558e963031d83aebf5c2e382240ef289469715a98ec63e9639fa"
+    },
+    "operator/operator-contribution.json": {
+      "bytes": 2750,
+      "sha256": "60ec119d200840c5631b99dca1bf69d8a698708e186d3438de88576c40afad55"
+    },
+    "operator/contribute.mjs": {
+      "bytes": 4841,
+      "sha256": "39bb689934326bc248e4052ad6f0a1e6e5d28a5953011b722076726723a910dd"
+    },
+    "phase1-verification/snarkjs-verify.log": {
+      "bytes": 341541,
+      "sha256": "e0a7deea27e2c6a7c872aec2895c0a27063fc6480062c8505bd3fd66554ce191"
+    },
+    "phase1-verification/run.json": {
+      "bytes": 296,
+      "sha256": "0388d5a317819cc1f037bb347f64f844b38deff707796912918cd0fb84c72bc7"
+    },
+    "phase1-verification/receipt.json": {
+      "bytes": 1495,
+      "sha256": "049f9185d56ec68a92fa59bd2cec45ecc37e2784b955c72c6292f58c5e8b6c7d"
+    },
+    "review-source/docs/security/mainnet-phase1-verification.json": {
+      "bytes": 1495,
+      "sha256": "049f9185d56ec68a92fa59bd2cec45ecc37e2784b955c72c6292f58c5e8b6c7d"
+    },
+    "local-deployment/shared-owner-publisher-smoke.log": {
+      "bytes": 420,
+      "sha256": "45587e2fbb2e325cce98a60e91953a2ca4f46b81113dcd35e46b962c4bd2489b"
+    },
+    "local-deployment/snapshot-shared-owner-publisher-smoke.log": {
+      "bytes": 420,
+      "sha256": "45587e2fbb2e325cce98a60e91953a2ca4f46b81113dcd35e46b962c4bd2489b"
+    },
+    "local-deployment/snapshot-native-contract-tests.log": {
+      "bytes": 1706,
+      "sha256": "41d0020026e5087876f92861a947f4779c00ac8e030d22ee89481145585ec1ec"
+    },
+    "README.md": {
+      "bytes": 4942,
+      "sha256": "73443c3d5efd576b8c93a586497f6ef1dbe67659ea774b19686a87a6ff1ec2dd"
+    },
+    "review-source/scripts/vite/siteSeo.ts": {
+      "bytes": 5115,
+      "sha256": "37999dcab79355c24c4c9c27e54cfe73551c2cbb74531dd6e43bbc6c2798aba7"
+    },
+    "review-source/scripts/vite/englishWalletLocale.ts": {
+      "bytes": 894,
+      "sha256": "025df954693248269c406e1603660e5a5ab6faf20e5e523f527468f4e63eda8b"
+    }
+  },
+  "phase1Verification": {
+    "finishedAt": "2026-11-21T15:11:54.283Z",
+    "tool": "snarkjs powersoftau verify",
+    "cliSha256": "6d787e37a4d1a2c6dd6032dadca09c0b3b007d4d4578bb6232a98136555d051a",
+    "transcriptSha256": "1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922",
+    "log": "phase1-verification/snarkjs-verify.log",
+    "logSha256": "e0a7deea27e2c6a7c872aec2895c0a27063fc6480062c8505bd3fd66554ce191"
+  },
+  "participantDescription": "One local operator; independent participant identity/custody not established",
+  "operatorDirectory": "operator",
+  "operatorManifest": "operator/operator-contribution.json",
+  "independentParticipantCountEstablished": false,
+  "finalBeaconApplied": false,
+  "circuits": {
+    "withdraw": {
+      "key": "withdraw_0001.zkey",
+      "bytes": 10810706,
+      "sha256": "bb391dc981537f4447a1baea5dc08cdb3ce4bf6d235f11dd011289aae92508a6",
+      "contributionHash": "8795376efd2dd5f9aaf2269e1252a85f8bfe0e43417d54b71d09e4433ee7efdc441fb17a677648e2587489cca872cb7cd7a4b6ecb7c749c820d883265906b347",
+      "contributionCount": 1,
+      "transcript": {
+        "type": 0,
+        "transcript": "657c214cdbddb1fb182cd8140c482a128525f40e7b232c8a488aa10592617d7cb33d630bdd079f5e613b0da23c2efb2d28b50dfb6af1bbec4105a2839355fa85",
+        "name": "hylsia-local-operator-2026-11-21"
+      },
+      "verifiedAgainstR1csAndPhase1": true,
+      "verificationLog": "withdraw-verify.log",
+      "verificationLogSha256": "1fa656c02b70e1723e01496ce608879456ebfec679e16faa1f84cfa1d3357755",
+      "bellmanChallenge": "withdraw_0001.mpcparams",
+      "bellmanChallengeBytes": 9777500,
+      "bellmanChallengeSha256": "db99242535bf635da3bfaebe32e2b9201f94f5c58d89f3f43b596468a25358d6"
+    },
+    "commitment": {
+      "key": "commitment_0001.zkey",
+      "bytes": 782522,
+      "sha256": "7eba1f249cf7b2fb25a9fcd638ff86c2f028a68afc45bd4d074cc3dbe57a301a",
+      "contributionHash": "f4af9d61894cc2f5d958afa3bd1aa2ce515408ecb5a39eaeca529395b78f1f56eb59648f36ebad4cc451eb7e56faf9be96aa31dfe9b83acd572d5bd305900fca",
+      "contributionCount": 1,
+      "transcript": {
+        "type": 0,
+        "transcript": "10f5afb27d54829ac52d99fbf7b5fd92516e96e488af5bf8d492fd540eab4463e53797f758e4de7769d288229c500c6f2276fbbbfc29cd545dd1d5d19a902d37",
+        "name": "hylsia-local-operator-2026-11-21"
+      },
+      "verifiedAgainstR1csAndPhase1": true,
+      "verificationLog": "commitment-verify.log",
+      "verificationLogSha256": "982eea18a96d558e963031d83aebf5c2e382240ef289469715a98ec63e9639fa",
+      "bellmanChallenge": "commitment_0001.mpcparams",
+      "bellmanChallengeBytes": 699100,
+      "bellmanChallengeSha256": "468a82cd877ba2f3838786200a655862c2e87acdced0ad06dbcf000cc0a275fd"
+    }
+  },
+  "finishedAt": "2026-11-21T15:14:34.021Z",
+  "documentationLanguage": "en",
+  "languageRevision": {
+    "updatedAt": "2026-11-21T16:27:16.197Z",
+    "reason": "English-only documentation, comments, examples and interface locale",
+    "previousManifestSha256": "b01278e60540d851c23ca32259d34c6b0c80da065041f8f8f34cab9ebc343a71",
+    "previousArchiveSha256": "c2fc8a797ce1189a015cc2530b8154f0508d0e2e150da016ea0a65272f010888",
+    "changedFiles": [
+      "review-source/client/src/components/pools/NetworkMenu.tsx",
+      "review-source/client/src/components/pools/PoolCharts.tsx",
+      "review-source/client/src/components/pools/PoolDetail.tsx",
+      "review-source/client/src/components/pools/TopStats.tsx",
+      "review-source/client/src/components/pools/format.ts",
+      "review-source/client/src/components/privacy/ActivityPanel.tsx",
+      "review-source/client/src/components/privacy/OpStatus.tsx",
+      "review-source/client/src/components/privacy/PoolHeader.tsx",
+      "review-source/client/src/components/privacy/PrivacyCheck.tsx",
+      "review-source/client/src/components/privacy/Screening.tsx",
+      "review-source/client/src/components/privacy/WithdrawPanel.tsx",
+      "review-source/client/src/pages/PoolPage.tsx",
+      "review-source/client/src/pages/Pools.tsx",
+      "review-source/client/src/pages/Portfolio.tsx",
+      "review-source/client/src/pages/ScreeningPolicy.tsx",
+      "review-source/client/src/hooks/useComposition.ts",
+      "review-source/client/src/providers/OnchainProvider.tsx",
+      "review-source/vite.config.ts",
+      "review-source/scripts/vite/siteSeo.ts",
+      "review-source/scripts/vite/englishWalletLocale.ts"
+    ],
+    "cryptographicArtifactsChanged": false
+  },
+  "uiLocale": "en-US",
+  "languageRevisionHistory": [
+    {
+      "updatedAt": "2026-11-21T16:17:45.929Z",
+      "reason": "English-only documentation and example paths",
+      "previousManifestSha256": "4ca8ad1acba885921c3d5c2856d4ca041ba16775291ef8bffc5711625443e941",
+      "previousArchiveSha256": "7e4d00ae1374d7c5c6a35d214694eefb5bb07132bdc1d65be6792f3e9e184565",
+      "changedFiles": [
+        "review-source/docs/security/findings.md",
+        "review-source/docs/privacy-pools/native-eth-v2.md",
+        "review-source/server/privacy/nativeEthV2.test.ts"
+      ],
+      "cryptographicArtifactsChanged": false
+    }
+  ]
+}

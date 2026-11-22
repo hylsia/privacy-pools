@@ -1,0 +1,11 @@
+Compiling 24 files with Solc 0.8.28
+Solc 0.8.28 finished in 673.11ms
+Compiler run successful!
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/v2/PrivacyPoolV2.sol:228:32
+    │
+228 │         if (w.deadline != 0 && block.timestamp > w.deadline) revert Expired();
+    │                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+

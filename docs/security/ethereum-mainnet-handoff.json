@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "targetChainId": 1,
+  "purpose": "Independent phase-2 contribution and native ETH source review handoff",
+  "createdAt": "2026-11-21T15:14:34.021Z",
+  "workspace": "ceremonies/ethereum-mainnet-v2-2026-11-21-handoff",
+  "manifestSha256": "637fe420459a468c4dc7cf5704eb9d0966c0a602d2ec29bf40669d29d35905b5",
+  "archive": "ceremonies/ethereum-mainnet-v2-2026-11-21-handoff.tar.gz",
+  "archiveBytes": 106978662,
+  "archiveSha256": "5d84906fe69fb6f8422d0343d55f7341acd540b4d13e754d13f64204f16a6790",
+  "files": 420,
+  "phase1TranscriptVerified": true,
+  "operatorContributionsPerCircuit": 1,
+  "independentParticipantCountEstablished": false,
+  "finalBeaconApplied": false,
+  "productionReady": false,
+  "reviewedRelease": false,
+  "broadcastAllowed": false,
+  "mainnetTransactionsSent": 0,
+  "localSnapshotValidation": {
+    "nativeContractTests": 17,
+    "sharedOwnerPublisherDeploymentSmoke": "passed",
+    "applicationSecretsIncluded": false,
+    "developmentVerifiersOnly": true
+  },
+  "remaining": [
+    "Independent phase-2 participation and verified responses",
+    "Agreed unpredictable final beacon and verified final keys",
+    "Exact Ethereum release build, final-key proof tests and production validation",
+    "Independent exact-release review",
+    "Mainnet simulation and actual receipt-verified deployment"
+  ],
+  "updatedAt": "2026-11-21T16:27:16.197Z",
+  "documentationLanguage": "en",
+  "languageRevision": {
+    "updatedAt": "2026-11-21T16:27:16.197Z",
+    "reason": "English-only documentation, comments, examples and interface locale",
+    "previousManifestSha256": "b01278e60540d851c23ca32259d34c6b0c80da065041f8f8f34cab9ebc343a71",
+    "previousArchiveSha256": "c2fc8a797ce1189a015cc2530b8154f0508d0e2e150da016ea0a65272f010888",
+    "changedFiles": [
+      "review-source/client/src/components/pools/NetworkMenu.tsx",
+      "review-source/client/src/components/pools/PoolCharts.tsx",
+      "review-source/client/src/components/pools/PoolDetail.tsx",
+      "review-source/client/src/components/pools/TopStats.tsx",
+      "review-source/client/src/components/pools/format.ts",
+      "review-source/client/src/components/privacy/ActivityPanel.tsx",
+      "review-source/client/src/components/privacy/OpStatus.tsx",
+      "review-source/client/src/components/privacy/PoolHeader.tsx",
+      "review-source/client/src/components/privacy/PrivacyCheck.tsx",
+      "review-source/client/src/components/privacy/Screening.tsx",
+      "review-source/client/src/components/privacy/WithdrawPanel.tsx",
+      "review-source/client/src/pages/PoolPage.tsx",
+      "review-source/client/src/pages/Pools.tsx",
+      "review-source/client/src/pages/Portfolio.tsx",
+      "review-source/client/src/pages/ScreeningPolicy.tsx",
+      "review-source/client/src/hooks/useComposition.ts",
+      "review-source/client/src/providers/OnchainProvider.tsx",
+      "review-source/vite.config.ts",
+      "review-source/scripts/vite/siteSeo.ts",
+      "review-source/scripts/vite/englishWalletLocale.ts"
+    ],
+    "cryptographicArtifactsChanged": false
+  },
+  "uiLocale": "en-US",
+  "languageRevisionHistory": [
+    {
+      "updatedAt": "2026-11-21T16:17:45.929Z",
+      "reason": "English-only documentation and example paths",
+      "previousManifestSha256": "4ca8ad1acba885921c3d5c2856d4ca041ba16775291ef8bffc5711625443e941",
+      "previousArchiveSha256": "7e4d00ae1374d7c5c6a35d214694eefb5bb07132bdc1d65be6792f3e9e184565",
+      "changedFiles": [
+        "review-source/docs/security/findings.md",
+        "review-source/docs/privacy-pools/native-eth-v2.md",
+        "review-source/server/privacy/nativeEthV2.test.ts"
+      ],
+      "cryptographicArtifactsChanged": false
+    }
+  ]
+}

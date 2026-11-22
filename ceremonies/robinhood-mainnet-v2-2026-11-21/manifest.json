@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "protocol": "hylsia-pp-v2-candidate",
+  "targetChainId": 4663,
+  "status": "interrupted",
+  "productionReady": false,
+  "broadcastAllowed": false,
+  "phase2ContributionCount": 0,
+  "createdAt": "2026-11-21T07:13:30.575Z",
+  "warning": "UNSAFE initial keys. Await independent contributions, finalization, and review. Never deploy or publish as proving assets.",
+  "interruptedStage": "phase1-verify",
+  "phase1TranscriptVerified": false,
+  "reason": "Full phase-1 verification separated from unsafe challenge preparation; not completed."
+}

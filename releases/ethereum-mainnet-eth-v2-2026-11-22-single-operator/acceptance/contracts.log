@@ -1,0 +1,25 @@
+Compiling 30 files with Solc 0.8.28
+Solc 0.8.28 finished in 1.31s
+Compiler run successful!
+
+Ran 17 tests for test/PrivacyPoolV2ETH.t.sol:PrivacyPoolV2ETHTest
+[PASS] test_changeRagequitUsesSameSpendNullifierAsPrivatePath() (gas: 8384650)
+[PASS] test_copiedDepositCannotStrandOriginalRagequit() (gas: 8384985)
+[PASS] test_copierCannotRagequitOriginalLabel() (gas: 6151081)
+[PASS] test_duplicateSecretsCanBothRagequit() (gas: 7181676)
+[PASS] test_duplicateSecretsSupportTwoPrivateWithdrawalChains() (gas: 13345231)
+[PASS] test_invalidRecoveryNonceRejectsBeforeAcceptingFunds() (gas: 47829)
+[PASS] test_nativeETHAssetAndAdministrativeSeparation() (gas: 12888)
+[PASS] test_nativeETHRejectsInvalidDeploymentRolesOrVerifierCode() (gas: 4933698)
+[PASS] test_originalRagequitStillWorksAfterWindDown() (gas: 6422114)
+[PASS] test_privateSpendReplayFails() (gas: 8608322)
+[PASS] test_ragequitOfCopiedDepositDoesNotConsumeOriginalPrivateSpend() (gas: 8383996)
+[PASS] test_ragequitReplayFails() (gas: 6423952)
+[PASS] test_sameNoteCannotSpendViaBothExitPaths() (gas: 8118088)
+[PASS] test_sharedOwnerPublisherCanDeployAndPublish() (gas: 3220620)
+[PASS] test_sharedOwnerPublisherRetainsPrivateSpendAndPublicExit() (gas: 8392327)
+[PASS] test_v1ProofRejectedByV2Verifier() (gas: 318670)
+[PASS] test_v2ProofRejectedByV1Verifier() (gas: 2370650)
+Suite result: ok. 17 passed; 0 failed; 0 skipped; finished in 69.11ms (328.19ms CPU time)
+
+Ran 1 test suite in 78.49ms (69.11ms CPU time): 17 tests passed, 0 failed, 0 skipped (17 total tests)

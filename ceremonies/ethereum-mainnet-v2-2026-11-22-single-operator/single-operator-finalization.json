@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "protocol": "hylsia-pp-v2-eth",
+  "targetChainId": 1,
+  "trustModel": "single-operator",
+  "independentParticipants": 0,
+  "independentReview": false,
+  "authorization": "Project owner instructed Ethereum mainnet deployment without independent ceremony contributors.",
+  "productionReady": false,
+  "reviewedRelease": false,
+  "createdAt": "2026-11-21T18:01:11.104Z",
+  "status": "finalized-single-operator",
+  "circuits": {
+    "withdraw": {
+      "response": "withdraw_0002.zkey",
+      "responseSha256": "7935878a8a245b881913570a803853bdcadf13c4f9c2e49c4fbd970d3f7c022c",
+      "operatorCustodies": 1,
+      "final": "withdraw_final.zkey",
+      "finalSha256": "05a9510daeb9e0deb0efafd441fb0859beb0439d7949c8a8ef38ffc7d95273d8",
+      "transcript": {
+        "nPublic": 6,
+        "circuitHash": "db918b41514e67151b4c26c639e89b7d6115d5bb18f982246a4a2d3e39ba6cc55942335502adba420beada23ed63317fc3930b8be1afdc9b5822971f016ab1ba",
+        "contributions": [
+          {
+            "type": 0,
+            "transcript": "657c214cdbddb1fb182cd8140c482a128525f40e7b232c8a488aa10592617d7cb33d630bdd079f5e613b0da23c2efb2d28b50dfb6af1bbec4105a2839355fa85",
+            "name": "hylsia-local-operator-2026-11-21"
+          },
+          {
+            "type": 0,
+            "transcript": "d40ef8957313e22681c3e863f035d9aeb01622011d4cff8baf8eb3cfe0c8747baa834dac4f6306ce570872579b875fd4faeb47e9b5435deea431bc63f55b8165",
+            "name": "hylsia-SAME-LOCAL-OPERATOR-second-contribution"
+          },
+          {
+            "type": 1,
+            "transcript": "1d58dfa49dfdf7c9d6da2e9ae6aef130d8883162a5c9f37309f11f8b65d0502d362dd4261262b14ad86d579814513e47d96862290fd4887ddf047c5ff7ec88c6",
+            "name": "hylsia-single-operator-Ethereum-final-beacon",
+            "beaconHash": "39c4eed245c350a6f5b8229313442900bda7a0b9c157a3dbda8f8c14b40e705c",
+            "numIterationsExp": 10
+          }
+        ]
+      },
+      "verifiedAgainstR1csAndPhase1": true
+    },
+    "commitment": {
+      "response": "commitment_0002.zkey",
+      "responseSha256": "0df2979cb05bd116af1da35a8b72689bd42e3596c74e31ece3051c99ad4c45a5",
+      "operatorCustodies": 1,
+      "final": "commitment_final.zkey",
+      "finalSha256": "c375d67eddaf29f7e2e3a94da8efdaad934e01e7b4951ba7308b6bccb49c7492",
+      "transcript": {
+        "nPublic": 4,
+        "circuitHash": "3fab313c4f1be24a27a35ef194a49b8793efa4b7faaa4697856f00acc62c8d239c5019fbadc67f47ee611dda8ef99fe48614b591481cbb8733fbdfceb7be09a1",
+        "contributions": [
+          {
+            "type": 0,
+            "transcript": "10f5afb27d54829ac52d99fbf7b5fd92516e96e488af5bf8d492fd540eab4463e53797f758e4de7769d288229c500c6f2276fbbbfc29cd545dd1d5d19a902d37",
+            "name": "hylsia-local-operator-2026-11-21"
+          },
+          {
+            "type": 0,
+            "transcript": "7c1a383503177e3810f93465418913a0ba962290abb7bd7143d7293f5d643130d8a0534f37fd666abaf2c2d470da6c15ecce2a7725f46cfa079c39faef18abfa",
+            "name": "hylsia-SAME-LOCAL-OPERATOR-second-contribution"
+          },
+          {
+            "type": 1,
+            "transcript": "700e36b4819d83313ecb5a6c8bb27e0883579cf776f4691485adaaf28a66edb77f2525901676fca171b7a10f0ff858fdcbed6b35694e9bf066858523c507bca8",
+            "name": "hylsia-single-operator-Ethereum-final-beacon",
+            "beaconHash": "39c4eed245c350a6f5b8229313442900bda7a0b9c157a3dbda8f8c14b40e705c",
+            "numIterationsExp": 10
+          }
+        ]
+      },
+      "verifiedAgainstR1csAndPhase1": true
+    }
+  },
+  "beaconPlan": {
+    "committedAt": "2026-11-21T18:01:28.893Z",
+    "observedHead": "26465136",
+    "blockNumber": "26465139",
+    "confirmations": 2,
+    "derivation": "SHA256(hylsia-eth-single-operator-v1:blockHash:withdrawResponseSha256:commitmentResponseSha256)"
+  },
+  "beacon": {
+    "blockNumber": "26465139",
+    "blockHash": "0x64c8600301011c9d6717d478204af60376719eb863a9e026932da58d9e396a33",
+    "value": "39c4eed245c350a6f5b8229313442900bda7a0b9c157a3dbda8f8c14b40e705c",
+    "iterationsExponent": 10
+  },
+  "finishedAt": "2026-11-21T18:02:43.410Z"
+}

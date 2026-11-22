@@ -1,0 +1,11 @@
+{
+  "aspPostman": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "chainId": 31337,
+  "commitmentVerifier": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+  "deployBlock": "0",
+  "minDepositWei": "0",
+  "owner": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "pool": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+  "scope": "12691614063895361675117108811459504883212868408867308191992060068028485866925",
+  "withdrawVerifier": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Local full verification of the digest-pinned public phase-1 transcript",
+  "startedAt": "2026-11-21T14:42:02.800Z",
+  "finishedAt": "2026-11-21T15:11:54.283Z",
+  "tool": {
+    "name": "snarkjs powersoftau verify",
+    "version": "0.7.6",
+    "cliSha256": "6d787e37a4d1a2c6dd6032dadca09c0b3b007d4d4578bb6232a98136555d051a",
+    "matchesPreparationCliSha256": true
+  },
+  "command": [
+    "node",
+    "node_modules/snarkjs/build/cli.cjs",
+    "powersoftau",
+    "verify",
+    "ceremonies/robinhood-mainnet-v2-2026-11-21-challenges/phase1.ptau",
+    "-v"
+  ],
+  "exitCode": 0,
+  "phase1TranscriptVerified": true,
+  "phase1": {
+    "path": "ceremonies/robinhood-mainnet-v2-2026-11-21-challenges/phase1.ptau",
+    "bytes": 75580568,
+    "sha256": "1c401abb57c9ce531370f3015c3e75c0892e0f32b8b1e94ace0f6682d9695922",
+    "blake2b512": "6a6277a2f74e1073601b4f9fed6e1e55226917efb0f0db8a07d98ab01df1ccf43eb0e8c3159432acd4960e2f29fe84a4198501fa54c8dad9e43297453efec125"
+  },
+  "log": {
+    "path": "ceremonies/robinhood-mainnet-v2-2026-11-21-challenges/logs/phase1-verify-production-preparation.log",
+    "bytes": 341541,
+    "sha256": "e0a7deea27e2c6a7c872aec2895c0a27063fc6480062c8505bd3fd66554ce191"
+  },
+  "originalCeremonyManifestSha256": "a9d41a1c509d2753e7fbbef58e0b1585d964ff062da328068327f2d2722f5ce5",
+  "originalManifestRetained": true,
+  "independentReview": false,
+  "productionReady": false,
+  "broadcastAllowed": false,
+  "mainnetTransactionsSent": 0
+}

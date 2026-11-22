@@ -1,0 +1,47 @@
+{
+  "protocol": "hylsia-pp-v2-eth",
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "builtAt": "2026-11-21T18:05:21.617Z",
+  "status": "ceremony-verified",
+  "productionReady": false,
+  "trustModel": "single-operator",
+  "independentlyReviewed": false,
+  "circuits": {
+    "withdraw": {
+      "nPublic": 6,
+      "wasm": {
+        "path": "withdraw.wasm",
+        "sha256": "798fc607a79e5bd79326e2056d5cb756693892fb3365cdb787d1655f2af1c82d",
+        "bytes": 2326418
+      },
+      "zkey": {
+        "path": "withdraw.zkey",
+        "sha256": "05a9510daeb9e0deb0efafd441fb0859beb0439d7949c8a8ef38ffc7d95273d8",
+        "bytes": 10811620
+      },
+      "vkey": {
+        "path": "withdraw.vkey.json",
+        "sha256": "62ae70c88b314b5080db766eb827fabdfa55851d9c705dbaea46073b643a7501",
+        "bytes": 3838
+      }
+    },
+    "commitment": {
+      "nPublic": 4,
+      "wasm": {
+        "path": "commitment.wasm",
+        "sha256": "0ad4a877543b8102fff989bdc5f3bc24a0057c025e13da52872fc06a7ee9c422",
+        "bytes": 2169842
+      },
+      "zkey": {
+        "path": "commitment.zkey",
+        "sha256": "c375d67eddaf29f7e2e3a94da8efdaad934e01e7b4951ba7308b6bccb49c7492",
+        "bytes": 783436
+      },
+      "vkey": {
+        "path": "commitment.vkey.json",
+        "sha256": "215abe623499ff1c7a3cafaa6dd3799d383449bd55f1b88ddd665fce6c8b7e7c",
+        "bytes": 3468
+      }
+    }
+  }
+}

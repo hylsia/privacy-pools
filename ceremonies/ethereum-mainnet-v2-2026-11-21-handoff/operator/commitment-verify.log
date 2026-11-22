@@ -1,0 +1,23 @@
+[32;22m[INFO]  [39;1msnarkJS[0m: Reading r1cs
+[32;22m[INFO]  [39;1msnarkJS[0m: Reading tauG1
+[32;22m[INFO]  [39;1msnarkJS[0m: Reading tauG2
+[32;22m[INFO]  [39;1msnarkJS[0m: Reading alphatauG1
+[32;22m[INFO]  [39;1msnarkJS[0m: Reading betatauG1
+[32;22m[INFO]  [39;1msnarkJS[0m: Circuit hash: 
+		3fab313c 4f1be24a 27a35ef1 94a49b87
+		93efa4b7 faaa4697 856f00ac c62c8d23
+		9c5019fb adc67f47 ee611dda 8ef99fe4
+		8614b591 481cbb87 33fbdfce b7be09a1
+[32;22m[INFO]  [39;1msnarkJS[0m: Circuit Hash: 
+		3fab313c 4f1be24a 27a35ef1 94a49b87
+		93efa4b7 faaa4697 856f00ac c62c8d23
+		9c5019fb adc67f47 ee611dda 8ef99fe4
+		8614b591 481cbb87 33fbdfce b7be09a1
+[32;22m[INFO]  [39;1msnarkJS[0m: -------------------------
+[32;22m[INFO]  [39;1msnarkJS[0m: contribution #1 hylsia-local-operator-2026-11-21:
+		f4af9d61 894cc2f5 d958afa3 bd1aa2ce
+		515408ec b5a39eae ca529395 b78f1f56
+		eb59648f 36ebad4c c451eb7e 56faf9be
+		96aa31df e9b83acd 572d5bd3 05900fca
+[32;22m[INFO]  [39;1msnarkJS[0m: -------------------------
+[32;22m[INFO]  [39;1msnarkJS[0m: ZKey Ok!

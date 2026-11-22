@@ -1,0 +1,374 @@
+/* Night-sky decorations for the landing page (see sky.tsx). */
+
+:root {
+  /* light theme: a dawn sky — gold moon, lavender ribbons, white clouds */
+  --moon-a: #ffffff;
+  --moon-b: #f6e2ae;
+  --moon-c: #d9b465;
+  --moon-disc: #aeb4ff;
+  --moon-glow: color-mix(in oklab, #d9b465 55%, transparent);
+  --moon-glow-wide: color-mix(in oklab, var(--primary) 22%, transparent);
+  --ribbon: color-mix(in oklab, var(--primary) 45%, white);
+  --ribbon-edge: var(--primary);
+  --cloud-hi: #ffffff;
+  --cloud-mid: color-mix(in oklab, var(--primary) 9%, white);
+  --cloud-lo: color-mix(in oklab, var(--primary) 20%, var(--background));
+  --cloud-floor: color-mix(in oklab, var(--primary) 12%, var(--background));
+  --cloud-glow: color-mix(in oklab, var(--primary) 18%, transparent);
+  --star: var(--primary);
+  /* diagram strokes (tree edges, nodes) that stay visible on the light sky */
+  --diagram-line: color-mix(in oklab, var(--primary) 55%, white);
+  --diagram-node: #5e5f8f;
+}
+
+.dark {
+  --moon-a: #fff8e6;
+  --moon-b: #e4e1ff;
+  --moon-c: #b3aeff;
+  --moon-disc: #aeb4ff;
+  --moon-glow: color-mix(in oklab, #d9d6ff 70%, transparent);
+  --moon-glow-wide: color-mix(in oklab, var(--primary) 45%, transparent);
+  --ribbon: #c9c6ff;
+  --ribbon-edge: #ffffff;
+  --cloud-hi: color-mix(in oklab, var(--primary) 42%, white);
+  --cloud-mid: color-mix(in oklab, var(--primary) 70%, var(--background));
+  --cloud-lo: color-mix(in oklab, var(--primary) 34%, var(--background));
+  --cloud-floor: color-mix(in oklab, var(--primary) 20%, var(--background));
+  --cloud-glow: color-mix(in oklab, var(--primary) 40%, transparent);
+  --star: #ffffff;
+  --diagram-line: var(--border);
+  --diagram-node: var(--muted-foreground);
+}
+
+/* ── sky backdrop ───────────────────────────── */
+.sky-gradient {
+  background:
+    radial-gradient(
+      48% 46% at 76% 42%,
+      color-mix(in oklab, var(--primary) 14%, transparent),
+      transparent 72%
+    ),
+    radial-gradient(
+      42% 38% at 8% 4%,
+      color-mix(in oklab, var(--primary) 9%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--primary) 8%, var(--background)) 0%,
+      var(--background) 42%,
+      color-mix(in oklab, var(--primary) 12%, var(--background)) 80%,
+      var(--background) 100%
+    );
+}
+.dark .sky-gradient {
+  background:
+    radial-gradient(
+      48% 46% at 76% 42%,
+      color-mix(in oklab, var(--primary) 13%, transparent),
+      transparent 72%
+    ),
+    radial-gradient(
+      42% 38% at 8% 4%,
+      color-mix(in oklab, var(--primary) 8%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--background) 65%, black) 0%,
+      var(--background) 42%,
+      color-mix(in oklab, var(--primary) 11%, var(--background)) 80%,
+      var(--background) 100%
+    );
+}
+
+.sky-stars {
+  color: var(--star);
+  opacity: 0.22;
+}
+.dark .sky-stars {
+  opacity: 0.85;
+}
+/* A twinkling group is its own compositing layer (a cheap opacity animation).
+   No will-change: the running animation promotes the group by itself, and a
+   stopped group keeps no layer and paints with its parent.
+     twinkle="all" (default)  the three groups, out of step
+     twinkle="one"            the top group only (.sky-stars--calm; .is-calm is
+                              an alias), so no still group sits above an
+                              animated one and needs an overlap layer
+     twinkle="none"           a still field (.sky-stars--still) */
+.sky-stars-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: sky-star-twinkle 5.5s ease-in-out infinite;
+}
+.sky-stars-1 {
+  animation-delay: -1.8s;
+}
+.sky-stars-2 {
+  animation-delay: -3.6s;
+}
+.sky-stars--calm .sky-stars-0,
+.sky-stars--calm .sky-stars-1,
+.sky-stars.is-calm .sky-stars-0,
+.sky-stars.is-calm .sky-stars-1,
+.sky-stars--still .sky-stars-layer {
+  animation: none;
+}
+@keyframes sky-star-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* ── sparkles ───────────────────────────────── */
+/* no will-change: the running animation composites the sparkle by itself, and a
+   stopped one (reduced motion, off-screen) keeps no layer */
+.sky-sparkle {
+  position: absolute;
+  color: var(--gold);
+  filter: drop-shadow(
+    0 0 6px color-mix(in oklab, var(--gold) 70%, transparent)
+  );
+  animation: sky-sparkle 6s ease-in-out infinite;
+}
+.sky-sparkle.is-white {
+  color: color-mix(in oklab, var(--primary) 30%, white);
+  filter: drop-shadow(
+    0 0 6px color-mix(in oklab, var(--primary) 60%, transparent)
+  );
+}
+:root:not(.dark) .sky-sparkle.is-white {
+  color: var(--primary);
+}
+@keyframes sky-sparkle {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.85) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(8deg);
+  }
+}
+
+/* ── moon ───────────────────────────────────── */
+.sky-moon {
+  overflow: visible;
+  filter: drop-shadow(0 0 10px var(--moon-glow))
+    drop-shadow(0 0 42px var(--moon-glow-wide));
+}
+
+/* ── ribbons ────────────────────────────────── */
+.sky-ribbon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  /* no will-change: the running animation composites it (see .sky-sparkle) */
+  animation: sky-ribbon-drift 20s ease-in-out infinite alternate;
+}
+@keyframes sky-ribbon-drift {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(-1.4%, 1%) rotate(-1.2deg);
+  }
+}
+
+/* ── clouds ─────────────────────────────────── */
+.sky-clouds {
+  position: absolute;
+  pointer-events: none;
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent,
+      #000 var(--cloud-fade-x, 12%),
+      #000 calc(100% - var(--cloud-fade-x, 12%)),
+      transparent
+    ),
+    linear-gradient(to top, transparent 4%, #000 46%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent,
+      #000 var(--cloud-fade-x, 12%),
+      #000 calc(100% - var(--cloud-fade-x, 12%)),
+      transparent
+    ),
+    linear-gradient(to top, transparent 4%, #000 46%);
+  mask-composite: intersect;
+}
+.sky-puff {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(
+    130% 110% at 48% 0%,
+    var(--cloud-hi) 0%,
+    var(--cloud-mid) 52%,
+    var(--cloud-lo) 100%
+  );
+  box-shadow: 0 -4px 28px -6px var(--cloud-glow);
+  filter: blur(2px);
+}
+.sky-cloud-floor {
+  position: absolute;
+  inset-inline: 0;
+  bottom: -20%;
+  height: 70%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: var(--cloud-floor);
+  filter: blur(4px);
+}
+
+/* the hero's cloud horizon: heaped up under the mascot, thinning out towards the text */
+.sky-clouds.sky-horizon {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 24%, #000 62%, #000 94%, transparent),
+    linear-gradient(to top, transparent 0%, #000 50%);
+  mask-image:
+    linear-gradient(to right, transparent 24%, #000 62%, #000 94%, transparent),
+    linear-gradient(to top, transparent 0%, #000 50%);
+}
+
+.sky-horizon .sky-puff {
+  filter: blur(8px);
+  opacity: 0.5;
+  box-shadow: none;
+}
+.sky-horizon .sky-cloud-floor {
+  filter: blur(10px);
+}
+
+/* opt-in per bank: soft vapour for banks at section seams (the mascot's cloud keeps its look) */
+.sky-clouds.is-soft .sky-puff {
+  filter: blur(8px);
+  box-shadow: none;
+}
+.sky-clouds.is-soft .sky-cloud-floor {
+  filter: blur(14px);
+}
+
+/* ── moonlit headline text ──────────────────── */
+.sky-text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--primary) 15%,
+    color-mix(in oklab, var(--primary) 55%, #b98cff) 85%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.dark .sky-text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--primary) 10%,
+    color-mix(in oklab, var(--primary) 45%, white) 55%,
+    color-mix(in oklab, var(--primary) 30%, white) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ── gentle float ───────────────────────────── */
+.sky-float {
+  animation: sky-float 5s ease-in-out infinite;
+}
+@keyframes sky-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ── pointer parallax (driven by --px / --py in [-1, 1]) ──
+   Only where a fine pointer can drive it and motion is allowed: touch devices
+   and reduced motion get no translate3d layers at all. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .sky-depth-far {
+    transform: translate3d(
+      calc(var(--px, 0) * -14px),
+      calc(var(--py, 0) * -10px),
+      0
+    );
+  }
+  .sky-depth-mid {
+    transform: translate3d(
+      calc(var(--px, 0) * -8px),
+      calc(var(--py, 0) * -6px),
+      0
+    );
+  }
+  .sky-depth-fox {
+    transform: translate3d(calc(var(--px, 0) * 5px), calc(var(--py, 0) * 3px), 0);
+  }
+  .sky-depth-near {
+    transform: translate3d(
+      calc(var(--px, 0) * 12px),
+      calc(var(--py, 0) * 6px),
+      0
+    );
+  }
+  /* the hero mascot's pointer layers move all the time, so they keep their own compositing layer */
+  .fox-stage .sky-depth-far,
+  .fox-stage .sky-depth-mid,
+  .fox-stage .sky-depth-fox,
+  .fox-stage .sky-depth-near {
+    will-change: transform;
+  }
+}
+
+/* ── idle while far off-screen ─────────────────
+   Landing.tsx marks each top-level block of <main> that is more than half a
+   viewport away from the screen with [data-idle]. While idle, its looping
+   decorations stop and nothing in it asks for a compositing layer, so the
+   compositor only keeps layers for what is on or near the screen. Nothing
+   visible changes: the block wakes up half a viewport before it scrolls in
+   (a stopped loop restarts from its first frame, which is never seen). */
+.landing-root [data-idle] :is(
+    .sky-stars-layer,
+    .sky-sparkle,
+    .sky-ribbon,
+    .sky-float,
+    .fox-body,
+    .mascot-glint,
+    [class*="animate-ping"],
+    [class*="animate-pulse"],
+    [class*="animate-spin"]
+  ) {
+  animation: none;
+}
+.landing-root [data-idle] :is(.will-change-transform, .fox-body) {
+  will-change: auto;
+}
+.landing-root [data-idle] :is(.sky-depth-far, .sky-depth-mid, .sky-depth-fox, .sky-depth-near) {
+  transform: none;
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky-stars-layer,
+  .sky-sparkle,
+  .sky-ribbon,
+  .sky-float {
+    animation: none;
+  }
+  .sky-sparkle {
+    opacity: 0.8;
+  }
+}

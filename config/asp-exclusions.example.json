@@ -1,0 +1,6 @@
+{
+  "format": "hylsia-asp-exclusions",
+  "version": 1,
+  "comment": "The association-set publisher's exclusion list (screening policy v1). Copy this file to config/asp-exclusions.json (git-ignored) and set PRIVACY_ASP_EXCLUSIONS_FILE=config/asp-exclusions.json. Each entry names exactly one of \"label\" (the deposit's label as text, decimal or 0x) or \"depositor\" (the depositing address, 0x and 40 hex digits), and a \"reason\": sanctions, stolen-funds, fraud, legal-order or test. Optional: \"chainId\" (absent: every network), \"note\" (at most 500 characters, never published or logged) and \"added\" (YYYY-MM-DD). Unknown fields are refused. Check an edit with npm run zk:asp:publish -- --dry-run. The format is described in .env.example.",
+  "entries": []
+}

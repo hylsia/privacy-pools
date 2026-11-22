@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "incremental": false },
+  "include": [
+    "scripts/privacy/v2/**/*.ts",
+    "scripts/privacy/loadDeploymentEnv.ts",
+    "scripts/privacy/mainnet-preflight.ts",
+    "scripts/privacy/mainnet-wallet.ts",
+    "scripts/privacy/mainnet-target.ts",
+    "scripts/privacy/env-deployer.ts",
+    "scripts/privacy/sync-deployments.ts",
+    "shared/privacy/snarkjs.d.ts"
+  ]
+}

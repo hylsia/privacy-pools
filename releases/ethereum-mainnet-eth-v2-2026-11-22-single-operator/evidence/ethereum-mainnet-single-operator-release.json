@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "chainId": 1,
+  "protocol": "hylsia-pp-v2-eth",
+  "trustModel": "single-operator",
+  "operatorAuthorized": true,
+  "independentReview": false,
+  "authorizationSource": "Explicit project-owner instruction in this session to deploy to mainnet without independent ceremony contributors.",
+  "releaseId": "23f30ccaa7c30be08724c67b226d37d51b6d4a0310866807f4c73637e54031ef",
+  "artifactManifestSha256": "546ae336183d51bf580d7118b5a945581d6d2bdbb988b12d305e338350e55c32",
+  "deployer": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+  "parameters": {
+    "owner": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+    "publisher": "0x5636835544d9D49f43dfDA695a51dcB398dDE6cF",
+    "minDepositWei": "0"
+  },
+  "acceptance": {
+    "path": "releases/ethereum-mainnet-eth-v2-2026-11-22-single-operator/acceptance/report.json",
+    "sha256": "c5063f9e9b3305599ac6be3b2b88d2ff138bb197c30d4a24e780e12b3be6f8ce"
+  },
+  "finalization": {
+    "path": "ceremonies/ethereum-mainnet-v2-2026-11-22-single-operator/single-operator-finalization.json",
+    "sha256": "0382345776b3ac8dac33f270085ebee87bae57d501b4ae3cbd56c9fcedbf45f5"
+  },
+  "phase1Verification": {
+    "path": "docs/security/mainnet-phase1-verification.json",
+    "sha256": "049f9185d56ec68a92fa59bd2cec45ecc37e2784b955c72c6292f58c5e8b6c7d"
+  },
+  "scope": "Contract deployment only; this is not an independent audit or public application/service activation.",
+  "createdAt": "2026-11-21T18:14:53.581Z"
+}
