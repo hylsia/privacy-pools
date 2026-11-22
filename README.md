@@ -206,3 +206,4 @@ Hosted CI results only become available after the workflow is published and run 
 Dependabot proposes npm and action updates weekly. A separate scheduled production dependency audit
 fails on high/critical findings; its initial scan is not clean. These checks and repository scores do
 not replace independent cryptographic review or establish production readiness.
+# privacy-pools

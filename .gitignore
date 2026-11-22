@@ -1,1 +1,4 @@
 node_modules
+
+# Keep the oversized ceremony archive locally; distribute it outside Git.
+/ceremonies/ethereum-mainnet-v2-2026-11-21-handoff.tar.gz
